@@ -45,6 +45,9 @@ load["(ns user) (defn head [a] (.head a))"];
 load["(ns user) (defn length [a] (.length a))"];
 
 
+load["(ns user) (def jlink-object-handler (.getObjectHandler (com.wolfram.jlink.Install/getStdLink)))"]
+
+
 load["(ns user) (use '[clojure.contrib.string :only [replace-str]]) (defn to-clojure-symbol [expr] 
 				(let [sname (.asString expr)] 
 					(cond 
@@ -63,6 +66,7 @@ load["(ns user) (use '[clojure.contrib.string :only [replace-str]]) (defn to-clo
 						(= sname \"Less\") '<
 						(= sname \"LessEqual\") '<=
 						(= sname \"Unequal\") 'not=
+						(re-matches #\"JLink`Object.*\" sname) (.getObject jlink-object-handler sname)
 						(= (subs sname 0 1) \"\[EmptyVerySmallSquare]\") (keyword (replace-str \"\[LongDash]\" \"_\" (replace-str \"\[Dash]\" \"-\" (subs sname 1 (count sname)))))
 						true (symbol (replace-str \"\[LongDash]\" \"_\" (replace-str \"\[Dash]\" \"-\" (replace-str \"\[FilledVerySmallSquare]\" \".\" sname))))
 					)
@@ -87,18 +91,6 @@ load["(ns user) (use '[clojure.contrib.string :only [replace-str]]) (defn to-s-e
 	)))"]
 
 
-load["(ns user) (defn evalm [expr] (binding [*ns* (create-ns 'user)] (eval expr)))"]
-
-
-MakeClojureExpression[x_]:=ReturnAsJavaObject[(RT`var["user","to-s-expression"])@invoke[MakeJavaExpr@(x/. Times[a_,Power[b_,-1]]:>Division[a,b])]]
-
-
-ClojureEvaluate[x_]/;JavaObjectQ[x]:=(RT`var["user","evalm"])@invoke[x]
-
-
-ClojureEvaluate[x_]:=ClojureEvaluate[MakeClojureExpression[createExpr@x]]
-
-
 load["(ns user) (use '[clojure.contrib.string :only [replace-str]]) (defn to-mathematica-symbol [expr] 
 				(let [sname  (replace-str \"_\" \"\[LongDash]\" (replace-str \"-\" \"\[Dash]\" (replace-str \":\" \"\[EmptyVerySmallSquare]\" (replace-str \".\" \"\[FilledVerySmallSquare]\" (str expr)))))] 
 					(cond
@@ -117,26 +109,64 @@ load["(ns user) (use '[clojure.contrib.string :only [replace-str]]) (defn to-mat
 "]
 
 
-load["(ns user)(use '[clojure.contrib.string :only [replace-str]]) (defn createExpr [struct] 
+load["(ns user)(def java-object-map)"
+]
+
+
+load["(ns user)(use '[clojure.contrib.string :only [replace-str]]) (defn createExprSub [struct] 
 					(cond
 						(= struct true) (com.wolfram.jlink.Expr. 4 \"True\")
 						(= struct false) (com.wolfram.jlink.Expr. 4 \"False\")
-						(= struct nil) (com.wolfram.jlink.Expr. 4 \"NotNull\")
-						(ratio? struct) (com.wolfram.jlink.Expr. (com.wolfram.jlink.Expr.  4 \"Rational\") (into-array com.wolfram.jlink.Expr (map createExpr [(numerator struct) (denominator struct)])))
+						(= struct nil) (com.wolfram.jlink.Expr. 4 \"Null\")
+						(ratio? struct) (com.wolfram.jlink.Expr. (com.wolfram.jlink.Expr.  4 \"Rational\") (into-array com.wolfram.jlink.Expr (map createExprSub [(numerator struct) (denominator struct)])))
 						(keyword? struct) (to-mathematica-symbol struct)
 						(symbol? struct) (to-mathematica-symbol struct)
 						(integer? struct) (com.wolfram.jlink.Expr.  1 (str struct))
 						(float? struct) (com.wolfram.jlink.Expr.  2 (str struct))
 						(string? struct) (com.wolfram.jlink.Expr. struct)
-						(list? struct) (com.wolfram.jlink.Expr. (createExpr (first struct)) (into-array com.wolfram.jlink.Expr (map createExpr (rest struct))))
-						(vector? struct) (com.wolfram.jlink.Expr. (com.wolfram.jlink.Expr.  4 \"List\") (into-array com.wolfram.jlink.Expr (map createExpr struct)))
-						(map? struct) (com.wolfram.jlink.Expr. (com.wolfram.jlink.Expr.  4 \"HashMap\") (into-array com.wolfram.jlink.Expr (map createExpr struct)))
-						(set? struct) (com.wolfram.jlink.Expr. (com.wolfram.jlink.Expr.  4 \"HashSet\") (into-array com.wolfram.jlink.Expr (map createExpr struct)))
-						(seq? struct) (com.wolfram.jlink.Expr. (com.wolfram.jlink.Expr.  4 \"List\") (into-array com.wolfram.jlink.Expr (map createExpr struct)))
-						true struct
+						(list? struct) (com.wolfram.jlink.Expr. (createExprSub (first struct)) (into-array com.wolfram.jlink.Expr (map createExprSub (rest struct))))
+						(vector? struct) (com.wolfram.jlink.Expr. (com.wolfram.jlink.Expr.  4 \"List\") (into-array com.wolfram.jlink.Expr (map createExprSub struct)))
+						(map? struct) (com.wolfram.jlink.Expr. (com.wolfram.jlink.Expr.  4 \"HashMap\") (into-array com.wolfram.jlink.Expr (map createExprSub struct)))
+						(set? struct) (com.wolfram.jlink.Expr. (com.wolfram.jlink.Expr.  4 \"HashSet\") (into-array com.wolfram.jlink.Expr (map createExprSub struct)))
+						(seq? struct) (com.wolfram.jlink.Expr. (com.wolfram.jlink.Expr.  4 \"List\") (into-array com.wolfram.jlink.Expr (map createExprSub struct)))
+						true (let [s (gensym)] (set! java-object-map (assoc java-object-map s struct)) (createExprSub s))
 					)	
 		)"
 ]
+
+
+load["(ns user)(use '[clojure.contrib.string :only [replace-str]]) 
+(defn createExpr [struct] 
+	(binding [java-object-map {}] 
+		(let [resultexpr (createExprSub struct)] (object-array [(createExprSub (map first java-object-map)) (object-array (map last java-object-map)) resultexpr]) )
+	) 	
+)"
+]
+
+
+load["(ns user) 
+(defn evalm [expr] 
+	(binding [*ns* (create-ns 'user)] 
+		(let [res (eval expr)]
+			(if (ratio? res) 
+					(com.wolfram.jlink.Expr. (com.wolfram.jlink.Expr.  4 \"Rational\") (into-array com.wolfram.jlink.Expr (map createExprSub [(numerator res) (denominator res)])))
+				res))))
+"]
+
+
+ToClojureExpression[x_]:=ReturnAsJavaObject[(RT`var["user","to-s-expression"])@invoke[MakeJavaExpr@(x/.y_Symbol/;JavaObjectQ[y]:>\[FilledVerySmallSquare][jlink\[Dash]object\[Dash]handler,getObject[SymbolName[y]]] /. Times[a_,Power[b_,-1]]:>Division[a,b])]]
+
+
+ClojureObjectEvaluate[x_]/;JavaObjectQ[x]:=With[{res=(RT`var["user","evalm"])@invoke[x]},res]
+
+
+FromClojureExpression[x_]/;Not[JavaObjectQ[x]]:=x
+
+
+FromClojureExpression[x_]:=With[{res=(RT`var["user","createExpr"])@invoke[x]},Last[res]/. Rule@@@Transpose[{res[[1]],res[[2]]}]]
+
+
+ClojureEvaluate[x_]:=FromClojureExpression[ClojureObjectEvaluate[ToClojureExpression[x]]]
 
 
 
