@@ -1,0 +1,554 @@
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[         0,          0]
+NotebookDataLength[     18757,        553]
+NotebookOptionsPosition[     15240,        432]
+NotebookOutlinePosition[     15820,        453]
+CellTagsIndexPosition[     15777,        450]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Init", "Section",
+ InitializationCell->True,
+ CellChangeTimes->{{3.5041361289392242`*^9, 3.504136129376598*^9}}],
+
+Cell[BoxData[
+ RowBox[{"BeginPackage", "[", 
+  RowBox[{"\"\<ClojureLink`\>\"", ",", "\"\<JLink`\>\""}], "]"}]], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{{3.504136079799005*^9, 3.504136085201136*^9}, {
+  3.504136418160857*^9, 3.504136420640032*^9}}],
+
+Cell[BoxData["SetClojureLinkAutoReplacements"], "Input",
+ InitializationCell->True],
+
+Cell[BoxData["ToClojureExpression"], "Input",
+ InitializationCell->True],
+
+Cell[BoxData["FromClojureExpression"], "Input",
+ InitializationCell->True],
+
+Cell[BoxData["ClojureObjectEvaluate"], "Input",
+ InitializationCell->True],
+
+Cell[BoxData["ClojureEvaluate"], "Input",
+ InitializationCell->True],
+
+Cell[BoxData["$ClojureLinkDirectory"], "Input",
+ InitializationCell->True],
+
+Cell[BoxData["InstallClojureLink"], "Input",
+ InitializationCell->True],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"{", 
+   RowBox[{
+   "\:2024", ",", "\:0589", " ", ",", "\:2011", " ", ",", "\:02cd", " ", ",", 
+    "\:204e"}], "}"}], "  "}]], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{{3.5041400054097977`*^9, 3.5041400259858217`*^9}}],
+
+Cell[BoxData["\:2024getObjectHandler"], "Input",
+ InitializationCell->True],
+
+Cell[BoxData["ClojureSymbol"], "Input",
+ InitializationCell->True],
+
+Cell[BoxData["getStdLink"], "Input",
+ InitializationCell->True]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Implementation", "Section",
+ InitializationCell->True,
+ CellChangeTimes->{{3.504136130776249*^9, 3.504136131463228*^9}, {
+  3.5041362094325523`*^9, 3.5041362108353643`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Begin", "[", "\"\<`Private`\>\"", "]"}]], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{{3.504136089016108*^9, 3.504136094955202*^9}, 
+   3.504137198024372*^9}],
+
+Cell[CellGroupData[{
+
+Cell["install", "Subsection",
+ InitializationCell->True,
+ CellChangeTimes->{{3.504136387113557*^9, 3.504136387854371*^9}}],
+
+Cell[BoxData[
+ RowBox[{"$ClojureLinkDirectory", "=", 
+  "\"\</Work/ClojureLink/ClojureLink\>\""}]], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{{3.504136705346814*^9, 3.5041367248868723`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"$JavaPath", ":=", 
+  RowBox[{"StringJoin", "@", 
+   RowBox[{"Riffle", "[", 
+    RowBox[{
+     RowBox[{"{", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"ToFileName", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+          "$InstallationDirectory", ",", "\"\<SystemFiles\>\"", ",", 
+           "\"\<Links\>\"", ",", "\"\<JLink\>\""}], "}"}], ",", 
+         "\"\<JLink.jar\>\""}], "]"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"ToFileName", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"$ClojureLinkDirectory", ",", "\"\<lib\>\""}], "}"}], ",", 
+         "\"\<clojure-1.2.0.jar\>\""}], "]"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"ToFileName", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"$ClojureLinkDirectory", ",", "\"\<lib\>\""}], "}"}], ",", 
+         "\"\<clojure-contrib-1.2.0.jar\>\""}], "]"}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"ToFileName", "[", 
+        RowBox[{
+         RowBox[{"{", "$ClojureLinkDirectory", "}"}], ",", 
+         "\"\<ClojureLink-1.0.0-SNAPSHOT.jar\>\""}], "]"}]}], 
+      "\[IndentingNewLine]", "}"}], ",", "\"\<:\>\""}], "]"}]}]}]], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{{3.5041365240777073`*^9, 3.504136572013068*^9}, {
+   3.504136689234317*^9, 3.504136769101529*^9}, {3.504137494043425*^9, 
+   3.5041374960650682`*^9}, 3.504139359881115*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"InstallClojureLink", "[", "dir_", "]"}], ":=", 
+  RowBox[{"{", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"$ClojureLinkDirectory", "=", "dir"}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"ReinstallJava", "[", 
+      RowBox[{
+       RowBox[{
+       "CommandLine", " ", "->", " ", "\"\</Library/Java/Home/bin/java\>\""}],
+        ",", 
+       RowBox[{"JVMArguments", "\[Rule]", 
+        RowBox[{
+        "\"\<-Djavax.xml.parsers.DocumentBuilderFactory=com.sun.org.apache.\
+xerces.internal.jaxp.DocumentBuilderFactoryImpl -Xmx1000m -Xms1000m \
+-Djava.library.path=/usr/local/lib/ -classpath \\\"\>\"", "<>", "$JavaPath", 
+         "<>", "\"\<\\\"\>\""}]}]}], "]"}]}], ",", "\[IndentingNewLine]", 
+    RowBox[{"LoadJavaClass", "/@", 
+     RowBox[{"{", 
+      RowBox[{
+      "\"\<clojure.lang.Compiler\>\"", ",", "\"\<clojure.lang.RT\>\"", ",", 
+       "\"\<java.io.StringReader\>\""}], "}"}]}], ",", "\[IndentingNewLine]", 
+    
+    RowBox[{"Compiler`load", "[", 
+     RowBox[{"JavaNew", "[", 
+      RowBox[{
+      "\"\<java.io.StringReader\>\"", ",", "\[IndentingNewLine]", 
+       "\"\<(use 'ClojureLink.core)\>\""}], "]"}], "]"}]}], "}"}]}]], "Input",\
+
+ InitializationCell->True,
+ CellChangeTimes->{{3.504136389154965*^9, 3.5041363931653357`*^9}, {
+   3.504136437128683*^9, 3.504136437666657*^9}, 3.5041365539134417`*^9, {
+   3.504136627169524*^9, 3.504136632164184*^9}, {3.504136790592493*^9, 
+   3.5041367983739643`*^9}, {3.504137364820096*^9, 3.504137368368464*^9}, {
+   3.5041375850692797`*^9, 3.504137590778647*^9}, {3.5041392453778963`*^9, 
+   3.504139254818218*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["syntax", "Subsection",
+ InitializationCell->True,
+ CellChangeTimes->{{3.504136206066536*^9, 3.504136207761558*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"$DotInput", "=", "\"\<\\\\\>\""}], ";", 
+  RowBox[{"$DotSymbol", "=", "\"\<\:2024\>\""}], ";"}]], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{{3.5031024515273657`*^9, 3.503102481251631*^9}, 
+   3.5041299115597773`*^9, 3.504132094483657*^9, {3.504132639867318*^9, 
+   3.504132640234748*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"$DashInput", "=", "\"\<--\>\""}], ";", 
+  RowBox[{"$DashSymbol", "=", "\"\<\:2011\>\""}], ";"}]], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{{3.503102489014694*^9, 3.50310250887598*^9}, {
+   3.5031026441591263`*^9, 3.5031026443034077`*^9}, 3.504129919324662*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"$UnderscoreInput", "=", "\"\<-=\>\""}], ";", 
+  RowBox[{"$UnderscoreSymbol", "=", "\"\<\:02cd\>\""}], ";"}]], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{{3.503102511080237*^9, 3.503102566250947*^9}, 
+   3.504130558558782*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"$ColonInput", "=", "\"\<''\>\""}], ";", 
+  RowBox[{"$ColonSymbol", "=", "\"\<\:0589\>\""}], ";"}]], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{{3.5031025693892097`*^9, 3.503102584194669*^9}, {
+  3.5041295967815933`*^9, 3.504129598876505*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"$AstriskInput", "=", "\"\<**\>\""}], ";", 
+  RowBox[{"$AstriskSymbol", "=", "\"\<\:204e\>\""}], ";"}]], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{{3.50412852334072*^9, 3.504128564814247*^9}, {
+  3.504129928415226*^9, 3.5041299394245462`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"$QuestionInput", "=", "\"\<\[DownQuestion]\>\""}], ";", 
+  RowBox[{"$QuestionSymbol", "=", "\"\<\:2047\>\""}], ";"}]], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{{3.504129950876828*^9, 3.504129994534849*^9}, {
+  3.504130697927032*^9, 3.504130755545261*^9}, {3.504132173979107*^9, 
+  3.504132215780683*^9}, {3.504132745741729*^9, 3.504132747660535*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"$ExclamationInput", "=", "\"\<!!\>\""}], ";", 
+  RowBox[{"$ExclamationSymbol", "=", "\"\<\:203c\>\""}], ";"}]], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{{3.50412996843108*^9, 3.504129988023774*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"SetClojureLinkAutoReplacements", "[", "notebookobj_", "]"}], ":=", 
+  
+  RowBox[{"SetOptions", "[", 
+   RowBox[{"notebookobj", ",", 
+    RowBox[{"InputAutoReplacements", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"$DotInput", "->", "$DotSymbol"}], ",", 
+       RowBox[{"$DashInput", "->", "$DashSymbol"}], ",", 
+       RowBox[{"$UnderscoreInput", "->", "$UnderscoreSymbol"}], ",", 
+       RowBox[{"$ColonInput", "->", "$ColonSymbol"}], ",", 
+       RowBox[{"$AstriskInput", "\[Rule]", "$AstriskSymbol"}], ",", 
+       RowBox[{"$QuestionInput", "->", "$QuestionSymbol"}], ",", 
+       RowBox[{"$ExclamationInput", "->", "$ExclamationSymbol"}]}], "}"}]}]}],
+    "]"}]}]], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{{3.50413600797828*^9, 3.504136042778534*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["eval", "Subsection",
+ InitializationCell->True,
+ CellChangeTimes->{{3.494042519173768*^9, 3.494042523131402*^9}, {
+  3.496118377563806*^9, 3.496118378034465*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"ToClojureExpression", "[", "x_", "]"}], "/;", 
+   RowBox[{"JavaObjectQ", "[", "x", "]"}]}], ":=", "x"}]], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{{3.49732413293639*^9, 3.497324143737132*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"ToClojureExpression", "[", "x_", "]"}], ":=", 
+  RowBox[{"ReturnAsJavaObject", "[", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"RT`var", "[", 
+      RowBox[{"\"\<ClojureLink.core\>\"", ",", "\"\<to-s-expression\>\""}], 
+      "]"}], ")"}], "@", 
+    RowBox[{"invoke", "[", 
+     RowBox[{"MakeJavaExpr", "@", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"x", "/.", 
+         RowBox[{
+          RowBox[{"y_Symbol", "/;", 
+           RowBox[{"JavaObjectQ", "[", "y", "]"}]}], "\[RuleDelayed]", 
+          RowBox[{"\:2024", "[", 
+           RowBox[{
+            RowBox[{"\:2024getObjectHandler", "[", 
+             RowBox[{"\:2024", "[", 
+              RowBox[{
+               RowBox[{
+               "ClojureSymbol", "[", "\"\<com.wolfram.jlink.Install\>\"", 
+                "]"}], ",", 
+               RowBox[{"getStdLink", "[", "]"}]}], "]"}], "]"}], ",", 
+            RowBox[{"getObject", "[", 
+             RowBox[{"SymbolName", "[", "y", "]"}], "]"}]}], "]"}]}]}], " ", "/.",
+         " ", 
+        RowBox[{
+         RowBox[{"Times", "[", 
+          RowBox[{"a_", ",", 
+           RowBox[{"Power", "[", 
+            RowBox[{"b_", ",", 
+             RowBox[{"-", "1"}]}], "]"}]}], "]"}], "\[RuleDelayed]", 
+         RowBox[{"Division", "[", 
+          RowBox[{"a", ",", "b"}], "]"}]}]}], ")"}]}], "]"}]}], 
+   "]"}]}]], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{{3.4961184550774603`*^9, 3.496118477986053*^9}, {
+   3.496118512867618*^9, 3.496118513729003*^9}, {3.496118556507658*^9, 
+   3.496118557728718*^9}, 3.496865631646215*^9, {3.496869717594556*^9, 
+   3.496869720086919*^9}, {3.497239039179525*^9, 3.49723903943501*^9}, {
+   3.4973226083413754`*^9, 3.497322616052713*^9}, 3.497322876198201*^9, {
+   3.497552617939622*^9, 3.497552621890107*^9}, 3.497553555208857*^9, 
+   3.497553617965128*^9, 3.497553696410514*^9, {3.500868535498704*^9, 
+   3.50086854366711*^9}, {3.50413632486447*^9, 3.5041363731981688`*^9}, {
+   3.5041372883168592`*^9, 3.504137298643731*^9}, {3.5041401218633633`*^9, 
+   3.504140126243656*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"SymbolName", "[", "ClojureLink`Private`Map", "]"}]], "Input",
+ CellChangeTimes->{{3.504139886834662*^9, 3.504139918085655*^9}}],
+
+Cell[BoxData["\<\"Map\"\>"], "Output",
+ CellChangeTimes->{{3.5041398990662603`*^9, 3.5041399185265837`*^9}}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"ClojureObjectEvaluate", "[", "x_", "]"}], "/;", 
+   RowBox[{"JavaObjectQ", "[", "x", "]"}]}], ":=", 
+  RowBox[{"With", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"res", "=", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"RT`var", "[", 
+         RowBox[{"\"\<ClojureLink.core\>\"", ",", "\"\<evalm\>\""}], "]"}], 
+        ")"}], "@", 
+       RowBox[{"invoke", "[", "x", "]"}]}]}], "}"}], ",", "res"}], 
+   "]"}]}]], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{{3.49611840865383*^9, 3.4961184200279217`*^9}, {
+   3.496281390044663*^9, 3.4962813946530533`*^9}, {3.4972353349201593`*^9, 
+   3.497235359808188*^9}, 3.497239312372346*^9, {3.49731948287119*^9, 
+   3.4973194946435347`*^9}, {3.497319557395795*^9, 3.497319582352859*^9}, {
+   3.497319927616803*^9, 3.497319927934194*^9}, {3.497320155839233*^9, 
+   3.4973201570310297`*^9}, 3.497552661673066*^9, {3.504138878628508*^9, 
+   3.504138880249881*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"ClojureObjectEvaluate", "[", "x_", "]"}], ":=", "x"}]], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{{3.497323838557136*^9, 3.497323839898508*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"FromClojureExpression", "[", "Null", "]"}], ":=", 
+  "Null"}]], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{{3.4973239377701406`*^9, 3.497323945416409*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"FromClojureExpression", "[", "x_", "]"}], "/;", 
+   RowBox[{"Not", "[", 
+    RowBox[{"JavaObjectQ", "[", "x", "]"}], "]"}]}], ":=", "x"}]], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{{3.497320350753837*^9, 3.497320365271299*^9}, {
+   3.497323865604444*^9, 3.497323871890994*^9}, 3.497753413727014*^9, 
+   3.504137872472912*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"FromClojureExpression", "[", "x_", "]"}], ":=", 
+  RowBox[{"With", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"res", "=", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"RT`var", "[", 
+         RowBox[{"\"\<ClojureLink.core\>\"", ",", "\"\<createExpr\>\""}], 
+         "]"}], ")"}], "@", 
+       RowBox[{"invoke", "[", "x", "]"}]}]}], "}"}], ",", 
+    RowBox[{
+     RowBox[{"Last", "[", "res", "]"}], "/.", " ", 
+     RowBox[{"Rule", "@@@", 
+      RowBox[{"Transpose", "[", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"res", "[", 
+          RowBox[{"[", "1", "]"}], "]"}], ",", 
+         RowBox[{"res", "[", 
+          RowBox[{"[", "2", "]"}], "]"}]}], "}"}], "]"}]}]}]}], 
+   "]"}]}]], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{{3.497238966490116*^9, 3.497238982179399*^9}, {
+   3.497239262262158*^9, 3.497239265247608*^9}, 3.497552628186496*^9, 
+   3.4977535826439753`*^9, {3.504137308681554*^9, 3.504137313546393*^9}, 
+   3.504137873584272*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"ClojureEvaluate", "[", "x_", "]"}], ":=", 
+  RowBox[{"FromClojureExpression", "[", 
+   RowBox[{"ClojureObjectEvaluate", "[", 
+    RowBox[{"ToClojureExpression", "[", "x", "]"}], "]"}], "]"}]}]], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{{3.497320222145545*^9, 3.497320236819635*^9}}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["End", "Section",
+ InitializationCell->True,
+ CellChangeTimes->{{3.5041361356134033`*^9, 3.5041361358536787`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"End", "[", "]"}]], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{{3.504139627947423*^9, 3.5041396287503023`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"EndPackage", "[", "]"}]], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{{3.504136137810937*^9, 3.504136139740741*^9}}]
+}, Open  ]]
+},
+AutoGeneratedPackage->Automatic,
+WindowSize->{1154, 741},
+WindowMargins->{{Automatic, 125}, {Automatic, 0}},
+ShowSelection->True,
+InputAutoReplacements->{
+ "\\" -> "\:2024", "--" -> "\:2011", "-=" -> "\:02cd", "''" -> "\:0589", "**" -> 
+  "\:204e", "\[DownQuestion]" -> "\:2047", "!!" -> "\:203c"},
+FrontEndVersion->"8.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (November 6, \
+2010)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[422, 15, 118, 2, 67, "Section",
+ InitializationCell->True],
+Cell[543, 19, 262, 5, 27, "Input",
+ InitializationCell->True],
+Cell[808, 26, 83, 1, 27, "Input",
+ InitializationCell->True],
+Cell[894, 29, 72, 1, 27, "Input",
+ InitializationCell->True],
+Cell[969, 32, 74, 1, 27, "Input",
+ InitializationCell->True],
+Cell[1046, 35, 74, 1, 27, "Input",
+ InitializationCell->True],
+Cell[1123, 38, 68, 1, 27, "Input",
+ InitializationCell->True],
+Cell[1194, 41, 74, 1, 27, "Input",
+ InitializationCell->True],
+Cell[1271, 44, 71, 1, 27, "Input",
+ InitializationCell->True],
+Cell[1345, 47, 268, 7, 27, "Input",
+ InitializationCell->True],
+Cell[1616, 56, 75, 1, 27, "Input",
+ InitializationCell->True],
+Cell[1694, 59, 66, 1, 27, "Input",
+ InitializationCell->True],
+Cell[1763, 62, 63, 1, 27, "Input",
+ InitializationCell->True]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1863, 68, 179, 3, 67, "Section",
+ InitializationCell->True],
+Cell[2045, 73, 193, 4, 27, "Input",
+ InitializationCell->True],
+Cell[CellGroupData[{
+Cell[2263, 81, 122, 2, 34, "Subsection",
+ InitializationCell->True],
+Cell[2388, 85, 203, 4, 27, "Input",
+ InitializationCell->True],
+Cell[2594, 91, 1411, 33, 103, "Input",
+ InitializationCell->True],
+Cell[4008, 126, 1633, 37, 148, "Input",
+ InitializationCell->True]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5678, 168, 121, 2, 34, "Subsection",
+ InitializationCell->True],
+Cell[5802, 172, 336, 7, 27, "Input",
+ InitializationCell->True],
+Cell[6141, 181, 309, 6, 27, "Input",
+ InitializationCell->True],
+Cell[6453, 189, 272, 6, 27, "Input",
+ InitializationCell->True],
+Cell[6728, 197, 289, 6, 27, "Input",
+ InitializationCell->True],
+Cell[7020, 205, 290, 6, 27, "Input",
+ InitializationCell->True],
+Cell[7313, 213, 399, 7, 27, "Input",
+ InitializationCell->True],
+Cell[7715, 222, 247, 5, 27, "Input",
+ InitializationCell->True],
+Cell[7965, 229, 823, 18, 73, "Input",
+ InitializationCell->True]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8825, 252, 168, 3, 34, "Subsection",
+ InitializationCell->True],
+Cell[8996, 257, 253, 6, 27, "Input",
+ InitializationCell->True],
+Cell[9252, 265, 2080, 48, 103, "Input",
+ InitializationCell->True],
+Cell[CellGroupData[{
+Cell[11357, 317, 151, 2, 27, "Input"],
+Cell[11511, 321, 108, 1, 27, "Output"]
+}, Open  ]],
+Cell[11634, 325, 974, 23, 27, "Input",
+ InitializationCell->True],
+Cell[12611, 350, 192, 4, 27, "Input",
+ InitializationCell->True],
+Cell[12806, 356, 202, 5, 27, "Input",
+ InitializationCell->True],
+Cell[13011, 363, 386, 9, 27, "Input",
+ InitializationCell->True],
+Cell[13400, 374, 1019, 28, 43, "Input",
+ InitializationCell->True],
+Cell[14422, 404, 331, 7, 27, "Input",
+ InitializationCell->True]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[14802, 417, 119, 2, 67, "Section",
+ InitializationCell->True],
+Cell[14924, 421, 146, 3, 27, "Input",
+ InitializationCell->True],
+Cell[15073, 426, 151, 3, 27, "Input",
+ InitializationCell->True]
+}, Open  ]]
+}
+]
+*)
+

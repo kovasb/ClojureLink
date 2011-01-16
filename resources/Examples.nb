@@ -1,0 +1,1620 @@
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[         0,          0]
+NotebookDataLength[     53577,       1619]
+NotebookOptionsPosition[     45763,       1335]
+NotebookOutlinePosition[     46341,       1356]
+CellTagsIndexPosition[     46298,       1353]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["ClojureLink", "Title",
+ CellChangeTimes->{{3.493337113058062*^9, 3.493337115496512*^9}, {
+   3.496126710196507*^9, 3.496126739978006*^9}, 3.496979563805235*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"AppendTo", "[", 
+   RowBox[{"$Path", ",", "\"\</Work/ClojureLink/src/mathematica\>\""}], "]"}],
+   ";"}]], "Input",
+ CellChangeTimes->{{3.504139157507572*^9, 3.50413917164657*^9}, {
+  3.5041392671130657`*^9, 3.504139315312611*^9}}],
+
+Cell[BoxData[
+ RowBox[{"<<", "ClojureLink`"}]], "Input",
+ CellChangeTimes->{{3.50413914098973*^9, 3.5041391451790648`*^9}, 
+   3.5041393175179462`*^9}],
+
+Cell[BoxData[
+ RowBox[{"InstallClojureLink", "[", "\"\</Work/ClojureLink\>\"", 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.504139433014282*^9, 3.504139440081815*^9}, {
+  3.504139744383008*^9, 3.504139758328649*^9}}],
+
+Cell[BoxData[
+ RowBox[{"SetClojureLinkAutoReplacements", "[", 
+  RowBox[{"EvaluationNotebook", "[", "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.504138940452321*^9, 3.50413894630271*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.504139417379848*^9, 3.504139420523346*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[" tests", "Section",
+ CellChangeTimes->{{3.495849492929494*^9, 3.495849499606658*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["booleans, strings, numbers", "Subsection",
+ CellChangeTimes->{{3.497063508808909*^9, 3.497063525184514*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"exprs", "=", 
+   RowBox[{"{", 
+    RowBox[{
+    "Null", ",", "True", ",", "False", ",", "\"\<a\>\"", ",", "1", ",", "1.5",
+      ",", 
+     RowBox[{"1", "/", "2"}]}], "}"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.497065009169997*^9, 3.497065013293743*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"result", "=", 
+  RowBox[{"ToClojureExpression", "/@", "exprs"}]}]], "Input",
+ CellChangeTimes->{{3.497063343376089*^9, 3.497063426606082*^9}, {
+   3.497065007892119*^9, 3.497065023779089*^9}, 3.497239371449655*^9, 
+   3.497239405832673*^9, 3.497239586012871*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"Null", ",", 
+   InterpretationBox[
+    RowBox[{"\[LeftGuillemet]", 
+     RowBox[{"JavaObject", "[", 
+      RowBox[{"java", ".", "lang", ".", "Boolean"}], "]"}], 
+     "\[RightGuillemet]"}],
+    JLink`Objects`vm2`JavaObject20652752897], ",", 
+   InterpretationBox[
+    RowBox[{"\[LeftGuillemet]", 
+     RowBox[{"JavaObject", "[", 
+      RowBox[{"java", ".", "lang", ".", "Boolean"}], "]"}], 
+     "\[RightGuillemet]"}],
+    JLink`Objects`vm2`JavaObject20753416193], ",", 
+   InterpretationBox[
+    RowBox[{"\[LeftGuillemet]", 
+     RowBox[{"JavaObject", "[", 
+      RowBox[{"java", ".", "lang", ".", "String"}], "]"}], 
+     "\[RightGuillemet]"}],
+    JLink`Objects`vm2`JavaObject1627389953], ",", 
+   InterpretationBox[
+    RowBox[{"\[LeftGuillemet]", 
+     RowBox[{"JavaObject", "[", 
+      RowBox[{"java", ".", "lang", ".", "Integer"}], "]"}], 
+     "\[RightGuillemet]"}],
+    JLink`Objects`vm2`JavaObject16777217], ",", 
+   InterpretationBox[
+    RowBox[{"\[LeftGuillemet]", 
+     RowBox[{"JavaObject", "[", 
+      RowBox[{"java", ".", "lang", ".", "Double"}], "]"}], 
+     "\[RightGuillemet]"}],
+    JLink`Objects`vm2`JavaObject18005602416459777], ",", 
+   InterpretationBox[
+    RowBox[{"\[LeftGuillemet]", 
+     RowBox[{"JavaObject", "[", 
+      RowBox[{"clojure", ".", "lang", ".", "PersistentList"}], "]"}], 
+     "\[RightGuillemet]"}],
+    JLink`Objects`vm2`JavaObject4946447615131649]}], "}"}]], "Output",
+ CellChangeTimes->{3.504139792094036*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ClojureEvaluate", "/@", "exprs"}]], "Input",
+ CellChangeTimes->{{3.497324090012087*^9, 3.497324106970948*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "Null", ",", "True", ",", "False", ",", "\<\"a\"\>", ",", "1", ",", "1.5`", 
+   ",", 
+   FractionBox["1", "2"]}], "}"}]], "Output",
+ CellChangeTimes->{3.5041397924421988`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"%", "===", "exprs"}]], "Input",
+ CellChangeTimes->{{3.4973199839477167`*^9, 3.497319992172585*^9}}],
+
+Cell[BoxData["True"], "Output",
+ CellChangeTimes->{{3.497319985888393*^9, 3.497319992634371*^9}, {
+   3.4973241579133673`*^9, 3.497324161178152*^9}, 3.4973243879248133`*^9, 
+   3.504138912353263*^9, 3.5041397932757597`*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["symbols, keywords", "Subsection",
+ CellChangeTimes->{{3.497063528992176*^9, 3.4970635361679697`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ToClojureExpression", "/@", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"quote", "[", "a", "]"}], ",", "a"}], "}"}]}]], "Input",
+ CellChangeTimes->{{3.5041389162784853`*^9, 3.5041389174131413`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   InterpretationBox[
+    RowBox[{"\[LeftGuillemet]", 
+     RowBox[{"JavaObject", "[", 
+      RowBox[{"clojure", ".", "lang", ".", "PersistentList"}], "]"}], 
+     "\[RightGuillemet]"}],
+    JLink`Objects`vm2`JavaObject7358501114347521], ",", 
+   InterpretationBox[
+    RowBox[{"\[LeftGuillemet]", 
+     RowBox[{"JavaObject", "[", 
+      RowBox[{"clojure", ".", "lang", ".", "Symbol"}], "]"}], 
+     "\[RightGuillemet]"}],
+    JLink`Objects`vm2`JavaObject27523445633843201]}], "}"}]], "Output",
+ CellChangeTimes->{3.4973200118884287`*^9, 3.497320048903624*^9, 
+  3.497323723995295*^9, 3.497324164092066*^9, 3.49732439094095*^9, 
+  3.504138967577813*^9, 3.5041397966306953`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ToClojureExpression", "/@", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"quote", "[", "a", "]"}], ",", "\:0589a"}], "}"}]}]], "Input",
+ CellChangeTimes->{3.504138963401181*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   InterpretationBox[
+    RowBox[{"\[LeftGuillemet]", 
+     RowBox[{"JavaObject", "[", 
+      RowBox[{"clojure", ".", "lang", ".", "PersistentList"}], "]"}], 
+     "\[RightGuillemet]"}],
+    JLink`Objects`vm2`JavaObject7358501114347522], ",", 
+   InterpretationBox[
+    RowBox[{"\[LeftGuillemet]", 
+     RowBox[{"JavaObject", "[", 
+      RowBox[{"clojure", ".", "lang", ".", "Keyword"}], "]"}], 
+     "\[RightGuillemet]"}],
+    JLink`Objects`vm2`JavaObject17010596620795905]}], "}"}]], "Output",
+ CellChangeTimes->{3.49732417107261*^9, 3.497324391526916*^9, 
+  3.504138968374824*^9, 3.504139796805045*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ClojureObjectEvaluate", "/@", 
+  RowBox[{"ToClojureExpression", "/@", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"quote", "[", "a", "]"}], ",", "\:0589a"}], "}"}]}]}]], "Input",
+ CellChangeTimes->{{3.497063567058442*^9, 3.497063569592793*^9}, {
+   3.497240724934914*^9, 3.497240755075697*^9}, {3.497320016676517*^9, 
+   3.497320017946219*^9}, {3.497320072779772*^9, 3.4973200799285707`*^9}, 
+   3.4973202042722588`*^9, 3.504138963217513*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   InterpretationBox[
+    RowBox[{"\[LeftGuillemet]", 
+     RowBox[{"JavaObject", "[", 
+      RowBox[{"clojure", ".", "lang", ".", "Symbol"}], "]"}], 
+     "\[RightGuillemet]"}],
+    JLink`Objects`vm2`JavaObject27523445633843202], ",", 
+   InterpretationBox[
+    RowBox[{"\[LeftGuillemet]", 
+     RowBox[{"JavaObject", "[", 
+      RowBox[{"clojure", ".", "lang", ".", "Keyword"}], "]"}], 
+     "\[RightGuillemet]"}],
+    JLink`Objects`vm2`JavaObject17010596620795905]}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.497068182229748*^9, 3.49719522841332*^9, 3.497230718704235*^9, 
+   3.497233569249015*^9, 3.497233839655395*^9, 3.497235379594265*^9, 
+   3.497239433107341*^9, {3.49724072261863*^9, 3.497240755373529*^9}, {
+   3.497320003479512*^9, 3.497320018416206*^9}, 3.497320080795636*^9, 
+   3.497320204966425*^9, {3.497324393417395*^9, 3.497324408399537*^9}, 
+   3.504138968964264*^9, 3.504139796865282*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"FromClojureExpression", "/@", 
+  RowBox[{"ToClojureExpression", "/@", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"quote", "[", "a", "]"}], ",", "\:0589a"}], "}"}]}]}]], "Input",
+ CellChangeTimes->{3.5041389632421427`*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"quote", "[", "a", "]"}], ",", "\:0589a"}], "}"}]], "Output",
+ CellChangeTimes->{3.4973200495396833`*^9, 3.497323725474333*^9, 
+  3.497324165126614*^9, 3.497324392830209*^9, 3.504138969719191*^9, 
+  3.5041397969154863`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"FromClojureExpression", "/@", 
+  RowBox[{"ClojureObjectEvaluate", "/@", 
+   RowBox[{"ToClojureExpression", "/@", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"quote", "[", "a", "]"}], ",", "\:0589a"}], 
+     "}"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.4973200928580627`*^9, 3.4973200933371677`*^9}, 
+   3.497320207240294*^9, 3.504138963291731*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"a", ",", "\:0589a"}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.497320093536618*^9, 3.4973202075810413`*^9, {3.497324394085438*^9, 
+   3.497324417088978*^9}, 3.504138970722432*^9, 3.504139796966174*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Dash, Underscore, and Dot", "Subsection",
+ CellChangeTimes->{{3.4970635371038933`*^9, 3.497063550247446*^9}, {
+  3.497063601591793*^9, 3.497063613333516*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ClojureEvaluate", "/@", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"quote", "[", "contains\:204eastrisk", "]"}], ",", 
+    RowBox[{"quote", "[", "contains\:2011dash", "]"}], ",", 
+    RowBox[{"quote", "[", "contains\:02cdunderscore", "]"}], ",", 
+    RowBox[{"quote", "[", "contains\:2024dot", "]"}], ",", 
+    RowBox[{"quote", "[", "contains\:0589colon", "]"}]}], "}"}]}]], "Input",
+ CellChangeTimes->{{3.49706344457819*^9, 3.497063504938242*^9}, {
+  3.4970635832912073`*^9, 3.497063642495228*^9}, {3.497063695293841*^9, 
+  3.497063702589621*^9}, {3.49706375919339*^9, 3.4970637607093353`*^9}, {
+  3.504138963344651*^9, 3.504138984223765*^9}, {3.504139017309143*^9, 
+  3.504139069956794*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"ClojureSymbol", "[", "\<\"contains*astrisk\"\>", "]"}], ",", 
+   "contains\:2011dash", ",", "contains\:02cdunderscore", ",", 
+   "contains\:2024dot", ",", "contains\:0589colon"}], "}"}]], "Output",
+ CellChangeTimes->{{3.4970635963058157`*^9, 3.497063642830461*^9}, 
+   3.497063703147666*^9, 3.497063773699247*^9, 3.497064038420739*^9, 
+   3.497064373043428*^9, 3.497067191990733*^9, 3.497067537035221*^9, 
+   3.4971952296048403`*^9, 3.497195277867078*^9, 3.49723071966039*^9, 
+   3.497233578407048*^9, 3.4972353809670877`*^9, 3.497320105707515*^9, {
+   3.497320265504507*^9, 3.4973202982125998`*^9}, 3.497320378410263*^9, 
+   3.497324425191431*^9, 3.504138987069653*^9, {3.504139021389892*^9, 
+   3.504139070637231*^9}, 3.504139816927207*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ClojureEvaluate", "/@", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"str", "@", 
+     RowBox[{"quote", "[", "contains\:2011dash", "]"}]}], ",", 
+    RowBox[{"str", "@", 
+     RowBox[{"quote", "[", "contains\:02cdunderscore", "]"}]}], ",", 
+    RowBox[{"str", "@", 
+     RowBox[{"quote", "[", "contains\:2024dot", "]"}]}], ",", 
+    RowBox[{"str", "@", 
+     RowBox[{"quote", "[", "contains\:0589colon", "]"}]}]}], "}"}]}]], "Input",\
+
+ CellChangeTimes->{{3.497063654880066*^9, 3.4970636609929333`*^9}, {
+  3.497063707191374*^9, 3.497063707374411*^9}, {3.497063770303769*^9, 
+  3.497063772237143*^9}, {3.497064066876316*^9, 3.497064067033628*^9}, {
+  3.497068235178424*^9, 3.497068246719262*^9}, {3.5041389633594007`*^9, 
+  3.504138984277673*^9}, {3.504139017360721*^9, 3.5041390390132103`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"contains-dash\"\>", ",", "\<\"contains_underscore\"\>", 
+   ",", "\<\"contains.dot\"\>", ",", "\<\"contains:colon\"\>"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.497195230321684*^9, 3.497195278085144*^9, 
+  3.497230720273819*^9, 3.4972335792627373`*^9, 3.4972353825136337`*^9, 
+  3.497320267735991*^9, 3.4973203829058037`*^9, 3.4973244257435217`*^9, 
+  3.504139044064601*^9, 3.504139082355607*^9, 3.504139817116811*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ClojureEvaluate", "/@", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"quote", "@", 
+     RowBox[{"ClojureSymbol", "[", "\"\<contains-dash\>\"", "]"}]}], ",", 
+    RowBox[{"quote", "@", 
+     RowBox[{"ClojureSymbol", "[", "\"\<contains_underscore\>\"", "]"}]}], 
+    ",", 
+    RowBox[{"quote", "@", 
+     RowBox[{"ClojureSymbol", "[", "\"\<contains.dot\>\"", "]"}]}], ",", 
+    RowBox[{"quote", "@", 
+     RowBox[{"ClojureSymbol", "[", "\"\<contains:colon\>\"", "]"}]}]}], 
+   "}"}]}]], "Input",
+ CellChangeTimes->{{3.497063912018029*^9, 3.497063912487355*^9}, {
+  3.497068230752651*^9, 3.497068230984305*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "contains\:2011dash", ",", "contains\:02cdunderscore", ",", 
+   "contains\:2024dot", ",", "contains\:0589colon"}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.497064376732604*^9, 3.4970671730865803`*^9, 3.497067538914061*^9, {
+   3.4970682313678207`*^9, 3.497068248459741*^9}, 3.4971952342198277`*^9, 
+   3.497195278145981*^9, 3.497230720796207*^9, 3.4972335798626957`*^9, 
+   3.497235383362705*^9, 3.4973203854484253`*^9, 3.4973244263151627`*^9, 
+   3.5041390448539*^9, 3.5041390829299383`*^9, 3.5041398172455606`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ClojureEvaluate", "/@", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"quote", "@", 
+     RowBox[{"ClojureSymbol", "[", "\"\<contains*star\>\"", "]"}]}], ",", 
+    RowBox[{"quote", "@", 
+     RowBox[{"ClojureSymbol", "[", "\"\<contains&amp\>\"", "]"}]}]}], 
+   "}"}]}]], "Input",
+ CellChangeTimes->{{3.497067692161974*^9, 3.4970677086158113`*^9}, {
+  3.497067815596793*^9, 3.497067820436611*^9}, {3.49706788842927*^9, 
+  3.4970678979856253`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"ClojureSymbol", "[", "\<\"contains*star\"\>", "]"}], ",", 
+   RowBox[{"ClojureSymbol", "[", "\<\"contains&amp\"\>", "]"}]}], 
+  "}"}]], "Output",
+ CellChangeTimes->{{3.497067693244491*^9, 3.49706770922033*^9}, 
+   3.497067820714127*^9, 3.497067934631939*^9, 3.497195234805591*^9, 
+   3.497195278268763*^9, 3.497230721327011*^9, 3.497233580499076*^9, 
+   3.497235383863469*^9, 3.497320386327923*^9, 3.497324426832198*^9, 
+   3.5041390461073008`*^9, 3.504139083907097*^9, 3.504139817346057*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ClojureEvaluate", "[", 
+  RowBox[{"quote", "[", "contains$dollar", "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.4970679109711437`*^9, 3.4970679177531157`*^9}}],
+
+Cell[BoxData["contains$dollar"], "Output",
+ CellChangeTimes->{3.4970679180821238`*^9, 3.49719523549183*^9, 
+  3.497195278346056*^9, 3.497230722282052*^9, 3.497233582692399*^9, 
+  3.497233956542987*^9, 3.497235384382208*^9, 3.497320387180345*^9, 
+  3.497324427669157*^9, 3.5041390844259233`*^9, 3.504139817397018*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ "  operators that have Clojure equivalents"
+}], "Subsection",
+ CellChangeTimes->{{3.497192950866748*^9, 3.497192956567976*^9}, {
+  3.497193468046998*^9, 3.497193493077882*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ClojureEvaluate", "/@", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"quote", "[", 
+     RowBox[{"a", "<", "b"}], "]"}], ",", 
+    RowBox[{"quote", "[", 
+     RowBox[{"a", "\[LessEqual]", "b"}], "]"}], ",", 
+    RowBox[{"quote", "[", 
+     RowBox[{"a", ">", "b"}], "]"}], ",", 
+    RowBox[{"quote", "[", 
+     RowBox[{"a", "\[GreaterEqual]", "b"}], "]"}], ",", 
+    RowBox[{"quote", "[", 
+     RowBox[{"a", "\[Equal]", "b"}], "]"}], ",", 
+    RowBox[{"quote", "[", 
+     RowBox[{"a", "!=", "b"}], "]"}]}], "}"}]}]], "Input",
+ CellChangeTimes->{{3.497193289545712*^9, 3.4971933165458803`*^9}, {
+  3.49719509877792*^9, 3.497195101530835*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"a", "<", "b"}], ",", 
+   RowBox[{"a", "\[LessEqual]", "b"}], ",", 
+   RowBox[{"a", ">", "b"}], ",", 
+   RowBox[{"a", "\[GreaterEqual]", "b"}], ",", 
+   RowBox[{"a", "\[Equal]", "b"}], ",", 
+   RowBox[{"a", "\[NotEqual]", "b"}]}], "}"}]], "Output",
+ CellChangeTimes->{{3.497193309393922*^9, 3.49719331699515*^9}, 
+   3.4971947591119337`*^9, 3.497195102079735*^9, 3.497195285322863*^9, 
+   3.497230724935892*^9, 3.497233953805395*^9, 3.497234004151492*^9, 
+   3.497235388746871*^9, 3.497320411623188*^9, 3.497324431375094*^9, 
+   3.504139086642352*^9, 3.504139824466785*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["lists and vectors", "Subsection",
+ CellChangeTimes->{{3.4970641284856052`*^9, 3.497064131253276*^9}, {
+  3.497064175668042*^9, 3.497064177779689*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ClojureEvaluate", "[", 
+  RowBox[{"quote", "[", 
+   RowBox[{"a", "[", 
+    RowBox[{"b", "[", "c", "]"}], "]"}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.497064197183419*^9, 3.49706419820483*^9}}],
+
+Cell[BoxData[
+ RowBox[{"a", "[", 
+  RowBox[{"b", "[", "c", "]"}], "]"}]], "Output",
+ CellChangeTimes->{3.497064383923794*^9, 3.497195285517426*^9, 
+  3.497230726281164*^9, 3.497233589353791*^9, 3.49723396569549*^9, 
+  3.497234011974401*^9, 3.497234200878162*^9, 3.497235390142098*^9, 
+  3.49732041272911*^9, 3.497324432390209*^9, 3.5041390881562653`*^9, 
+  3.50413982462271*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ClojureEvaluate", "[", 
+  RowBox[{"quote", "[", 
+   RowBox[{"a", "[", 
+    RowBox[{"b", "[", "c", "]"}], "]"}], "]"}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"a", "[", 
+  RowBox[{"b", "[", "c", "]"}], "]"}]], "Output",
+ CellChangeTimes->{3.497233494160269*^9, 3.497233589960486*^9, 
+  3.497233966649582*^9, 3.497234010634515*^9, 3.4972353907106867`*^9, 
+  3.4973204132808857`*^9, 3.4973244328923817`*^9, 3.504139088759296*^9, 
+  3.5041398246744967`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ClojureEvaluate", "[", 
+  RowBox[{"{", 
+   RowBox[{"1", ",", "2", ",", "3", ",", "4", ",", "5"}], "}"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.497064562106535*^9, 3.497064568753314*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"1", ",", "2", ",", "3", ",", "4", ",", "5"}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.49706456923829*^9, 3.49706460647129*^9, 3.4971952856098747`*^9, 
+   3.497230726834147*^9, 3.497233590538021*^9, 3.497233961314735*^9, 
+   3.497235391196478*^9, 3.497320414704265*^9, {3.497324434364903*^9, 
+   3.4973244411627083`*^9}, 3.5041390895592613`*^9, 3.5041398247726603`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ClojureEvaluate", "[", 
+  RowBox[{"{", 
+   RowBox[{"{", 
+    RowBox[{"{", "1", "}"}], "}"}], "}"}], "]"}]], "Input",
+ CellChangeTimes->{{3.497235470852894*^9, 3.497235476005115*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{"{", "1", "}"}], "}"}], "}"}]], "Output",
+ CellChangeTimes->{3.497235476528839*^9, 3.497235701832781*^9, 
+  3.4973204168817663`*^9, 3.497324441731434*^9, 3.504139090103217*^9, 
+  3.504139824825015*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ClojureEvaluate", "@", 
+  RowBox[{"ToClojureExpression", "[", 
+   RowBox[{"let", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"a", ",", 
+       RowBox[{"{", 
+        RowBox[{"1", ",", "2", ",", "3", ",", "4", ",", "5"}], "}"}]}], "}"}],
+      ",", 
+     RowBox[{"a", "[", "0", "]"}]}], "]"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.4970646434423027`*^9, 3.4970646461204157`*^9}, {
+  3.497240813389616*^9, 3.497240817267314*^9}}],
+
+Cell[BoxData["1"], "Output",
+ CellChangeTimes->{
+  3.4970646464504547`*^9, 3.497195285674322*^9, 3.497230727385961*^9, 
+   3.497233591614851*^9, 3.49723396303899*^9, 3.49723539179891*^9, {
+   3.497240814135253*^9, 3.497240818046887*^9}, 3.4973204175997543`*^9, 
+   3.497324442315537*^9, 3.504139090702568*^9, 3.5041398248719387`*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["scoping", "Subsection",
+ CellChangeTimes->{{3.497064625445869*^9, 3.497064626477592*^9}, 
+   3.497064684322068*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ClojureEvaluate", "[", 
+  RowBox[{"let", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"a", ",", "1"}], "}"}], ",", "a"}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.4970646134649763`*^9, 3.497064634727455*^9}, 
+   3.497064684322453*^9}],
+
+Cell[BoxData["1"], "Output",
+ GeneratedCell->False,
+ CellAutoOverwrite->False,
+ CellChangeTimes->{3.4970646352304087`*^9, 3.497064684323947*^9, 
+  3.497195285758924*^9, 3.497233599216186*^9, 3.497235394394875*^9, 
+  3.4973204192913322`*^9, 3.4973244447619133`*^9, 3.5041390929936867`*^9, 
+  3.5041398249382267`*^9}],
+
+Cell[BoxData["1"], "Output",
+ GeneratedCell->False,
+ CellAutoOverwrite->False,
+ CellChangeTimes->{3.4970646352304087`*^9, 3.497064684323947*^9, 
+  3.497195285758924*^9, 3.497233599216186*^9, 3.497235394394875*^9, 
+  3.4973204192913322`*^9, 3.4973244447619133`*^9, 3.5041390929936867`*^9}],
+
+Cell[BoxData["1"], "Output",
+ GeneratedCell->False,
+ CellAutoOverwrite->False,
+ CellChangeTimes->{3.4970646352304087`*^9, 3.497064684323947*^9, 
+  3.497195285758924*^9, 3.497233599216186*^9, 3.497235394394875*^9, 
+  3.4973204192913322`*^9, 3.4973244447619133`*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["function call", "Subsection",
+ CellChangeTimes->{{3.4958495361897163`*^9, 3.495849536997161*^9}, {
+  3.495849747833679*^9, 3.495849749247205*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ClojureEvaluate", "[", 
+  RowBox[{"map", "[", 
+   RowBox[{"count", ",", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"1", ",", "2", ",", "3"}], "}"}], ",", 
+      RowBox[{"{", "2", "}"}]}], "}"}]}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.496281784654543*^9, 3.4962817922778788`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"3", ",", "1"}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.496281792652567*^9, 3.4968627861745853`*^9, 3.496865993675205*^9, 
+   3.497064695400619*^9, 3.497195285847232*^9, 3.497232985697144*^9, 
+   3.4972336006515503`*^9, 3.497234015690735*^9, 3.497235399566841*^9, {
+   3.4973204209313498`*^9, 3.497320426171502*^9}, 3.497324448775119*^9, 
+   3.504139095236265*^9, 3.5041398249919367`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ClojureEvaluate", "[", 
+  RowBox[{"reduce", "[", 
+   RowBox[{"vector", ",", "1", ",", 
+    RowBox[{"{", 
+     RowBox[{"2", ",", "3", ",", "4", ",", "5"}], "}"}]}], "]"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.497235527667164*^9, 3.497235529097365*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"1", ",", "2"}], "}"}], ",", "3"}], "}"}], ",", "4"}], "}"}], 
+   ",", "5"}], "}"}]], "Output",
+ CellChangeTimes->{3.497235529714703*^9, 3.497320427326882*^9, 
+  3.497324449333282*^9, 3.504139095890326*^9, 3.5041398250435543`*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["hash\:2011map", "Subsection",
+ CellChangeTimes->{{3.496866874091914*^9, 3.49686688714524*^9}, 
+   3.5041390174156847`*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ClojureEvaluate", "[", 
+  RowBox[{"hash\:2011map", "[", 
+   RowBox[{"1", ",", "2", ",", "3", ",", "4"}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.496866880500368*^9, 3.4968668913784647`*^9}, 
+   3.50413901749673*^9}],
+
+Cell[BoxData[
+ RowBox[{"HashMap", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"1", ",", "2"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"3", ",", "4"}], "}"}]}], "]"}]], "Output",
+ CellChangeTimes->{
+  3.496866891898528*^9, {3.4968669703243837`*^9, 3.496866991487515*^9}, 
+   3.496867061122211*^9, 3.49686724631674*^9, 3.496867946155888*^9, 
+   3.497064700823484*^9, 3.497195286031341*^9, 3.497235427273904*^9, 
+   3.497320428493787*^9, 3.497324450249444*^9, 3.5041390978972807`*^9, 
+   3.5041398251560802`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ClojureEvaluate", "[", 
+  RowBox[{"HashMap", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"1", ",", "2"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"3", ",", "4"}], "}"}]}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{3.496867950751225*^9}],
+
+Cell[BoxData[
+ RowBox[{"HashMap", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"1", ",", "2"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"3", ",", "4"}], "}"}]}], "]"}]], "Output",
+ CellChangeTimes->{3.496867951228743*^9, 3.497064701895384*^9, 
+  3.497195286110227*^9, 3.497234198886868*^9, 3.49723542806102*^9, 
+  3.497320429013098*^9, 3.497324450743866*^9, 3.504139098452594*^9, 
+  3.504139825225671*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ClojureEvaluate", "[", 
+  RowBox[{"hash\:2011map", "[", 
+   RowBox[{"\:0589key", " ", ",", "\:0589value"}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.496869161929454*^9, 3.496869172939245*^9}, {
+   3.504138963377149*^9, 3.5041389633785*^9}, 3.5041390175960197`*^9}],
+
+Cell[BoxData[
+ RowBox[{"HashMap", "[", 
+  RowBox[{"{", 
+   RowBox[{"\:0589key", ",", "\:0589value"}], "}"}], "]"}]], "Output",
+ CellChangeTimes->{{3.496869170574428*^9, 3.496869173204069*^9}, 
+   3.49706470726888*^9, 3.4971952861944923`*^9, 3.4972344128459997`*^9, 
+   3.497235429266115*^9, 3.4973204295207577`*^9, 3.497324451257999*^9, 
+   3.504139099000605*^9, 3.504139825277726*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ClojureEvaluate", "[", 
+  RowBox[{"\:0589key", "[", 
+   RowBox[{"hash\:2011map", "[", 
+    RowBox[{"\:0589key", " ", ",", "\:0589value"}], "]"}], "]"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.496869258471774*^9, 3.4968692601744957`*^9}, {
+   3.504138963381825*^9, 3.504138963384499*^9}, 3.504139017713633*^9}],
+
+Cell[BoxData["\:0589value"], "Output",
+ CellChangeTimes->{3.496869260544408*^9, 3.4970647079460907`*^9, 
+  3.497195286277791*^9, 3.497235429902128*^9, 3.497320430038672*^9, 
+  3.49732445177697*^9, 3.504139099569366*^9, 3.504139825339295*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["hash\:2011set", "Subsection",
+ CellChangeTimes->{{3.496867248966135*^9, 3.496867253179679*^9}, 
+   3.504139017786593*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ClojureEvaluate", "[", 
+  RowBox[{"hash\:2011set", "[", 
+   RowBox[{"1", ",", "2", ",", "3", ",", "4"}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.496867257871723*^9, 3.496867260596712*^9}, 
+   3.5041390178813066`*^9}],
+
+Cell[BoxData[
+ RowBox[{"HashSet", "[", 
+  RowBox[{"1", ",", "2", ",", "3", ",", "4"}], "]"}]], "Output",
+ CellChangeTimes->{3.49686795364045*^9, 3.497064709884053*^9, 
+  3.4971952937329273`*^9, 3.4973204311700583`*^9, 3.497324453186987*^9, 
+  3.504139103416065*^9, 3.5041398253942337`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ClojureEvaluate", "[", 
+  RowBox[{"HashSet", "[", 
+   RowBox[{"1", ",", "2", ",", "3", ",", "4"}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.496867274469514*^9, 3.4968672757895203`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"HashSet", "[", 
+  RowBox[{"1", ",", "2", ",", "3", ",", "4"}], "]"}]], "Output",
+ CellChangeTimes->{3.496867927874626*^9, 3.4970647121742897`*^9, 
+  3.497195293872662*^9, 3.497320431964157*^9, 3.497324453722088*^9, 
+  3.504139104003872*^9, 3.504139825439526*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["division", "Subsection",
+ CellChangeTimes->{{3.4968701320287533`*^9, 3.4968701326097813`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ToClojureExpression", "[", 
+  RowBox[{"Division", "[", 
+   RowBox[{"1", " ", ",", "2"}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.4972408561075773`*^9, 3.497240860153343*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\[LeftGuillemet]", 
+   RowBox[{"JavaObject", "[", 
+    RowBox[{"clojure", ".", "lang", ".", "PersistentList"}], "]"}], 
+   "\[RightGuillemet]"}],
+  JLink`Objects`vm2`JavaObject4946447615131651]], "Output",
+ CellChangeTimes->{3.49724086053913*^9, 3.497320433387882*^9, 
+  3.497324456916678*^9, 3.504139105143511*^9, 3.50413982549721*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ClojureEvaluate", "[", 
+  RowBox[{"ToClojureExpression", "[", 
+   RowBox[{"Division", "[", 
+    RowBox[{"1", " ", ",", "2"}], "]"}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.496870136846109*^9, 3.496870152796756*^9}, 
+   3.497240863299712*^9}],
+
+Cell[BoxData[
+ FractionBox["1", "2"]], "Output",
+ CellChangeTimes->{3.4968759032328176`*^9, 3.4968764284997787`*^9, 
+  3.49706471421681*^9, 3.497195293931181*^9, 3.49723549810695*^9, 
+  3.497240863743629*^9, 3.497320434475642*^9, 3.497324457519785*^9, 
+  3.504139105928104*^9, 3.5041398256587543`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ClojureEvaluate", "[", 
+  RowBox[{"ToClojureExpression", "@", 
+   RowBox[{"Division", "[", 
+    RowBox[{"1", " ", ",", "2.0"}], "]"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.49687643987784*^9, 3.496876440476059*^9}, {
+  3.497240885963065*^9, 3.497240886306059*^9}}],
+
+Cell[BoxData["0.5`"], "Output",
+ CellChangeTimes->{
+  3.496876440936619*^9, 3.497064715026635*^9, 3.497195293974578*^9, 
+   3.497234196073687*^9, 3.4972354988266783`*^9, {3.4972408778140173`*^9, 
+   3.49724088687993*^9}, 3.497320435731812*^9, 3.497324458071178*^9, 
+   3.504139107049694*^9, 3.504139825712117*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ClojureEvaluate", "[", 
+  RowBox[{"Unevaluated", "[", 
+   RowBox[{"1", "/", "2.0"}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.496870171373323*^9, 3.496870171651783*^9}, {
+  3.496871876402371*^9, 3.496871877138029*^9}, {3.496875822871015*^9, 
+  3.496875826517323*^9}}],
+
+Cell[BoxData["0.5`"], "Output",
+ CellChangeTimes->{3.496870243959003*^9, 3.496871353788344*^9, 
+  3.496871877478739*^9, 3.496875826891317*^9, 3.496876419387689*^9, 
+  3.497064715756763*^9, 3.497195294037299*^9, 3.497235500149088*^9, 
+  3.497320436585042*^9, 3.497324458556654*^9, 3.504139107585931*^9, 
+  3.504139825760017*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ClojureEvaluate", "[", 
+  RowBox[{"1", "/", "2"}], "]"}]], "Input",
+ CellChangeTimes->{{3.496875835117527*^9, 3.4968758353407173`*^9}, {
+   3.496875896362461*^9, 3.496875898145906*^9}, 3.4968764232872047`*^9}],
+
+Cell[BoxData[
+ FractionBox["1", "2"]], "Output",
+ CellChangeTimes->{3.4968758983938427`*^9, 3.496875967969575*^9, 
+  3.496876005086026*^9, 3.496876423575677*^9, 3.497064716459579*^9, 
+  3.4971952940925207`*^9, 3.4972355009359713`*^9, 3.4973204372043552`*^9, 
+  3.497324459043194*^9, 3.504139108105083*^9, 3.5041398258083763`*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Plus", "Subsection",
+ CellChangeTimes->{{3.496876451650763*^9, 3.496876453280943*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ClojureEvaluate", "[", 
+  RowBox[{"def", "[", 
+   RowBox[{"addto", ",", "1"}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.497064740188983*^9, 3.497064751275235*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\[LeftGuillemet]", 
+   RowBox[{"JavaObject", "[", 
+    RowBox[{"clojure", ".", "lang", ".", "Var"}], "]"}], "\[RightGuillemet]"}],
+  JLink`Objects`vm2`JavaObject15953225098199041]], "Output",
+ CellChangeTimes->{3.497064755634892*^9, 3.4971952941688232`*^9, 
+  3.4972355040836554`*^9, 3.497320441323471*^9, 3.497324460097209*^9, 
+  3.504139110630555*^9, 3.504139825863632*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ClojureEvaluate", "[", 
+  RowBox[{"addto", "+", "1"}], "]"}]], "Input",
+ CellChangeTimes->{{3.4970647629172153`*^9, 3.4970647640427933`*^9}}],
+
+Cell[BoxData["2"], "Output",
+ CellChangeTimes->{3.497064764726815*^9, 3.497195294226459*^9, 
+  3.4972355045684032`*^9, 3.4973204418756523`*^9, 3.497324460649961*^9, 
+  3.5041391112661753`*^9, 3.504139825919979*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["method call", "Subsection",
+ CellChangeTimes->{{3.496119225947154*^9, 3.496119227488706*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ClojureEvaluate", "[", 
+  RowBox[{"\:2024toUpperCase", "[", "\"\<fred\>\"", "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.496119228551059*^9, 3.496119232601151*^9}, 
+   3.504138984328713*^9}],
+
+Cell[BoxData["\<\"FRED\"\>"], "Output",
+ CellChangeTimes->{
+  3.4961192331036043`*^9, {3.4962816312818127`*^9, 3.4962816399199667`*^9}, 
+   3.496283049291192*^9, 3.496862789723104*^9, 3.4968660401664343`*^9, 
+   3.497064804654262*^9, 3.4971952942800417`*^9, 3.4972346295916443`*^9, 
+   3.4972354330667953`*^9, 3.4973204472489862`*^9, 3.4973244619051113`*^9, 
+   3.504139112723098*^9, 3.504139825984015*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ClojureEvaluate", "[", 
+  RowBox[{"\:2024\:2024", "[", 
+   RowBox[{"System", ",", 
+    RowBox[{"getProperties", "[", "]"}], ",", 
+    RowBox[{"get", "[", "\"\<os.name\>\"", "]"}]}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.4957303609375143`*^9, 3.495730392983533*^9}, {
+  3.4962818533888493`*^9, 3.496281854643808*^9}, {3.5041389843313713`*^9, 
+  3.504138984332697*^9}}],
+
+Cell[BoxData["\<\"Mac OS X\"\>"], "Output",
+ CellChangeTimes->{3.49628185502345*^9, 3.496862790258402*^9, 
+  3.496866041339921*^9, 3.497064802461422*^9, 3.497195294363524*^9, 
+  3.4972340230732803`*^9, 3.497234383850148*^9, 3.497234630262034*^9, 
+  3.4972354336860437`*^9, 3.497320447791254*^9, 3.497324462776292*^9, 
+  3.504139113458623*^9, 3.5041398260469217`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ClojureEvaluate", "[", 
+  RowBox[{"\:2024", "[", 
+   RowBox[{
+    RowBox[{"\:2024", "[", 
+     RowBox[{"System", ",", 
+      RowBox[{"getProperties", "[", "]"}]}], "]"}], ",", 
+    RowBox[{"get", "[", "\"\<os.name\>\"", "]"}]}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.495730397735643*^9, 3.495730427938363*^9}, {
+  3.496281857581976*^9, 3.496281858811893*^9}, {3.504138984335047*^9, 
+  3.504138984336442*^9}}],
+
+Cell[BoxData["\<\"Mac OS X\"\>"], "Output",
+ CellChangeTimes->{3.496281859183509*^9, 3.496283064308078*^9, 
+  3.496862790744339*^9, 3.496866042058364*^9, 3.4970648009707317`*^9, 
+  3.497195294452325*^9, 3.49723419231701*^9, 3.497234382109118*^9, 
+  3.497234626477614*^9, 3.497235434556706*^9, 3.497320448354208*^9, 
+  3.497324463428841*^9, 3.504139114679655*^9, 3.504139826098241*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["constructor", "Subsection",
+ CellChangeTimes->{{3.49719529622639*^9, 3.4971952985999613`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ClojureEvaluate", "[", 
+  RowBox[{"java\:2024util\:2024HashMap\:2024", "[", "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.4972329933843937`*^9, 3.497232997201041*^9}, {
+  3.504138984338441*^9, 3.5041389843405237`*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\[LeftGuillemet]", 
+   RowBox[{"JavaObject", "[", 
+    RowBox[{"java", ".", "util", ".", "HashMap"}], "]"}], 
+   "\[RightGuillemet]"}],
+  JLink`Objects`vm2`JavaObject1]], "Output",
+ CellChangeTimes->{3.497232997499563*^9, 3.497233614612138*^9, 
+  3.4972344842149763`*^9, 3.4972354004379873`*^9, 3.497324464427807*^9, 
+  3.504139115834516*^9, 3.5041398261438*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["jlink interop", "Subsection",
+ CellChangeTimes->{{3.497323055083208*^9, 3.4973230571935577`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"props", "=", 
+  RowBox[{"ClojureEvaluate", "[", 
+   RowBox[{"\:2024", "[", 
+    RowBox[{"System", ",", 
+     RowBox[{"getProperties", "[", "]"}]}], "]"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.497234037865449*^9, 3.49723403999148*^9}, 
+   3.497235590705626*^9, {3.497235784507042*^9, 3.497235786671727*^9}, {
+   3.4972364318412123`*^9, 3.497236436047056*^9}, {3.4972380660320597`*^9, 
+   3.497238077907736*^9}, {3.497320572685132*^9, 3.497320583776556*^9}, 
+   3.497320640546279*^9, 3.504138984342627*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\[LeftGuillemet]", 
+   RowBox[{"JavaObject", "[", 
+    RowBox[{"java", ".", "util", ".", "Properties"}], "]"}], 
+   "\[RightGuillemet]"}],
+  JLink`Objects`vm2`JavaObject15190587703558145]], "Output",
+ CellChangeTimes->{
+  3.497234040397558*^9, 3.4972341865835*^9, 3.497234336751959*^9, 
+   3.497234385587615*^9, 3.497235436146496*^9, {3.49723558378938*^9, 
+   3.497235591072551*^9}, 3.497235786895646*^9, 3.497236197462496*^9, {
+   3.4972364293298264`*^9, 3.4972364362621813`*^9}, {3.497238066453145*^9, 
+   3.497238078258647*^9}, 3.49723814209126*^9, {3.4973204489894342`*^9, 
+   3.497320462166716*^9}, 3.497320539663001*^9, {3.497320574501931*^9, 
+   3.4973205840108232`*^9}, {3.4973206378174953`*^9, 3.497320640971003*^9}, 
+   3.497322634874638*^9, 3.497322674066847*^9, 3.4973244654046917`*^9, 
+   3.504139117362707*^9, {3.504139826201076*^9, 3.504139833652751*^9}, 
+   3.504140067388461*^9, 3.504140194569627*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ToClojureExpression", "[", 
+  RowBox[{"\:2024", "[", 
+   RowBox[{"props", ",", 
+    RowBox[{"get", "[", "\"\<os.name\>\"", "]"}]}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.504139957891758*^9, 3.5041399613111057`*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\[LeftGuillemet]", 
+   RowBox[{"JavaObject", "[", 
+    RowBox[{"clojure", ".", "lang", ".", "PersistentList"}], "]"}], 
+   "\[RightGuillemet]"}],
+  JLink`Objects`vm2`JavaObject25996525435879425]], "Output",
+ CellChangeTimes->{3.5041399619165697`*^9, 3.5041400680584993`*^9, 
+  3.5041401947547493`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"FromClojureExpression", "@", 
+  RowBox[{"ToClojureExpression", "[", 
+   RowBox[{"\:2024", "[", 
+    RowBox[{"props", ",", 
+     RowBox[{"get", "[", "\"\<os.name\>\"", "]"}]}], "]"}], "]"}]}]], "Input",\
+
+ CellChangeTimes->{{3.5041399672154703`*^9, 3.504139970453548*^9}}],
+
+Cell[BoxData[
+ RowBox[{"\:2024", "[", 
+  RowBox[{
+   RowBox[{"\:2024", "[", 
+    RowBox[{
+     RowBox[{"\:2024getObjectHandler", "[", 
+      RowBox[{"\:2024", "[", 
+       RowBox[{"com\:2024wolfram\:2024jlink\:2024Install", ",", 
+        RowBox[{"getStdLink", "[", "]"}]}], "]"}], "]"}], ",", 
+     RowBox[{
+     "ClojureLink`Private`getObject", 
+      "[", "\<\"JavaObject15190587703558145\"\>", "]"}]}], "]"}], ",", 
+   RowBox[{"get", "[", "\<\"os.name\"\>", "]"}]}], "]"}]], "Output",
+ CellChangeTimes->{3.5041399708194036`*^9, 3.5041400687272377`*^9, 
+  3.5041401948046007`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ClojureEvaluate", "[", 
+  RowBox[{"\:2024", "[", 
+   RowBox[{"props", ",", 
+    RowBox[{"get", "[", "\"\<os.name\>\"", "]"}]}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.49732284349302*^9, 3.497322843986637*^9}, 
+   3.50413898434481*^9}],
+
+Cell[BoxData["\<\"Mac OS X\"\>"], "Output",
+ CellChangeTimes->{
+  3.4973228444385033`*^9, {3.497322892342135*^9, 3.497322912063815*^9}, 
+   3.497324465940024*^9, 3.5041391180773897`*^9, {3.5041398263687887`*^9, 
+   3.504139834426916*^9}, 3.504139939597876*^9, 3.504140069646533*^9, 
+   3.504140194856895*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ClojureEvaluate", "[", 
+  RowBox[{"let", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"hm", ",", 
+      RowBox[{"JavaNew", "[", "\"\<java.util.HashMap\>\"", "]"}]}], "}"}], 
+    ",", 
+    RowBox[{"\:2024", "[", 
+     RowBox[{"hm", ",", 
+      RowBox[{"put", "[", 
+       RowBox[{"1", ",", "2"}], "]"}]}], "]"}], ",", 
+    RowBox[{"\:2024", "[", 
+     RowBox[{"hm", ",", 
+      RowBox[{"get", "[", "1", "]"}]}], "]"}]}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.497322943639542*^9, 3.497322972710416*^9}, {
+  3.4973230107550287`*^9, 3.497323044078298*^9}, {3.5041389843475533`*^9, 
+  3.504138984349237*^9}}],
+
+Cell[BoxData["2"], "Output",
+ CellChangeTimes->{
+  3.497322973136848*^9, {3.497323028650569*^9, 3.497323044572209*^9}, 
+   3.497324466475313*^9, 3.504139118813738*^9, 3.5041398264284763`*^9, 
+   3.504139865433649*^9, 3.504140072098627*^9, 3.504140194907558*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ClojureEvaluate", "[", 
+  RowBox[{"import", "[", 
+   RowBox[{"quote", "[", "com\:2024wolfram\:2024jlink\:2024Expr", "]"}], 
+   "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.497323391154162*^9, 3.497323404080624*^9}, {
+  3.5041389843512783`*^9, 3.504138984353595*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\[LeftGuillemet]", 
+   RowBox[{"JavaObject", "[", 
+    RowBox[{"java", ".", "lang", ".", "Class"}], "]"}], "\[RightGuillemet]"}],
+  
+  JLink`Objects`vm2`JavaObject25405722502103041]], "Output",
+ CellChangeTimes->{3.497323404655541*^9, 3.497324466980926*^9, 
+  3.50413911941567*^9, 3.504139826495977*^9, 3.504140194959058*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ClojureEvaluate", "[", 
+  RowBox[{"Expr\:2024", "[", 
+   RowBox[{
+    RowBox[{"Expr\:2024", "[", 
+     RowBox[{"4", ",", "\"\<symbol1\>\""}], "]"}], ",", 
+    RowBox[{"into\:2011array", "[", 
+     RowBox[{"Expr", ",", 
+      RowBox[{"map", "[", 
+       RowBox[{
+        RowBox[{"fn", "[", 
+         RowBox[{
+          RowBox[{"{", "x", "}"}], ",", 
+          RowBox[{"Expr\:2024", "[", 
+           RowBox[{"1", ",", 
+            RowBox[{"str", "@", "x"}]}], "]"}]}], "]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"1", ",", "2", ",", "3"}], "}"}]}], "]"}]}], "]"}]}], "]"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.497323110915452*^9, 3.497323170932558*^9}, {
+   3.497323211843047*^9, 3.497323318502425*^9}, {3.497323374770115*^9, 
+   3.49732337540336*^9}, {3.497323412718892*^9, 3.497323422579385*^9}, {
+   3.5041389843565483`*^9, 3.504138984360403*^9}, 3.504139017985461*^9}],
+
+Cell[BoxData[
+ RowBox[{"symbol1", "[", 
+  RowBox[{"1", ",", "2", ",", "3"}], "]"}]], "Output",
+ CellChangeTimes->{{3.497323131040452*^9, 3.497323173749349*^9}, 
+   3.4973232564998198`*^9, 3.4973233190899343`*^9, 3.497323375701976*^9, {
+   3.497323413353965*^9, 3.497323423784053*^9}, 3.4973244675000257`*^9, 
+   3.497324521957041*^9, 3.504139119946143*^9, 3.504139826550898*^9, 
+   3.50414019504152*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ClojureEvaluate", "[", 
+  RowBox[{"reduce", "[", 
+   RowBox[{"vector", ",", 
+    RowBox[{"Object\:2024", "[", "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"Object\:2024", "[", "]"}], ",", 
+      RowBox[{"Object\:2024", "[", "]"}], ",", 
+      RowBox[{"Object\:2024", "[", "]"}]}], "}"}]}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.496282796037274*^9, 3.496282821243731*^9}, {
+  3.497232967994255*^9, 3.497232971651054*^9}, {3.497235608498402*^9, 
+  3.497235622861638*^9}, {3.4973247408992777`*^9, 3.4973247586642647`*^9}, {
+  3.504138984362863*^9, 3.504138984367219*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       InterpretationBox[
+        RowBox[{"\[LeftGuillemet]", 
+         RowBox[{"JavaObject", "[", 
+          RowBox[{"java", ".", "lang", ".", "Object"}], "]"}], 
+         "\[RightGuillemet]"}],
+        JLink`Objects`vm2`JavaObject5093154520825857], ",", 
+       InterpretationBox[
+        RowBox[{"\[LeftGuillemet]", 
+         RowBox[{"JavaObject", "[", 
+          RowBox[{"java", ".", "lang", ".", "Object"}], "]"}], 
+         "\[RightGuillemet]"}],
+        JLink`Objects`vm2`JavaObject32255151326625793]}], "}"}], ",", 
+     InterpretationBox[
+      RowBox[{"\[LeftGuillemet]", 
+       RowBox[{"JavaObject", "[", 
+        RowBox[{"java", ".", "lang", ".", "Object"}], "]"}], 
+       "\[RightGuillemet]"}],
+      JLink`Objects`vm2`JavaObject23048651697815553]}], "}"}], ",", 
+   InterpretationBox[
+    RowBox[{"\[LeftGuillemet]", 
+     RowBox[{"JavaObject", "[", 
+      RowBox[{"java", ".", "lang", ".", "Object"}], "]"}], 
+     "\[RightGuillemet]"}],
+    JLink`Objects`vm2`JavaObject33092514676211713]}], "}"}]], "Output",
+ CellChangeTimes->{{3.496282817894328*^9, 3.4962828215405293`*^9}, 
+   3.496862786759459*^9, 3.496865995198772*^9, 3.49686697287914*^9, 
+   3.497064696037383*^9, 3.497195285969137*^9, 3.4972329725198717`*^9, 
+   3.497235401257869*^9, {3.497235595642363*^9, 3.49723562341679*^9}, 
+   3.497320557425264*^9, 3.4973234501008387`*^9, 3.497324468016082*^9, {
+   3.497324743782164*^9, 3.4973247589840803`*^9}, 3.5041391204732227`*^9, 
+   3.5041398267163773`*^9, 3.504140195251383*^9}]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["bugs (may crash link)", "Section",
+ CellChangeTimes->{{3.497195243691918*^9, 3.497195250737996*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ClojureEvaluate", "[", 
+  RowBox[{"Unevaluated", "@", 
+   RowBox[{"quote", "@", 
+    RowBox[{"Plus", "[", 
+     RowBox[{"a", ",", "b"}], "]"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.497068465768692*^9, 3.4970685350608463`*^9}}],
+
+Cell[BoxData["$Failed"], "Output",
+ CellChangeTimes->{{3.497068467012848*^9, 3.497068482332088*^9}, {
+  3.497068514964855*^9, 3.497068535521159*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ClojureEvaluate", "[", 
+  RowBox[{"quote", "@", 
+   RowBox[{
+    RowBox[{"ClojureSymbol", "[", "\"\<+\>\"", "]"}], "[", 
+    RowBox[{"1", ",", "2"}], "]"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.497068441459156*^9, 3.497068442927825*^9}}],
+
+Cell[BoxData["$Failed"], "Output",
+ CellChangeTimes->{3.4970684433288383`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ClojureEvaluate", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"1", ",", "2", ",", "3", ",", "4", ",", "5"}], "}"}], "[", "0", 
+   "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.497064580037148*^9, 3.497064582889183*^9}}],
+
+Cell[BoxData["$Failed"], "Output",
+ CellChangeTimes->{3.497064583297811*^9, 3.504139132470895*^9}]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+AutoGeneratedPackage->Automatic,
+WindowSize->{1436, 856},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+ShowSelection->True,
+InputAutoReplacements->{
+ "\\" -> "\:2024", "--" -> "\:2011", "-=" -> "\:02cd", "''" -> "\:0589", "**" -> 
+  "\:204e", "\[DownQuestion]" -> "\:2047", "!!" -> "\:203c"},
+FrontEndVersion->"8.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (November 6, \
+2010)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[422, 15, 166, 2, 76, "Title"],
+Cell[591, 19, 266, 6, 27, "Input"],
+Cell[860, 27, 151, 3, 27, "Input"],
+Cell[1014, 32, 213, 4, 27, "Input"],
+Cell[1230, 38, 188, 3, 27, "Input"],
+Cell[1421, 43, 92, 1, 27, "Input"],
+Cell[CellGroupData[{
+Cell[1538, 48, 91, 1, 67, "Section"],
+Cell[CellGroupData[{
+Cell[1654, 53, 114, 1, 34, "Subsection"],
+Cell[1771, 56, 293, 8, 27, "Input"],
+Cell[CellGroupData[{
+Cell[2089, 68, 286, 5, 27, "Input"],
+Cell[2378, 75, 1497, 39, 43, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3912, 119, 134, 2, 27, "Input"],
+Cell[4049, 123, 217, 6, 46, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4303, 134, 123, 2, 27, "Input"],
+Cell[4429, 138, 223, 3, 27, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4701, 147, 107, 1, 34, "Subsection"],
+Cell[CellGroupData[{
+Cell[4833, 152, 219, 5, 27, "Input"],
+Cell[5055, 159, 717, 17, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5809, 181, 197, 5, 27, "Input"],
+Cell[6009, 188, 645, 16, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6691, 209, 466, 9, 27, "Input"],
+Cell[7160, 220, 949, 21, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8146, 246, 246, 6, 27, "Input"],
+Cell[8395, 254, 274, 6, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8706, 265, 374, 9, 27, "Input"],
+Cell[9083, 276, 242, 5, 27, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9374, 287, 164, 2, 34, "Subsection"],
+Cell[CellGroupData[{
+Cell[9563, 293, 715, 13, 27, "Input"],
+Cell[10281, 308, 794, 13, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11112, 326, 815, 17, 27, "Input"],
+Cell[11930, 345, 465, 8, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12432, 358, 629, 15, 27, "Input"],
+Cell[13064, 375, 559, 10, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[13660, 390, 465, 11, 27, "Input"],
+Cell[14128, 403, 544, 10, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[14709, 418, 184, 3, 27, "Input"],
+Cell[14896, 423, 316, 4, 27, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[15261, 433, 242, 6, 34, "Subsection"],
+Cell[CellGroupData[{
+Cell[15528, 443, 660, 17, 27, "Input"],
+Cell[16191, 462, 624, 13, 27, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[16864, 481, 156, 2, 34, "Subsection"],
+Cell[CellGroupData[{
+Cell[17045, 487, 224, 5, 27, "Input"],
+Cell[17272, 494, 378, 7, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[17687, 506, 159, 4, 27, "Input"],
+Cell[17849, 512, 318, 6, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[18204, 523, 214, 5, 27, "Input"],
+Cell[18421, 530, 410, 7, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[18868, 542, 206, 5, 27, "Input"],
+Cell[19077, 549, 257, 6, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[19371, 560, 461, 12, 27, "Input"],
+Cell[19835, 574, 333, 5, 27, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[20217, 585, 121, 2, 34, "Subsection"],
+Cell[CellGroupData[{
+Cell[20363, 591, 267, 7, 27, "Input"],
+Cell[20633, 600, 315, 6, 27, "Output"],
+Cell[20951, 608, 288, 5, 27, "Output"],
+Cell[21242, 615, 264, 5, 27, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[21555, 626, 152, 2, 34, "Subsection"],
+Cell[CellGroupData[{
+Cell[21732, 632, 337, 9, 27, "Input"],
+Cell[22072, 643, 430, 8, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[22539, 656, 280, 7, 27, "Input"],
+Cell[22822, 665, 371, 11, 27, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[23242, 682, 128, 2, 34, "Subsection"],
+Cell[CellGroupData[{
+Cell[23395, 688, 245, 5, 27, "Input"],
+Cell[23643, 695, 514, 12, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[24194, 712, 270, 8, 27, "Input"],
+Cell[24467, 722, 408, 10, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[24912, 737, 293, 5, 27, "Input"],
+Cell[25208, 744, 385, 7, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[25630, 756, 336, 7, 27, "Input"],
+Cell[25969, 765, 241, 3, 27, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[26259, 774, 127, 2, 34, "Subsection"],
+Cell[CellGroupData[{
+Cell[26411, 780, 246, 5, 27, "Input"],
+Cell[26660, 787, 289, 5, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[26986, 797, 214, 4, 27, "Input"],
+Cell[27203, 803, 286, 5, 27, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[27538, 814, 100, 1, 34, "Subsection"],
+Cell[CellGroupData[{
+Cell[27663, 819, 204, 4, 27, "Input"],
+Cell[27870, 825, 381, 8, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[28288, 838, 272, 6, 27, "Input"],
+Cell[28563, 846, 301, 5, 46, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[28901, 856, 291, 6, 27, "Input"],
+Cell[29195, 864, 313, 5, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[29545, 874, 296, 6, 27, "Input"],
+Cell[29844, 882, 327, 5, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[30208, 892, 233, 4, 27, "Input"],
+Cell[30444, 898, 329, 5, 46, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[30822, 909, 92, 1, 34, "Subsection"],
+Cell[CellGroupData[{
+Cell[30939, 914, 192, 4, 27, "Input"],
+Cell[31134, 920, 420, 8, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[31591, 933, 165, 3, 27, "Input"],
+Cell[31759, 938, 214, 3, 27, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[32022, 947, 99, 1, 34, "Subsection"],
+Cell[CellGroupData[{
+Cell[32146, 952, 215, 4, 27, "Input"],
+Cell[32364, 958, 406, 6, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[32807, 969, 399, 8, 27, "Input"],
+Cell[33209, 979, 366, 5, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[33612, 989, 440, 10, 27, "Input"],
+Cell[34055, 1001, 384, 5, 27, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[34488, 1012, 100, 1, 34, "Subsection"],
+Cell[CellGroupData[{
+Cell[34613, 1017, 242, 4, 27, "Input"],
+Cell[34858, 1023, 407, 9, 27, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[35314, 1038, 103, 1, 34, "Subsection"],
+Cell[CellGroupData[{
+Cell[35442, 1043, 532, 10, 27, "Input"],
+Cell[35977, 1055, 963, 17, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[36977, 1077, 247, 5, 27, "Input"],
+Cell[37227, 1084, 346, 8, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[37610, 1097, 295, 7, 27, "Input"],
+Cell[37908, 1106, 582, 14, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[38527, 1125, 265, 6, 27, "Input"],
+Cell[38795, 1133, 308, 5, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[39140, 1143, 639, 17, 27, "Input"],
+Cell[39782, 1162, 261, 4, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[40080, 1171, 291, 6, 27, "Input"],
+Cell[40374, 1179, 370, 8, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[40781, 1192, 908, 22, 27, "Input"],
+Cell[41692, 1216, 403, 7, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[42132, 1228, 614, 13, 27, "Input"],
+Cell[42749, 1243, 1608, 37, 27, "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[44418, 1287, 106, 1, 67, "Section"],
+Cell[CellGroupData[{
+Cell[44549, 1292, 256, 6, 27, "Input"],
+Cell[44808, 1300, 149, 2, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[44994, 1307, 265, 6, 27, "Input"],
+Cell[45262, 1315, 78, 1, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[45377, 1321, 245, 6, 27, "Input"],
+Cell[45625, 1329, 98, 1, 27, "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
