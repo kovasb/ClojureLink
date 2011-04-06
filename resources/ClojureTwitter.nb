@@ -1,0 +1,4306 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[    183217,       4297]
+NotebookOptionsPosition[    173829,       3992]
+NotebookOutlinePosition[    174847,       4026]
+CellTagsIndexPosition[    174674,       4019]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"CL", "=", "ClojureEvaluate"}]], "Input",
+ CellChangeTimes->{{3.5059596236768417`*^9, 3.5059596274691677`*^9}}],
+
+Cell[BoxData["ClojureEvaluate"], "Output",
+ CellChangeTimes->{3.5059596278805227`*^9, 3.506201558727932*^9, 
+  3.5063919387042227`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"import", "[", 
+   RowBox[{
+   "quote", "[", 
+    "org\:2024apache\:2024hadoop\:2024hbase\:2024util\:2024Bytes", "]"}], 
+   "]"}], "//", "ClojureEvaluate"}]], "Input"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\[LeftGuillemet]", 
+   RowBox[{"JavaObject", "[", 
+    RowBox[{"java", ".", "lang", ".", "Class"}], "]"}], "\[RightGuillemet]"}],
+  
+  JLink`Objects`vm2`JavaObject3509438547755009]], "Output",
+ CellChangeTimes->{3.5062249388709106`*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"SetClojureLinkAutoReplacements", "[", 
+  RowBox[{"EvaluationNotebook", "[", "]"}], "]"}]], "Input"],
+
+Cell[CellGroupData[{
+
+Cell["", "Section"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"mideasters", "=", 
+   RowBox[{"{", 
+    RowBox[{
+    "\"\<oshaokhtmeligi\>\"", ",", "\"\<Lujee\>\"", ",", 
+     "\"\<norashalaby\>\"", ",", "\"\<TwiddleEastNews\>\"", ",", 
+     "\"\<pressfreedom\>\"", ",", "\"\<ghazalairshad\>\"", ",", 
+     "\"\<NouralAdly\>\"", ",", "\"\<drnemovet\>\"", ",", 
+     "\"\<Angela_Deane\>\"", ",", "\"\<GayMiddleEast\>\"", ",", 
+     "\"\<Advox\>\"", ",", "\"\<demotix\>\"", ",", "\"\<iyad_elbaghdadi\>\"", 
+     ",", "\"\<netraKL\>\"", ",", "\"\<ElNa7aS_Pasha\>\"", ",", 
+     "\"\<hfakhry\>\"", ",", "\"\<TEDataEgypt\>\"", ",", 
+     "\"\<themoornextdoor\>\"", ",", "\"\<hebalsherif\>\"", ",", 
+     "\"\<ElBaradei\>\"", ",", "\"\<Mohamed_Bary\>\"", ",", 
+     "\"\<amrwaked\>\"", ",", "\"\<MarcusMonopoli\>\"", ",", "\"\<TauxFu\>\"",
+      ",", "\"\<tamsinchan\>\"", ",", "\"\<CaireneGirl\>\"", ",", 
+     "\"\<ZeroSilence\>\"", ",", "\"\<Gemyhood\>\"", ",", "\"\<BooDy\>\"", 
+     ",", "\"\<Ghafari\>\"", ",", "\"\<ANaje\>\"", ",", "\"\<ahmedsamih\>\"", 
+     ",", "\"\<oke1985\>\"", ",", "\"\<salmaeldaly\>\"", ",", 
+     "\"\<MAswad\>\"", ",", "\"\<BikyaMasr\>\"", ",", "\"\<Ramikantari\>\"", 
+     ",", "\"\<AmmarMa\>\"", ",", "\"\<DidiRemez\>\"", ",", 
+     "\"\<sarahussein\>\"", ",", "\"\<jricole\>\"", ",", "\"\<Warchadi\>\"", 
+     ",", "\"\<asteris\>\"", ",", "\"\<ghoshworld\>\"", ",", 
+     "\"\<DanRaviv\>\"", ",", "\"\<freearab\>\"", ",", "\"\<Crowdmap\>\"", 
+     ",", "\"\<CrisisMappers\>\"", ",", "\"\<occupiedcairo\>\"", ",", 
+     "\"\<anjucomet\>\"", ",", "\"\<AbdullaBnS\>\"", ",", 
+     "\"\<M_ElMotasem\>\"", ",", "\"\<EngyG\>\"", ",", "\"\<brericsson\>\"", 
+     ",", "\"\<LeilaFadel\>\"", ",", "\"\<krmaher\>\"", ",", 
+     "\"\<ashrafkhalil\>\"", ",", "\"\<JaredCohen\>\"", ",", 
+     "\"\<BloggerSeif\>\"", ",", "\"\<jpalfrey\>\"", ",", 
+     "\"\<daliamosaad\>\"", ",", "\"\<democracynow\>\"", ",", 
+     "\"\<LobnaAkrab\>\"", ",", "\"\<BDUTT\>\"", ",", "\"\<monamahfouz\>\"", 
+     ",", "\"\<eskandarany\>\"", ",", "\"\<aayatun\>\"", ",", 
+     "\"\<alfagih\>\"", ",", "\"\<ahmada2\>\"", ",", "\"\<waelabbas\>\"", 
+     ",", "\"\<nevin_A\>\"", ",", "\"\<remon_z\>\"", ",", "\"\<hmlc\>\"", 
+     ",", "\"\<Amiralx\>\"", ",", "\"\<BBCGavinLee\>\"", ",", 
+     "\"\<nadinetoukan\>\"", ",", "\"\<habibh\>\"", ",", "\"\<Sarahngb\>\"", 
+     ",", "\"\<etharkamal\>\"", ",", "\"\<Ali_Bahnasawy\>\"", ",", 
+     "\"\<lrozen\>\"", ",", "\"\<matthewteller\>\"", ",", 
+     "\"\<RamyYaacoub\>\"", ",", "\"\<hadeelalsh\>\"", ",", "\"\<qubadjt\>\"",
+      ",", "\"\<prashantrao\>\"", ",", "\"\<NadiaE\>\"", ",", 
+     "\"\<Ssirgany\>\"", ",", "\"\<FromJoanne\>\"", ",", "\"\<estr4ng3d\>\"", 
+     ",", "\"\<ellozy\>\"", ",", "\"\<gr33ndata\>\"", ",", 
+     "\"\<WANA_FORUM\>\"", ",", "\"\<Gsquare86\>\"", ",", 
+     "\"\<ianinegypt\>\"", ",", "\"\<anthonyshadid\>\"", ",", 
+     "\"\<Lastoadri\>\"", ",", "\"\<jilliancyork\>\"", ",", 
+     "\"\<BaghdadBrian\>\"", ",", "\"\<gharbeia\>\"", ",", 
+     "\"\<ziad_mohi\>\"", ",", "\"\<Mozn\>\"", ",", "\"\<jstacher\>\"", ",", 
+     "\"\<monasosh\>\"", ",", "\"\<Sandmonkey\>\"", ",", 
+     "\"\<farazrabbani\>\"", ",", "\"\<omarc\>\"", ",", "\"\<daliaziada\>\"", 
+     ",", "\"\<habibahamid\>\"", ",", "\"\<haaretzonline\>\"", ",", 
+     "\"\<harrietsherwood\>\"", ",", "\"\<MennaGamal\>\"", ",", 
+     "\"\<TravellerW\>\"", ",", "\"\<Sarahcarr\>\"", ",", "\"\<AmrEzzat\>\"", 
+     ",", "\"\<sarahspeakstome\>\"", ",", "\"\<shadysamir\>\"", ",", 
+     "\"\<maggieosama\>\"", ",", "\"\<tabulagaza\>\"", ",", "\"\<moftasa\>\"",
+      ",", "\"\<Zeinobia\>\"", ",", "\"\<Raafatology\>\"", ",", 
+     "\"\<beleidy\>\"", ",", "\"\<khadijapatel\>\"", ",", "\"\<azadessa\>\"", 
+     ",", "\"\<mmbilal\>\"", ",", "\"\<nashwanasreldin\>\"", ",", 
+     "\"\<mbaa\>\"", ",", "\"\<mohamed\>\"", ",", "\"\<hamish6PM\>\"", ",", 
+     "\"\<ragehomaar\>\"", ",", "\"\<omarkhalifa\>\"", ",", "\"\<mrayyan\>\"",
+      ",", "\"\<safdar\>\"", ",", "\"\<moeed\>\"", ",", "\"\<Riy\>\"", ",", 
+     "\"\<EnoughGaddafi\>\"", ",", "\"\<FreeLibya\>\"", ",", 
+     "\"\<Cyrenaican\>\"", ",", "\"\<AymanM\>\"", ",", "\"\<Brian_Whit\>\"", 
+     ",", "\"\<HooverInst\>\"", ",", "\"\<haaretzopinion\>\"", ",", 
+     "\"\<camanpour\>\"", ",", "\"\<Jerusalem_Post\>\"", ",", 
+     "\"\<joshmull\>\"", ",", "\"\<kv64info\>\"", ",", "\"\<ahramEgypt\>\"", 
+     ",", "\"\<BrookingsInst\>\"", ",", "\"\<hrw\>\"", ",", 
+     "\"\<witnessorg\>\"", ",", "\"\<BrookingsFP\>\"", ",", "\"\<CFR_org\>\"",
+      ",", "\"\<USIP\>\"", ",", "\"\<CrisisGroup\>\"", ",", 
+     "\"\<AliveInEgypt\>\"", ",", "\"\<evanchill\>\"", ",", 
+     "\"\<JacksonDiehl\>\"", ",", "\"\<alaa\>\"", ",", "\"\<Ghonim\>\"", ",", 
+     "\"\<stevenacook\>\"", ",", "\"\<joshrogin\>\"", ",", 
+     "\"\<MJayRosenberg\>\"", ",", "\"\<georgehale\>\"", ",", 
+     "\"\<justimage\>\"", ",", "\"\<borzou\>\"", ",", "\"\<ryandevereaux\>\"",
+      ",", "\"\<Linaattalah\>\"", ",", "\"\<naveenaqvi\>\"", ",", 
+     "\"\<hackneylad\>\"", ",", "\"\<Omar_Gaza\>\"", ",", 
+     "\"\<jeremyscahill\>\"", ",", "\"\<3arabawy\>\"", ",", 
+     "\"\<sharifkouddous\>\"", ",", "\"\<mathieubastian\>\"", ",", 
+     "\"\<RamyRaoof\>\"", ",", "\"\<Elshaheeed\>\"", ",", "\"\<SherineT\>\"", 
+     ",", "\"\<yasmineryan\>\"", ",", "\"\<abdu\>\"", ",", "\"\<htgamal\>\"", 
+     ",", "\"\<afinighan\>\"", ",", "\"\<Desert_Dals\>\"", ",", 
+     "\"\<fpleitgenCNN\>\"", ",", "\"\<mosharrafzaidi\>\"", ",", 
+     "\"\<NickKristof\>\"", ",", "\"\<jrug\>\"", ",", "\"\<piyachatto\>\"", 
+     ",", "\"\<NaheedMustafa\>\"", ",", "\"\<Londonstani\>\"", ",", 
+     "\"\<bungdan\>\"", ",", "\"\<khalidalkhalifa\>\"", ",", 
+     "\"\<emile_hokayem\>\"", ",", "\"\<AJCountingCost\>\"", ",", 
+     "\"\<AlMasryAlYoum_E\>\"", ",", "\"\<SudaneseThinker\>\"", ",", 
+     "\"\<ahmed\>\"", ",", "\"\<lassecgen\>\"", ",", "\"\<bbclysedoucet\>\"", 
+     ",", "\"\<margaortigas\>\"", ",", "\"\<FTMiddleEast\>\"", ",", 
+     "\"\<manal\>\"", ",", "\"\<SaeedCNN\>\"", ",", "\"\<jonjensen\>\"", ",", 
+     "\"\<avilewis\>\"", ",", "\"\<melissakchan\>\"", ",", 
+     "\"\<RawyaRageh\>\"", ",", "\"\<AlanFisher\>\"", ",", "\"\<Moadow\>\"", 
+     ",", "\"\<glcarlstrom\>\"", ",", "\"\<Dima_Khatib\>\"", ",", 
+     "\"\<AJRizKhan\>\"", ",", "\"\<newgyptian\>\"", ",", "\"\<IvanCNN\>\"", 
+     ",", "\"\<phijazin\>\"", ",", "\"\<alexhanna\>\"", ",", 
+     "\"\<monaeltahawy\>\"", ",", "\"\<TrellaLB\>\"", ",", 
+     "\"\<blakehounshell\>\"", ",", "\"\<bencnn\>\"", ",", "\"\<bsebti\>\"", 
+     ",", "\"\<nolanjazeera\>\"", ",", "\"\<jordantimes\>\"", ",", 
+     "\"\<Nabeelrajab\>\"", ",", "\"\<gamaleid\>\"", ",", 
+     "\"\<shadihamid\>\"", ",", "\"\<Max_Fisher\>\"", ",", 
+     "\"\<FP_Magazine\>\"", ",", "\"\<BabakDehghan\>\"", ",", 
+     "\"\<Almezel\>\"", ",", "\"\<RaviCNN\>\"", ",", "\"\<HalaGorani\>\"", 
+     ",", "\"\<ArabRevolution\>\"", ",", "\"\<moalkhalifa\>\"", ",", 
+     "\"\<MiddleEastInst\>\"", ",", "\"\<tweetsintheME\>\"", ",", 
+     "\"\<RobAtState\>\"", ",", "\"\<sarahmckoolking\>\"", ",", 
+     "\"\<emilydparker\>\"", ",", "\"\<onwardcaro\>\"", ",", 
+     "\"\<erin_pelton\>\"", ",", "\"\<eliselabottcnn\>\"", ",", 
+     "\"\<PJCrowley\>\"", ",", "\"\<AlecJRoss\>\"", ",", "\"\<Katulis\>\"", 
+     ",", "\"\<abumuqawama\>\"", ",", "\"\<abuaardvark\>\"", ",", 
+     "\"\<AmjadAtallah\>\"", ",", "\"\<arabist\>\"", ",", "\"\<mwhanna1\>\"", 
+     ",", "\"\<WSJMidEast\>\"", ",", "\"\<SultanAlQassemi\>\"", ",", 
+     "\"\<AJELive\>\"", ",", "\"\<AJEnglish\>\""}], "}"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.506216270726309*^9, 3.506216275515749*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["clojure-twitter", "Section",
+ CellChangeTimes->{{3.505702072494532*^9, 3.505702075931149*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"use", "[", 
+   RowBox[{"quote", "[", "clojure\:2024contrib\:2024json", "]"}], "]"}], "//",
+   "CL"}]], "Input",
+ CellChangeTimes->{{3.505960510627471*^9, 3.5059605470880337`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"require", "[", 
+   RowBox[{"quote", "[", "twitter", "]"}], "]"}], "//", "CL"}]], "Input",
+ CellChangeTimes->{{3.505702114467105*^9, 3.505702121451236*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"require", "[", 
+   RowBox[{"quote", "[", 
+    RowBox[{"{", 
+     RowBox[{"oauth\:2024client", ",", "\:0589as", ",", "oauth"}], "}"}], 
+    "]"}], "]"}], "//", "CL"}]], "Input",
+ CellChangeTimes->{{3.505702154678094*^9, 3.505702177490912*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"def", "[", 
+   RowBox[{"oauth\:2011consumer", ",", 
+    RowBox[{"oauth`make\:2011consumer", "[", 
+     RowBox[{
+     "\"\<gf6hR6WixpxWRoTPzLSh3w\>\"", ",", 
+      "\"\<YiOJQZmwZCKyXjEsPiRsgLxINER7mPSUbA55AZNAIko\>\"", ",", 
+      "\"\<https://api.twitter.com/oauth/request_token\>\"", ",", 
+      "\"\<https://api.twitter.com/oauth/access_token\>\"", ",", 
+      "\"\<https://api.twitter.com/oauth/authorize\>\"", ",", 
+      "\:0589hmac\:2011sha1"}], "]"}]}], "]"}], "//", "CL"}]], "Input",
+ CellChangeTimes->{{3.505702181542589*^9, 3.505702256174816*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\[LeftGuillemet]", 
+   RowBox[{"JavaObject", "[", 
+    RowBox[{"clojure", ".", "lang", ".", "Var"}], "]"}], "\[RightGuillemet]"}],
+  JLink`Objects`vm2`JavaObject3005188449239041]], "Output",
+ CellChangeTimes->{3.505702256418592*^9, 3.505714722355955*^9, 
+  3.5059596390825377`*^9, 3.50620156593926*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"def", "[", 
+   RowBox[{
+   "oauth\:2011access\:2011token", ",", 
+    "\"\<2933441-J2x9hoG54wd3VVIUDz4rJsQroYaTa6CQQGfSFr5tAS\>\""}], "]"}], "//",
+   "CL"}]], "Input",
+ CellChangeTimes->{{3.50570234052212*^9, 3.505702375744577*^9}, 
+   3.505714730130612*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\[LeftGuillemet]", 
+   RowBox[{"JavaObject", "[", 
+    RowBox[{"clojure", ".", "lang", ".", "Var"}], "]"}], "\[RightGuillemet]"}],
+  JLink`Objects`vm2`JavaObject26086617038979073]], "Output",
+ CellChangeTimes->{3.505702376020132*^9, 3.505714733554001*^9, 
+  3.505959639424809*^9, 3.506201568986609*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"def", "[", 
+   RowBox[{
+   "oauth\:2011access\:2011token\:2011secret", ",", 
+    "\"\<S8eMWaqqeUengEajY49mZU7V2QMrcSy4wdF5SHObg\>\""}], "]"}], "//", 
+  "CL"}]], "Input",
+ CellChangeTimes->{{3.5057023513281717`*^9, 3.505702378815996*^9}, 
+   3.5057147328101883`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\[LeftGuillemet]", 
+   RowBox[{"JavaObject", "[", 
+    RowBox[{"clojure", ".", "lang", ".", "Var"}], "]"}], "\[RightGuillemet]"}],
+  JLink`Objects`vm2`JavaObject23919521949548545]], "Output",
+ CellChangeTimes->{3.505702379221388*^9, 3.505714734237667*^9, 
+  3.505959639687443*^9, 3.5062015697228518`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["nowmov_mideast token", "Subsection",
+ CellChangeTimes->{{3.5061319448297653`*^9, 3.5061319557982883`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"def", "[", 
+   RowBox[{
+   "oauth\:2011access\:2011token", ",", 
+    "\"\<248478681-LpeQtGrghK3TXo8A2kWm6XB3MWtUvowGRIVG1Yj0\>\""}], "]"}], "//",
+   "CL"}]], "Input",
+ CellChangeTimes->{{3.50570234052212*^9, 3.505702375744577*^9}, 
+   3.505714730130612*^9, 3.506132240588489*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\[LeftGuillemet]", 
+   RowBox[{"JavaObject", "[", 
+    RowBox[{"clojure", ".", "lang", ".", "Var"}], "]"}], "\[RightGuillemet]"}],
+  JLink`Objects`vm2`JavaObject35494178582429697]], "Output",
+ CellChangeTimes->{3.505702376020132*^9, 3.505714733554001*^9, 
+  3.505959639424809*^9, 3.506132245311417*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"def", "[", 
+   RowBox[{
+   "oauth\:2011access\:2011token\:2011secret", ",", 
+    "\"\<PWtOIOFpqqlFRh913DBTcEQG8YJBDRc8iUipkIgfE\>\""}], "]"}], "//", 
+  "CL"}]], "Input",
+ CellChangeTimes->{{3.5057023513281717`*^9, 3.505702378815996*^9}, 
+   3.5057147328101883`*^9, 3.506132243933508*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\[LeftGuillemet]", 
+   RowBox[{"JavaObject", "[", 
+    RowBox[{"clojure", ".", "lang", ".", "Var"}], "]"}], "\[RightGuillemet]"}],
+  JLink`Objects`vm2`JavaObject24116942738554881]], "Output",
+ CellChangeTimes->{3.505702379221388*^9, 3.505714734237667*^9, 
+  3.505959639687443*^9, 3.50613224608103*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["userinfo", "Subsection",
+ CellChangeTimes->{{3.505702609476905*^9, 3.505702610055174*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"twitter`with\:2011oauth", "[", 
+   RowBox[{
+   "oauth\:2011consumer", ",", " ", "oauth\:2011access\:2011token", ",", 
+    "oauth\:2011access\:2011token\:2011secret", ",", 
+    RowBox[{
+    "twitter`lookup\:2011users\:2011by\:2011id", "[", " ", "\"\<16529829\>\"",
+      "]"}]}], "]"}], "//", "CL"}]], "Input",
+ CellChangeTimes->{{3.505702903701396*^9, 3.5057029540005302`*^9}, 
+   3.505703008467823*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"\:0589status", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+       "\:0589text", 
+        "\[Rule]", "\<\"Profiled some of my code in latest guile and it is \
+cooking with gas! Looking forward to pending 2.0 release.\"\>"}], ",", 
+       RowBox[{"\:0589retweet\:02cdcount", "\[Rule]", "0"}], ",", 
+       RowBox[{"\:0589coordinates", "\[Rule]", "Null"}], ",", 
+       RowBox[{
+       "\:0589in\:02cdreply\:02cdto\:02cdstatus\:02cdid\:02cdstr", "\[Rule]", 
+        "Null"}], ",", 
+       RowBox[{"\:0589contributors", "\[Rule]", "Null"}], ",", 
+       RowBox[{
+       "\:0589in\:02cdreply\:02cdto\:02cduser\:02cdid\:02cdstr", "\[Rule]", 
+        "Null"}], ",", 
+       RowBox[{"\:0589id\:02cdstr", "\[Rule]", "\<\"33670065526145025\"\>"}], 
+       ",", 
+       RowBox[{
+       "\:0589in\:02cdreply\:02cdto\:02cdscreen\:02cdname", "\[Rule]", 
+        "Null"}], ",", 
+       RowBox[{"\:0589retweeted", "\[Rule]", "False"}], ",", 
+       RowBox[{"\:0589truncated", "\[Rule]", "False"}], ",", 
+       RowBox[{
+       "\:0589created\:02cdat", 
+        "\[Rule]", "\<\"Fri Feb 04 23:35:43 +0000 2011\"\>"}], ",", 
+       RowBox[{"\:0589geo", "\[Rule]", "Null"}], ",", 
+       RowBox[{"\:0589place", "\[Rule]", "Null"}], ",", 
+       RowBox[{
+       "\:0589in\:02cdreply\:02cdto\:02cdstatus\:02cdid", "\[Rule]", "Null"}],
+        ",", 
+       RowBox[{"\:0589favorited", "\[Rule]", "False"}], ",", 
+       RowBox[{
+       "\:0589source", 
+        "\[Rule]", "\<\"<a \
+href=\\\"http://itunes.apple.com/app/twitter/id333903271?mt=8\\\" \
+rel=\\\"nofollow\\\">Twitter for iPad</a>\"\>"}], ",", 
+       RowBox[{"\:0589id", "\[Rule]", "33670065526145025"}], ",", 
+       RowBox[{
+       "\:0589in\:02cdreply\:02cdto\:02cduser\:02cdid", "\[Rule]", "Null"}]}],
+       "}"}]}], ",", 
+    RowBox[{
+    "\:0589profile\:02cduse\:02cdbackground\:02cdimage", "\[Rule]", "False"}],
+     ",", 
+    RowBox[{"\:0589follow\:02cdrequest\:02cdsent", "\[Rule]", "False"}], ",", 
+    
+    RowBox[{
+    "\:0589profile\:02cdsidebar\:02cdfill\:02cdcolor", 
+     "\[Rule]", "\<\"ffffff\"\>"}], ",", 
+    RowBox[{"\:0589protected", "\[Rule]", "False"}], ",", 
+    RowBox[{"\:0589following", "\[Rule]", "False"}], ",", 
+    RowBox[{
+    "\:0589profile\:02cdbackground\:02cdimage\:02cdurl", 
+     "\[Rule]", \
+"\<\"http://a2.twimg.com/profile_background_images/187232855/reddit.jpg\"\>"}]\
+, ",", 
+    RowBox[{"\:0589contributors\:02cdenabled", "\[Rule]", "False"}], ",", 
+    RowBox[{"\:0589favourites\:02cdcount", "\[Rule]", "0"}], ",", 
+    RowBox[{"\:0589time\:02cdzone", "\[Rule]", "\<\"London\"\>"}], ",", 
+    RowBox[{"\:0589name", "\[Rule]", "\<\"zedstar@freenode\"\>"}], ",", 
+    RowBox[{"\:0589id\:02cdstr", "\[Rule]", "\<\"16529829\"\>"}], ",", 
+    RowBox[{"\:0589listed\:02cdcount", "\[Rule]", "1"}], ",", 
+    RowBox[{"\:0589utc\:02cdoffset", "\[Rule]", "0"}], ",", 
+    RowBox[{
+    "\:0589profile\:02cdlink\:02cdcolor", "\[Rule]", "\<\"3a2f82\"\>"}], ",", 
+    
+    RowBox[{"\:0589profile\:02cdbackground\:02cdtile", "\[Rule]", "True"}], 
+    ",", 
+    RowBox[{"\:0589location", "\[Rule]", "\<\"London\"\>"}], ",", 
+    RowBox[{"\:0589statuses\:02cdcount", "\[Rule]", "2690"}], ",", 
+    RowBox[{"\:0589followers\:02cdcount", "\[Rule]", "111"}], ",", 
+    RowBox[{"\:0589friends\:02cdcount", "\[Rule]", "251"}], ",", 
+    RowBox[{
+    "\:0589created\:02cdat", 
+     "\[Rule]", "\<\"Tue Sep 30 16:21:00 +0000 2008\"\>"}], ",", 
+    RowBox[{"\:0589lang", "\[Rule]", "\<\"en\"\>"}], ",", 
+    RowBox[{
+    "\:0589profile\:02cdsidebar\:02cdborder\:02cdcolor", 
+     "\[Rule]", "\<\"00103d\"\>"}], ",", 
+    RowBox[{"\:0589url", "\[Rule]", "\<\"http://zedstar.org\"\>"}], ",", 
+    RowBox[{"\:0589notifications", "\[Rule]", "False"}], ",", 
+    RowBox[{
+    "\:0589profile\:02cdbackground\:02cdcolor", "\[Rule]", "\<\"ffffff\"\>"}],
+     ",", 
+    RowBox[{"\:0589geo\:02cdenabled", "\[Rule]", "False"}], ",", 
+    RowBox[{
+    "\:0589show\:02cdall\:02cdinline\:02cdmedia", "\[Rule]", "False"}], ",", 
+    RowBox[{"\:0589is\:02cdtranslator", "\[Rule]", "False"}], ",", 
+    RowBox[{
+    "\:0589profile\:02cdimage\:02cdurl", 
+     "\[Rule]", \
+"\<\"http://a2.twimg.com/profile_images/1202646646/me_normal.jpg\"\>"}], ",", 
+    
+    RowBox[{"\:0589verified", "\[Rule]", "False"}], ",", 
+    RowBox[{"\:0589id", "\[Rule]", "16529829"}], ",", 
+    RowBox[{"\:0589description", "\[Rule]", "\<\"FSF #6831\"\>"}], ",", 
+    RowBox[{
+    "\:0589profile\:02cdtext\:02cdcolor", "\[Rule]", "\<\"080808\"\>"}], ",", 
+    
+    RowBox[{"\:0589screen\:02cdname", "\[Rule]", "\<\"jptmoore\"\>"}]}], 
+   "}"}], "}"}]], "Output",
+ CellChangeTimes->{3.505782942412516*^9, 3.505959645151648*^9}]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["timeline->hbase", "Section",
+ CellChangeTimes->{{3.506202522834247*^9, 3.506202532151806*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["into hbase", "Subsection",
+ CellChangeTimes->{{3.506202542200926*^9, 3.5062025517069807`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"sampleTimeline", "[", "username_", "]"}], ":=", 
+  RowBox[{"CL", "[", 
+   RowBox[{"(", 
+    RowBox[{"let", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"tweetlist", ",", 
+        RowBox[{"twitter`with\:2011oauth", "[", 
+         RowBox[{
+         "oauth\:2011consumer", ",", " ", "oauth\:2011access\:2011token", ",",
+           "oauth\:2011access\:2011token\:2011secret", ",", 
+          RowBox[{"twitter`user\:2011timeline", "[", 
+           RowBox[{
+           "\:0589id", ",", " ", "username", ",", "\:0589count", ",", 
+            "\"\<200\>\""}], "]"}]}], "]"}]}], "}"}], ",", 
+      RowBox[{"map", "[", 
+       RowBox[{
+        RowBox[{"fn", "[", 
+         RowBox[{
+          RowBox[{"{", "tweet", "}"}], ",", 
+          RowBox[{"hb`with\:2011table", "[", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"t", ",", 
+              RowBox[{"hb`table", "[", "\"\<tweets\>\"", "]"}]}], "}"}], ",", 
+            
+            RowBox[{"hb`put", "[", 
+             RowBox[{"t", ",", 
+              RowBox[{"str", "[", 
+               RowBox[{
+                RowBox[{"\:0589screen\:02cdname", "[", 
+                 RowBox[{"\:0589user", "[", "tweet", "]"}], "]"}], ",", 
+                "\"\</\>\"", ",", 
+                RowBox[{"\:0589id\:02cdstr", "[", "tweet", "]"}]}], "]"}], 
+              ",", "\:0589values", ",", 
+              RowBox[{"{", 
+               RowBox[{"\:0589raw", ",", 
+                RowBox[{"{", 
+                 RowBox[{"\:0589json", ",", 
+                  RowBox[{"json\:2011str", "[", "tweet", "]"}]}], "}"}]}], 
+               "}"}]}], "]"}]}], "]"}]}], "]"}], ",", "tweetlist"}], "]"}]}], 
+     "]"}], ")"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.505961538726911*^9, 3.5059615886182117`*^9}, {
+  3.505961953723534*^9, 3.50596197816402*^9}, {3.506201948196156*^9, 
+  3.506201955297556*^9}, {3.50620198787722*^9, 3.50620216963728*^9}, {
+  3.50620649434793*^9, 3.506206502278857*^9}, {3.5062162269245977`*^9, 
+  3.50621625787788*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"mideasters", "[", 
+  RowBox[{"[", "3", "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.506216324526688*^9, 3.506216327278858*^9}}],
+
+Cell[BoxData["\<\"norashalaby\"\>"], "Output",
+ CellChangeTimes->{{3.506216319989876*^9, 3.506216327574071*^9}}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"Print", "[", "#", "]"}], ";", 
+      RowBox[{"sampleTimeline", "[", "#", "]"}]}], ")"}], "&"}], "/@", 
+   RowBox[{"Drop", "[", 
+    RowBox[{"mideasters", ",", "3"}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.506216262305963*^9, 3.5062162834894257`*^9}, 
+   3.5062163301099567`*^9, {3.5062163731994467`*^9, 3.506216395844811*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["out of hbase", "Subsection",
+ CellChangeTimes->{{3.5062025485829906`*^9, 3.506202549910935*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"hb`with\:2011table", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"test\:2011tbl", ",", 
+      RowBox[{"hb`table", "[", "\"\<tweets\>\"", "]"}]}], "}"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"hb`with\:2011scanner", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"scan\:2011results", ",", 
+        RowBox[{"hb`scan", "[", 
+         RowBox[{
+         "test\:2011tbl", ",", "\:0589start\:2011row", ",", "\"\<Lujee\>\""}],
+          "]"}]}], "}"}], ",", 
+      RowBox[{"map", "[", 
+       RowBox[{
+        RowBox[{"fn", "[", 
+         RowBox[{
+          RowBox[{"{", "yy", "}"}], ",", 
+          RowBox[{"read\:2011json", "[", 
+           RowBox[{"last", "@", 
+            RowBox[{"first", "@", 
+             RowBox[{"get\:2011in", "[", 
+              RowBox[{
+               RowBox[{"hb`as\:2011map", "[", 
+                RowBox[{"yy", ",", "\:0589map\:2011value", ",", 
+                 RowBox[{"fn", "[", 
+                  RowBox[{
+                   RowBox[{"{", "x", "}"}], ",", 
+                   RowBox[{"Bytes`toString", "[", "x", "]"}]}], "]"}], ",", 
+                 "\:0589map\:2011family", ",", 
+                 RowBox[{"fn", "[", 
+                  RowBox[{
+                   RowBox[{"{", "x", "}"}], ",", 
+                   RowBox[{"Bytes`toString", "[", "x", "]"}]}], "]"}], ",", 
+                 "\:0589map\:2011qualifier", ",", 
+                 RowBox[{"fn", "[", 
+                  RowBox[{
+                   RowBox[{"{", "x", "}"}], ",", 
+                   RowBox[{"Bytes`toString", "[", "x", "]"}]}], "]"}]}], 
+                "]"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"\"\<raw\>\"", ",", "\"\<json\>\""}], "}"}]}], 
+              "]"}]}]}], "]"}]}], "]"}], ",", 
+        RowBox[{"doall", "@", 
+         RowBox[{"seq", "@", "scan\:2011results"}]}]}], "]"}]}], "]"}]}], 
+   "\[IndentingNewLine]", "]"}], "//", "CL"}]], "Input",
+ CellChangeTimes->{{3.5062058620075493`*^9, 3.506205865891307*^9}, {
+   3.5062059494381733`*^9, 3.506205962162332*^9}, {3.5062060835133867`*^9, 
+   3.506206162900769*^9}, {3.50620622504396*^9, 3.506206251358419*^9}, 
+   3.506206508607553*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"hb`with\:2011table", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"test\:2011tbl", ",", 
+      RowBox[{"hb`table", "[", "\"\<tweets\>\"", "]"}]}], "}"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"hb`with\:2011scanner", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"scan\:2011results", ",", 
+        RowBox[{"hb`scan", "[", 
+         RowBox[{
+         "test\:2011tbl", ",", "\:0589start\:2011row", ",", "\"\<Lujee\>\""}],
+          "]"}]}], "}"}], ",", 
+      RowBox[{"map", "[", 
+       RowBox[{
+        RowBox[{"fn", "[", 
+         RowBox[{
+          RowBox[{"{", "yy", "}"}], ",", 
+          RowBox[{"read\:2011json", "[", 
+           RowBox[{"last", "@", 
+            RowBox[{"first", "@", 
+             RowBox[{"get\:2011in", "[", 
+              RowBox[{
+               RowBox[{"hb`as\:2011map", "[", 
+                RowBox[{"yy", ",", 
+                 RowBox[{"\:0589map\:2011value", "->", 
+                  RowBox[{"fn", "[", 
+                   RowBox[{
+                    RowBox[{"{", "x", "}"}], ",", 
+                    RowBox[{"Bytes`toString", "[", "x", "]"}]}], "]"}]}], ",", 
+                 RowBox[{"\:0589map\:2011family", "->", 
+                  RowBox[{"fn", "[", 
+                   RowBox[{
+                    RowBox[{"{", "x", "}"}], ",", 
+                    RowBox[{"Bytes`toString", "[", "x", "]"}]}], "]"}]}], ",", 
+                 RowBox[{"\:0589map\:2011qualifier", "->", 
+                  RowBox[{"fn", "[", 
+                   RowBox[{
+                    RowBox[{"{", "x", "}"}], ",", 
+                    RowBox[{"Bytes`toString", "[", "x", "]"}]}], "]"}]}]}], 
+                "]"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"\"\<raw\>\"", ",", "\"\<json\>\""}], "}"}]}], 
+              "]"}]}]}], "]"}]}], "]"}], ",", 
+        RowBox[{"doall", "@", 
+         RowBox[{"seq", "@", "scan\:2011results"}]}]}], "]"}]}], "]"}]}], 
+   "\[IndentingNewLine]", "]"}], "//", "CL"}]], "Input",
+ CellChangeTimes->{{3.5062068260536137`*^9, 3.5062068361318893`*^9}, {
+  3.506206868138996*^9, 3.506206872043249*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["get specific user\[CloseCurlyQuote]s tweets", "Subsection",
+ CellChangeTimes->{{3.506217777512384*^9, 3.5062177816953506`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"hb`with\:2011table", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"test\:2011tbl", ",", 
+      RowBox[{"hb`table", "[", "\"\<tweets\>\"", "]"}]}], "}"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"hb`with\:2011scanner", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"scan\:2011results", ",", 
+        RowBox[{"hb`scan", "[", 
+         RowBox[{
+         "test\:2011tbl", ",", "\:0589start\:2011row", ",", "\"\<Lujee\>\"", 
+          ",", "\:0589stop\:2011row", ",", "\"\<Lujee1\>\""}], "]"}]}], "}"}],
+       ",", 
+      RowBox[{"count", "@", 
+       RowBox[{"seq", "@", "scan\:2011results"}]}]}], "]"}]}], 
+   "\[IndentingNewLine]", "]"}], "//", "CL"}]], "Input",
+ CellChangeTimes->{{3.506217804026367*^9, 3.506217850468206*^9}, {
+  3.506217890682583*^9, 3.506217931897431*^9}}],
+
+Cell[BoxData["981"], "Output",
+ CellChangeTimes->{{3.506217819326921*^9, 3.506217850801498*^9}, {
+  3.5062178915413437`*^9, 3.5062179324073057`*^9}}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"UserTweets", "[", "uname_", "]"}], ":=", 
+  RowBox[{
+   RowBox[{"hb`with\:2011table", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"test\:2011tbl", ",", 
+       RowBox[{"hb`table", "[", "\"\<tweets\>\"", "]"}]}], "}"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"hb`with\:2011scanner", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"scan\:2011results", ",", 
+         RowBox[{"hb`scan", "[", 
+          RowBox[{
+          "test\:2011tbl", ",", "\:0589start\:2011row", ",", "uname", ",", 
+           "\:0589stop\:2011row", ",", 
+           RowBox[{"uname", "<>", "\"\<1\>\""}]}], "]"}]}], "}"}], ",", 
+       RowBox[{"map", "[", 
+        RowBox[{
+         RowBox[{"fn", "[", 
+          RowBox[{
+           RowBox[{"{", "yy", "}"}], ",", 
+           RowBox[{"read\:2011json", "[", 
+            RowBox[{"last", "@", 
+             RowBox[{"first", "@", 
+              RowBox[{"get\:2011in", "[", 
+               RowBox[{
+                RowBox[{"hb`as\:2011map", "[", 
+                 RowBox[{"yy", ",", 
+                  RowBox[{"\:0589map\:2011value", "->", 
+                   RowBox[{"fn", "[", 
+                    RowBox[{
+                    RowBox[{"{", "x", "}"}], ",", 
+                    RowBox[{"Bytes`toString", "[", "x", "]"}]}], "]"}]}], ",", 
+                  RowBox[{"\:0589map\:2011family", "->", 
+                   RowBox[{"fn", "[", 
+                    RowBox[{
+                    RowBox[{"{", "x", "}"}], ",", 
+                    RowBox[{"Bytes`toString", "[", "x", "]"}]}], "]"}]}], ",", 
+                  RowBox[{"\:0589map\:2011qualifier", "->", 
+                   RowBox[{"fn", "[", 
+                    RowBox[{
+                    RowBox[{"{", "x", "}"}], ",", 
+                    RowBox[{"Bytes`toString", "[", "x", "]"}]}], "]"}]}]}], 
+                 "]"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<raw\>\"", ",", "\"\<json\>\""}], "}"}]}], 
+               "]"}]}]}], "]"}]}], "]"}], ",", 
+         RowBox[{"doall", "@", 
+          RowBox[{"seq", "@", "scan\:2011results"}]}]}], "]"}]}], "]"}]}], 
+    "\[IndentingNewLine]", "]"}], "//", "CL"}]}]], "Input",
+ CellChangeTimes->{{3.506217951581278*^9, 3.506217976136568*^9}, 
+   3.506218082753278*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"arabicfraction", "=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"#", "->", 
+     RowBox[{"With", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"s", "=", 
+         RowBox[{"Flatten", "@", 
+          RowBox[{"ToCharacterCode", "@", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{"\:0589text", "/.", "#"}], ")"}], "&"}], "/@", 
+             RowBox[{"UserTweets", "[", "#", "]"}]}], ")"}]}]}]}], "}"}], ",", 
+       RowBox[{"N", "[", 
+        RowBox[{
+         RowBox[{"Length", "@", 
+          RowBox[{"Select", "[", 
+           RowBox[{"s", ",", 
+            RowBox[{
+             RowBox[{"#", ">", "1000"}], "&"}]}], "]"}]}], "/", 
+         RowBox[{"Length", "[", "s", "]"}]}], "]"}]}], "]"}]}], "&"}], "/@", 
+   "mideasters"}]}]], "Input",
+ CellChangeTimes->{{3.50621810966508*^9, 3.506218113183096*^9}, {
+  3.5062214327116756`*^9, 3.506221460235865*^9}, {3.506222564829893*^9, 
+  3.506222581325344*^9}, {3.5062226222671623`*^9, 3.5062226984351788`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"\<\"oshaokhtmeligi\"\>", "\[Rule]", "0.6924460431654677`"}], ",", 
+   
+   RowBox[{"\<\"Lujee\"\>", "\[Rule]", "0.012052226314027453`"}], ",", 
+   RowBox[{"\<\"norashalaby\"\>", "\[Rule]", "0.0038788602118454423`"}], ",", 
+   
+   RowBox[{"\<\"TwiddleEastNews\"\>", "\[Rule]", "0.000507292327203551`"}], 
+   ",", 
+   RowBox[{"\<\"pressfreedom\"\>", "\[Rule]", "0.0010265503242965798`"}], ",", 
+   RowBox[{"\<\"ghazalairshad\"\>", "\[Rule]", "0.`"}], ",", 
+   RowBox[{"\<\"NouralAdly\"\>", "\[Rule]", "0.0005825808330905913`"}], ",", 
+   RowBox[{"\<\"drnemovet\"\>", "\[Rule]", "0.6526928675400291`"}], ",", 
+   RowBox[{"\<\"Angela_Deane\"\>", "\[Rule]", "0.00051698670605613`"}], ",", 
+   RowBox[{"\<\"GayMiddleEast\"\>", "\[Rule]", "0.004480155831507183`"}], ",", 
+   RowBox[{"\<\"Advox\"\>", "\[Rule]", "0.0009919877909194963`"}], ",", 
+   RowBox[{"\<\"demotix\"\>", "\[Rule]", "0.0000491497100167109`"}], ",", 
+   RowBox[{"\<\"iyad_elbaghdadi\"\>", "\[Rule]", "0.017370664077250905`"}], 
+   ",", 
+   RowBox[{"\<\"netraKL\"\>", "\[Rule]", "0.0009074410163339383`"}], ",", 
+   RowBox[{"\<\"ElNa7aS_Pasha\"\>", "\[Rule]", "0.650543682039745`"}], ",", 
+   RowBox[{"\<\"hfakhry\"\>", "\[Rule]", "Indeterminate"}], ",", 
+   RowBox[{"\<\"TEDataEgypt\"\>", "\[Rule]", "0.04838951310861423`"}], ",", 
+   RowBox[{"\<\"themoornextdoor\"\>", "\[Rule]", "0.021303501945525292`"}], 
+   ",", 
+   RowBox[{"\<\"hebalsherif\"\>", "\[Rule]", "0.031008292105079785`"}], ",", 
+   RowBox[{"\<\"ElBaradei\"\>", "\[Rule]", "0.46314719952584565`"}], ",", 
+   RowBox[{"\<\"Mohamed_Bary\"\>", "\[Rule]", "0.01749502982107356`"}], ",", 
+   RowBox[{"\<\"amrwaked\"\>", "\[Rule]", "0.3992789199140841`"}], ",", 
+   RowBox[{"\<\"MarcusMonopoli\"\>", "\[Rule]", "0.`"}], ",", 
+   RowBox[{"\<\"TauxFu\"\>", "\[Rule]", "0.00006954102920723227`"}], ",", 
+   RowBox[{"\<\"tamsinchan\"\>", "\[Rule]", "0.00010283833813245579`"}], ",", 
+   
+   RowBox[{"\<\"CaireneGirl\"\>", "\[Rule]", "0.009997369113391212`"}], ",", 
+   RowBox[{"\<\"ZeroSilence\"\>", "\[Rule]", "0.`"}], ",", 
+   RowBox[{"\<\"Gemyhood\"\>", "\[Rule]", "0.6585295392171024`"}], ",", 
+   RowBox[{"\<\"BooDy\"\>", "\[Rule]", "0.5969296944526846`"}], ",", 
+   RowBox[{"\<\"Ghafari\"\>", "\[Rule]", "0.2699059561128527`"}], ",", 
+   RowBox[{"\<\"ANaje\"\>", "\[Rule]", "0.7244734737403359`"}], ",", 
+   RowBox[{"\<\"ahmedsamih\"\>", "\[Rule]", "0.637124569177745`"}], ",", 
+   RowBox[{"\<\"oke1985\"\>", "\[Rule]", "0.5787128139830999`"}], ",", 
+   RowBox[{"\<\"salmaeldaly\"\>", "\[Rule]", "0.25717751718560455`"}], ",", 
+   RowBox[{"\<\"MAswad\"\>", "\[Rule]", "0.2146417889189574`"}], ",", 
+   RowBox[{"\<\"BikyaMasr\"\>", "\[Rule]", "0.003040853201709929`"}], ",", 
+   RowBox[{"\<\"Ramikantari\"\>", "\[Rule]", "0.0011525479542273812`"}], ",", 
+   
+   RowBox[{"\<\"AmmarMa\"\>", "\[Rule]", "0.03174497092828978`"}], ",", 
+   RowBox[{"\<\"DidiRemez\"\>", "\[Rule]", "0.0013338183581908573`"}], ",", 
+   RowBox[{"\<\"sarahussein\"\>", "\[Rule]", "0.005306003779619131`"}], ",", 
+   RowBox[{"\<\"jricole\"\>", "\[Rule]", "0.0036881547455565582`"}], ",", 
+   RowBox[{"\<\"Warchadi\"\>", "\[Rule]", "0.01700258979844612`"}], ",", 
+   RowBox[{"\<\"asteris\"\>", "\[Rule]", "0.`"}], ",", 
+   RowBox[{"\<\"ghoshworld\"\>", "\[Rule]", "0.`"}], ",", 
+   RowBox[{"\<\"DanRaviv\"\>", "\[Rule]", "0.`"}], ",", 
+   RowBox[{"\<\"freearab\"\>", "\[Rule]", "0.010722169662567014`"}], ",", 
+   RowBox[{"\<\"Crowdmap\"\>", "\[Rule]", "0.00008805917576611483`"}], ",", 
+   RowBox[{"\<\"CrisisMappers\"\>", "\[Rule]", "0.0009917527925670739`"}], 
+   ",", 
+   RowBox[{"\<\"occupiedcairo\"\>", "\[Rule]", "0.002789832610043397`"}], ",", 
+   RowBox[{"\<\"anjucomet\"\>", "\[Rule]", "0.0002526017985248055`"}], ",", 
+   RowBox[{"\<\"AbdullaBnS\"\>", "\[Rule]", "0.3305073859987155`"}], ",", 
+   RowBox[{"\<\"M_ElMotasem\"\>", "\[Rule]", "0.41202562838836865`"}], ",", 
+   RowBox[{"\<\"EngyG\"\>", "\[Rule]", "0.20506605259968488`"}], ",", 
+   RowBox[{"\<\"brericsson\"\>", "\[Rule]", "0.00042584903651655487`"}], ",", 
+   
+   RowBox[{"\<\"LeilaFadel\"\>", "\[Rule]", "0.0007146685724495265`"}], ",", 
+   RowBox[{"\<\"krmaher\"\>", "\[Rule]", "0.001728821931341072`"}], ",", 
+   RowBox[{"\<\"ashrafkhalil\"\>", "\[Rule]", "0.`"}], ",", 
+   RowBox[{"\<\"JaredCohen\"\>", "\[Rule]", "0.`"}], ",", 
+   RowBox[{"\<\"BloggerSeif\"\>", "\[Rule]", "0.00013187392852433074`"}], ",", 
+   RowBox[{"\<\"jpalfrey\"\>", "\[Rule]", "0.0003382034632034632`"}], ",", 
+   RowBox[{"\<\"daliamosaad\"\>", "\[Rule]", "0.23100475384739344`"}], ",", 
+   RowBox[{"\<\"democracynow\"\>", "\[Rule]", "0.0012241899942871135`"}], ",", 
+   RowBox[{"\<\"LobnaAkrab\"\>", "\[Rule]", "0.13137254901960785`"}], ",", 
+   RowBox[{"\<\"BDUTT\"\>", "\[Rule]", "0.`"}], ",", 
+   RowBox[{"\<\"monamahfouz\"\>", "\[Rule]", "0.22708439339972378`"}], ",", 
+   RowBox[{"\<\"eskandarany\"\>", "\[Rule]", "0.677796011108306`"}], ",", 
+   RowBox[{"\<\"aayatun\"\>", "\[Rule]", "Indeterminate"}], ",", 
+   RowBox[{"\<\"alfagih\"\>", "\[Rule]", "0.6294784894176234`"}], ",", 
+   RowBox[{"\<\"ahmada2\"\>", "\[Rule]", "0.4588542232851397`"}], ",", 
+   RowBox[{"\<\"waelabbas\"\>", "\[Rule]", "0.5227045908183633`"}], ",", 
+   RowBox[{"\<\"nevin_A\"\>", "\[Rule]", "0.5292833757730083`"}], ",", 
+   RowBox[{"\<\"remon_z\"\>", "\[Rule]", "0.030041152263374487`"}], ",", 
+   RowBox[{"\<\"hmlc\"\>", "\[Rule]", "0.8063063063063063`"}], ",", 
+   RowBox[{"\<\"Amiralx\"\>", "\[Rule]", "0.009617502386021584`"}], ",", 
+   RowBox[{"\<\"BBCGavinLee\"\>", "\[Rule]", "Indeterminate"}], ",", 
+   RowBox[{"\<\"nadinetoukan\"\>", "\[Rule]", "0.026263486655309483`"}], ",", 
+   
+   RowBox[{"\<\"habibh\"\>", "\[Rule]", "0.00014771048744460856`"}], ",", 
+   RowBox[{"\<\"Sarahngb\"\>", "\[Rule]", "0.06121376652946843`"}], ",", 
+   RowBox[{"\<\"etharkamal\"\>", "\[Rule]", "0.11080243615770916`"}], ",", 
+   RowBox[{"\<\"Ali_Bahnasawy\"\>", "\[Rule]", "0.012722504324535462`"}], ",", 
+   RowBox[{"\<\"lrozen\"\>", "\[Rule]", "0.0004351610095735422`"}], ",", 
+   RowBox[{"\<\"matthewteller\"\>", "\[Rule]", "0.0021413276231263384`"}], 
+   ",", 
+   RowBox[{"\<\"RamyYaacoub\"\>", "\[Rule]", "0.014679715302491103`"}], ",", 
+   RowBox[{"\<\"hadeelalsh\"\>", "\[Rule]", "0.`"}], ",", 
+   RowBox[{"\<\"qubadjt\"\>", "\[Rule]", "0.004118289173365089`"}], ",", 
+   RowBox[{"\<\"prashantrao\"\>", "\[Rule]", "0.`"}], ",", 
+   RowBox[{"\<\"NadiaE\"\>", "\[Rule]", "0.1330095566348112`"}], ",", 
+   RowBox[{"\<\"Ssirgany\"\>", "\[Rule]", "0.09417096033273326`"}], ",", 
+   RowBox[{"\<\"FromJoanne\"\>", "\[Rule]", "0.0005060728744939271`"}], ",", 
+   RowBox[{"\<\"estr4ng3d\"\>", "\[Rule]", "0.04933726067746686`"}], ",", 
+   RowBox[{"\<\"ellozy\"\>", "\[Rule]", "0.1375443577004968`"}], ",", 
+   RowBox[{"\<\"gr33ndata\"\>", "\[Rule]", "0.2913723785722047`"}], ",", 
+   RowBox[{"\<\"WANA_FORUM\"\>", "\[Rule]", "0.004890495428449926`"}], ",", 
+   RowBox[{"\<\"Gsquare86\"\>", "\[Rule]", "0.`"}], ",", 
+   RowBox[{"\<\"ianinegypt\"\>", "\[Rule]", "0.`"}], ",", 
+   RowBox[{"\<\"anthonyshadid\"\>", "\[Rule]", "0.00014490653528474135`"}], 
+   ",", 
+   RowBox[{"\<\"Lastoadri\"\>", "\[Rule]", "0.41270731511898084`"}], ",", 
+   RowBox[{"\<\"jilliancyork\"\>", "\[Rule]", "0.004783856658258676`"}], ",", 
+   
+   RowBox[{"\<\"BaghdadBrian\"\>", "\[Rule]", "0.00028124648441894476`"}], 
+   ",", 
+   RowBox[{"\<\"gharbeia\"\>", "\[Rule]", "0.1546946091272577`"}], ",", 
+   RowBox[{"\<\"ziad_mohi\"\>", "\[Rule]", "0.11873374585238992`"}], ",", 
+   RowBox[{"\<\"Mozn\"\>", "\[Rule]", "0.09561431796194776`"}], ",", 
+   RowBox[{"\<\"jstacher\"\>", "\[Rule]", "0.0003205950243652218`"}], ",", 
+   RowBox[{"\<\"monasosh\"\>", "\[Rule]", "0.027503526093088856`"}], ",", 
+   RowBox[{"\<\"Sandmonkey\"\>", "\[Rule]", "0.007655851257746992`"}], ",", 
+   RowBox[{"\<\"farazrabbani\"\>", "\[Rule]", "0.004466154919748779`"}], ",", 
+   
+   RowBox[{"\<\"omarc\"\>", "\[Rule]", "0.00019068200597470284`"}], ",", 
+   RowBox[{"\<\"daliaziada\"\>", "\[Rule]", "0.206644559076394`"}], ",", 
+   RowBox[{"\<\"habibahamid\"\>", "\[Rule]", "0.0007451564828614009`"}], ",", 
+   
+   RowBox[{"\<\"haaretzonline\"\>", "\[Rule]", "0.00005600985773496135`"}], 
+   ",", 
+   RowBox[{"\<\"harrietsherwood\"\>", "\[Rule]", "0.`"}], ",", 
+   RowBox[{"\<\"MennaGamal\"\>", "\[Rule]", "0.02855318372559752`"}], ",", 
+   RowBox[{"\<\"TravellerW\"\>", "\[Rule]", "0.01728608470181504`"}], ",", 
+   RowBox[{"\<\"Sarahcarr\"\>", "\[Rule]", "0.024592973436161097`"}], ",", 
+   RowBox[{"\<\"AmrEzzat\"\>", "\[Rule]", "0.6449354286603391`"}], ",", 
+   RowBox[{"\<\"sarahspeakstome\"\>", "\[Rule]", "0.11219921656407386`"}], 
+   ",", 
+   RowBox[{"\<\"shadysamir\"\>", "\[Rule]", "0.1457787481804949`"}], ",", 
+   RowBox[{"\<\"maggieosama\"\>", "\[Rule]", "0.30099945765863484`"}], ",", 
+   RowBox[{"\<\"tabulagaza\"\>", "\[Rule]", "0.06861519224757737`"}], ",", 
+   RowBox[{"\<\"moftasa\"\>", "\[Rule]", "0.11168877733954823`"}], ",", 
+   RowBox[{"\<\"Zeinobia\"\>", "\[Rule]", "0.000995732574679943`"}], ",", 
+   RowBox[{"\<\"Raafatology\"\>", "\[Rule]", "0.09655644687927999`"}], ",", 
+   RowBox[{"\<\"beleidy\"\>", "\[Rule]", "0.008337109198006343`"}], ",", 
+   RowBox[{"\<\"khadijapatel\"\>", "\[Rule]", "0.0001720676799541153`"}], ",", 
+   RowBox[{"\<\"azadessa\"\>", "\[Rule]", "0.00018744142455482662`"}], ",", 
+   RowBox[{"\<\"mmbilal\"\>", "\[Rule]", "0.00011708916339792752`"}], ",", 
+   RowBox[{"\<\"nashwanasreldin\"\>", "\[Rule]", "0.00017482517482517483`"}], 
+   ",", 
+   RowBox[{"\<\"mbaa\"\>", "\[Rule]", "0.3467024026036183`"}], ",", 
+   RowBox[{"\<\"mohamed\"\>", "\[Rule]", "0.0001608320377419182`"}], ",", 
+   RowBox[{"\<\"hamish6PM\"\>", "\[Rule]", "0.`"}], ",", 
+   RowBox[{"\<\"ragehomaar\"\>", "\[Rule]", "0.`"}], ",", 
+   RowBox[{"\<\"omarkhalifa\"\>", "\[Rule]", "0.0020213537887426142`"}], ",", 
+   
+   RowBox[{"\<\"mrayyan\"\>", "\[Rule]", "0.03589791530335608`"}], ",", 
+   RowBox[{"\<\"safdar\"\>", "\[Rule]", "0.0012979638192585382`"}], ",", 
+   RowBox[{"\<\"moeed\"\>", "\[Rule]", "0.0006868131868131869`"}], ",", 
+   RowBox[{"\<\"Riy\"\>", "\[Rule]", "0.0001332090049287332`"}], ",", 
+   RowBox[{"\<\"EnoughGaddafi\"\>", "\[Rule]", "0.019155753691836166`"}], ",", 
+   RowBox[{"\<\"FreeLibya\"\>", "\[Rule]", "0.045364891518737675`"}], ",", 
+   RowBox[{"\<\"Cyrenaican\"\>", "\[Rule]", "0.0019066503965832825`"}], ",", 
+   RowBox[{"\<\"AymanM\"\>", "\[Rule]", "0.004334496246960567`"}], ",", 
+   RowBox[{"\<\"Brian_Whit\"\>", "\[Rule]", "0.0003957653111704759`"}], ",", 
+   RowBox[{"\<\"HooverInst\"\>", "\[Rule]", "0.0017754822048260835`"}], ",", 
+   RowBox[{"\<\"haaretzopinion\"\>", "\[Rule]", "0.00031152647975077883`"}], 
+   ",", 
+   RowBox[{"\<\"camanpour\"\>", "\[Rule]", "0.0033098882912701694`"}], ",", 
+   RowBox[{"\<\"Jerusalem_Post\"\>", "\[Rule]", "0.0010661372743649132`"}], 
+   ",", 
+   RowBox[{"\<\"joshmull\"\>", "\[Rule]", "0.0005365126676602086`"}], ",", 
+   RowBox[{"\<\"kv64info\"\>", "\[Rule]", "0.00011825456265520911`"}], ",", 
+   RowBox[{"\<\"ahramEgypt\"\>", "\[Rule]", "0.009484655054275308`"}], ",", 
+   RowBox[{"\<\"BrookingsInst\"\>", "\[Rule]", "0.00004548142083958703`"}], 
+   ",", 
+   RowBox[{"\<\"hrw\"\>", "\[Rule]", "0.0011145786892554615`"}], ",", 
+   RowBox[{"\<\"witnessorg\"\>", "\[Rule]", "0.000609942055504727`"}], ",", 
+   RowBox[{"\<\"BrookingsFP\"\>", "\[Rule]", "0.0001322226629644321`"}], ",", 
+   
+   RowBox[{"\<\"CFR_org\"\>", "\[Rule]", "0.000851270825732701`"}], ",", 
+   RowBox[{"\<\"USIP\"\>", "\[Rule]", "0.0007383138756864012`"}], ",", 
+   RowBox[{"\<\"CrisisGroup\"\>", "\[Rule]", "0.014082272204371455`"}], ",", 
+   RowBox[{"\<\"AliveInEgypt\"\>", "\[Rule]", "0.007213423239767916`"}], ",", 
+   
+   RowBox[{"\<\"evanchill\"\>", "\[Rule]", "0.000049838026414154`"}], ",", 
+   RowBox[{"\<\"JacksonDiehl\"\>", "\[Rule]", "0.`"}], ",", 
+   RowBox[{"\<\"alaa\"\>", "\[Rule]", "0.1748036120695984`"}], ",", 
+   RowBox[{"\<\"Ghonim\"\>", "\[Rule]", "0.12993949964571866`"}], ",", 
+   RowBox[{"\<\"stevenacook\"\>", "\[Rule]", "0.`"}], ",", 
+   RowBox[{"\<\"joshrogin\"\>", "\[Rule]", "0.001116123331628145`"}], ",", 
+   RowBox[{"\<\"MJayRosenberg\"\>", "\[Rule]", "0.`"}], ",", 
+   RowBox[{"\<\"georgehale\"\>", "\[Rule]", "0.0038473098887886986`"}], ",", 
+   RowBox[{"\<\"justimage\"\>", "\[Rule]", "0.002820802133552159`"}], ",", 
+   RowBox[{"\<\"borzou\"\>", "\[Rule]", "0.0011114332656808738`"}], ",", 
+   RowBox[{"\<\"ryandevereaux\"\>", "\[Rule]", "0.00027277686852154935`"}], 
+   ",", 
+   RowBox[{"\<\"Linaattalah\"\>", "\[Rule]", "0.027841208501668716`"}], ",", 
+   RowBox[{"\<\"naveenaqvi\"\>", "\[Rule]", "0.00026854288629894193`"}], ",", 
+   
+   RowBox[{"\<\"hackneylad\"\>", "\[Rule]", "0.000048520135856380395`"}], ",", 
+   RowBox[{"\<\"Omar_Gaza\"\>", "\[Rule]", "0.`"}], ",", 
+   RowBox[{"\<\"jeremyscahill\"\>", "\[Rule]", "0.00031938677738741617`"}], 
+   ",", 
+   RowBox[{"\<\"3arabawy\"\>", "\[Rule]", "0.19476372924648785`"}], ",", 
+   RowBox[{"\<\"sharifkouddous\"\>", "\[Rule]", "0.0001979218208807521`"}], 
+   ",", 
+   RowBox[{"\<\"mathieubastian\"\>", "\[Rule]", "0.0002489172101359088`"}], 
+   ",", 
+   RowBox[{"\<\"RamyRaoof\"\>", "\[Rule]", "0.12845868152274836`"}], ",", 
+   RowBox[{"\<\"Elshaheeed\"\>", "\[Rule]", "0.6431840617427982`"}], ",", 
+   RowBox[{"\<\"SherineT\"\>", "\[Rule]", "0.0005148152385310605`"}], ",", 
+   RowBox[{"\<\"yasmineryan\"\>", "\[Rule]", "0.00008990380293086398`"}], ",", 
+   RowBox[{"\<\"abdu\"\>", "\[Rule]", "0.005532642591288603`"}], ",", 
+   RowBox[{"\<\"htgamal\"\>", "\[Rule]", "0.0044286979627989375`"}], ",", 
+   RowBox[{"\<\"afinighan\"\>", "\[Rule]", "0.`"}], ",", 
+   RowBox[{"\<\"Desert_Dals\"\>", "\[Rule]", "0.00016088378827693462`"}], ",", 
+   RowBox[{"\<\"fpleitgenCNN\"\>", "\[Rule]", "0.`"}], ",", 
+   RowBox[{"\<\"mosharrafzaidi\"\>", "\[Rule]", "0.00019101284561386754`"}], 
+   ",", 
+   RowBox[{"\<\"NickKristof\"\>", "\[Rule]", "0.`"}], ",", 
+   RowBox[{"\<\"jrug\"\>", "\[Rule]", "0.000051778594728939054`"}], ",", 
+   RowBox[{"\<\"piyachatto\"\>", "\[Rule]", "0.`"}], ",", 
+   RowBox[{"\<\"NaheedMustafa\"\>", "\[Rule]", "0.000756501182033097`"}], ",", 
+   RowBox[{"\<\"Londonstani\"\>", "\[Rule]", "0.007550050899219545`"}], ",", 
+   RowBox[{"\<\"bungdan\"\>", "\[Rule]", "0.`"}], ",", 
+   RowBox[{"\<\"khalidalkhalifa\"\>", "\[Rule]", "0.06458916761008163`"}], 
+   ",", 
+   RowBox[{"\<\"emile_hokayem\"\>", "\[Rule]", "0.00019044898347855068`"}], 
+   ",", 
+   RowBox[{"\<\"AJCountingCost\"\>", "\[Rule]", "0.`"}], ",", 
+   RowBox[{"\<\"AlMasryAlYoum_E\"\>", "\[Rule]", "0.0006203124118874415`"}], 
+   ",", 
+   RowBox[{"\<\"SudaneseThinker\"\>", "\[Rule]", "0.0042742205833053975`"}], 
+   ",", 
+   RowBox[{"\<\"ahmed\"\>", "\[Rule]", "0.02857142857142857`"}], ",", 
+   RowBox[{"\<\"lassecgen\"\>", "\[Rule]", "0.8047088501156191`"}], ",", 
+   RowBox[{"\<\"bbclysedoucet\"\>", "\[Rule]", "0.`"}], ",", 
+   RowBox[{"\<\"margaortigas\"\>", "\[Rule]", "0.`"}], ",", 
+   RowBox[{"\<\"FTMiddleEast\"\>", "\[Rule]", "0.002718622564567286`"}], ",", 
+   
+   RowBox[{"\<\"manal\"\>", "\[Rule]", "0.09043119982950913`"}], ",", 
+   RowBox[{"\<\"SaeedCNN\"\>", "\[Rule]", "0.000571183778380694`"}], ",", 
+   RowBox[{"\<\"jonjensen\"\>", "\[Rule]", "0.`"}], ",", 
+   RowBox[{"\<\"avilewis\"\>", "\[Rule]", "0.`"}], ",", 
+   RowBox[{"\<\"melissakchan\"\>", "\[Rule]", "0.0046621081609093335`"}], ",", 
+   RowBox[{"\<\"RawyaRageh\"\>", "\[Rule]", "0.00038289027458702547`"}], ",", 
+   
+   RowBox[{"\<\"AlanFisher\"\>", "\[Rule]", "0.00034173430158052114`"}], ",", 
+   
+   RowBox[{"\<\"Moadow\"\>", "\[Rule]", "0.`"}], ",", 
+   RowBox[{"\<\"glcarlstrom\"\>", "\[Rule]", "0.00004301260269258893`"}], ",", 
+   RowBox[{"\<\"Dima_Khatib\"\>", "\[Rule]", "0.27726140283633577`"}], ",", 
+   RowBox[{"\<\"AJRizKhan\"\>", "\[Rule]", "0.001393463389916392`"}], ",", 
+   RowBox[{"\<\"newgyptian\"\>", "\[Rule]", "0.009398280802292264`"}], ",", 
+   RowBox[{"\<\"IvanCNN\"\>", "\[Rule]", "0.00013662446488751253`"}], ",", 
+   RowBox[{"\<\"phijazin\"\>", "\[Rule]", "0.1741466236879081`"}], ",", 
+   RowBox[{"\<\"alexhanna\"\>", "\[Rule]", "0.0018633540372670807`"}], ",", 
+   RowBox[{"\<\"monaeltahawy\"\>", "\[Rule]", "0.`"}], ",", 
+   RowBox[{"\<\"TrellaLB\"\>", "\[Rule]", "0.19747710827943907`"}], ",", 
+   RowBox[{"\<\"blakehounshell\"\>", "\[Rule]", "0.00012313754463735992`"}], 
+   ",", 
+   RowBox[{"\<\"bencnn\"\>", "\[Rule]", "0.0002149151085321298`"}], ",", 
+   RowBox[{"\<\"bsebti\"\>", "\[Rule]", "0.013327924900040563`"}], ",", 
+   RowBox[{"\<\"nolanjazeera\"\>", "\[Rule]", "0.`"}], ",", 
+   RowBox[{"\<\"jordantimes\"\>", "\[Rule]", "0.004462235054793622`"}], ",", 
+   RowBox[{"\<\"Nabeelrajab\"\>", "\[Rule]", "0.27605811749842074`"}], ",", 
+   RowBox[{"\<\"gamaleid\"\>", "\[Rule]", "0.6729388462490715`"}], ",", 
+   RowBox[{"\<\"shadihamid\"\>", "\[Rule]", "0.`"}], ",", 
+   RowBox[{"\<\"Max_Fisher\"\>", "\[Rule]", "0.00023371038608955782`"}], ",", 
+   
+   RowBox[{"\<\"FP_Magazine\"\>", "\[Rule]", "0.0017193947730398899`"}], ",", 
+   
+   RowBox[{"\<\"BabakDehghan\"\>", "\[Rule]", "0.`"}], ",", 
+   RowBox[{"\<\"Almezel\"\>", "\[Rule]", "0.055494740850030935`"}], ",", 
+   RowBox[{"\<\"RaviCNN\"\>", "\[Rule]", "0.`"}], ",", 
+   RowBox[{"\<\"HalaGorani\"\>", "\[Rule]", "0.00016109112387907427`"}], ",", 
+   
+   RowBox[{"\<\"ArabRevolution\"\>", "\[Rule]", "0.0016888001842327474`"}], 
+   ",", 
+   RowBox[{"\<\"moalkhalifa\"\>", "\[Rule]", "0.00360821360624549`"}], ",", 
+   RowBox[{"\<\"MiddleEastInst\"\>", "\[Rule]", "0.00019549068161084322`"}], 
+   ",", 
+   RowBox[{"\<\"tweetsintheME\"\>", "\[Rule]", "0.`"}], ",", 
+   RowBox[{"\<\"RobAtState\"\>", "\[Rule]", "0.0009594371302169394`"}], ",", 
+   RowBox[{"\<\"sarahmckoolking\"\>", "\[Rule]", "0.00022638092363416843`"}], 
+   ",", 
+   RowBox[{"\<\"emilydparker\"\>", "\[Rule]", "0.006128133704735376`"}], ",", 
+   
+   RowBox[{"\<\"onwardcaro\"\>", "\[Rule]", "0.0003786205590963589`"}], ",", 
+   RowBox[{"\<\"erin_pelton\"\>", "\[Rule]", "0.000239880059970015`"}], ",", 
+   RowBox[{"\<\"eliselabottcnn\"\>", "\[Rule]", "0.0004206762370510596`"}], 
+   ",", 
+   RowBox[{"\<\"PJCrowley\"\>", "\[Rule]", "0.00007979253939756632`"}], ",", 
+   RowBox[{"\<\"AlecJRoss\"\>", "\[Rule]", "0.06689907038512616`"}], ",", 
+   RowBox[{"\<\"Katulis\"\>", "\[Rule]", "0.004511278195488722`"}], ",", 
+   RowBox[{"\<\"abumuqawama\"\>", "\[Rule]", "0.00020578672264065523`"}], ",", 
+   RowBox[{"\<\"abuaardvark\"\>", "\[Rule]", "0.0001788508830762352`"}], ",", 
+   
+   RowBox[{"\<\"AmjadAtallah\"\>", "\[Rule]", "0.0003056701818737582`"}], ",", 
+   RowBox[{"\<\"arabist\"\>", "\[Rule]", "0.008420718144264379`"}], ",", 
+   RowBox[{"\<\"mwhanna1\"\>", "\[Rule]", "0.`"}], ",", 
+   RowBox[{"\<\"WSJMidEast\"\>", "\[Rule]", "0.`"}], ",", 
+   RowBox[{"\<\"SultanAlQassemi\"\>", "\[Rule]", "0.0003996447602131439`"}], 
+   ",", 
+   RowBox[{"\<\"AJELive\"\>", "\[Rule]", "0.`"}], ",", 
+   RowBox[{"\<\"AJEnglish\"\>", "\[Rule]", "0.`"}]}], "}"}]], "Output",
+ CellChangeTimes->{{3.5062213227485332`*^9, 3.5062213360012703`*^9}, {
+   3.506221445831061*^9, 3.506221461636175*^9}, {3.506222662541686*^9, 
+   3.506222671469694*^9}, 3.5062228290809402`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"SortBy", "[", 
+  RowBox[{"%", ",", "Last"}], "]"}]], "Input",
+ CellChangeTimes->{{3.5062228493707323`*^9, 3.5062228537284527`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"\<\"afinighan\"\>", "\[Rule]", "0.`"}], ",", 
+   RowBox[{"\<\"AJCountingCost\"\>", "\[Rule]", "0.`"}], ",", 
+   RowBox[{"\<\"AJELive\"\>", "\[Rule]", "0.`"}], ",", 
+   RowBox[{"\<\"AJEnglish\"\>", "\[Rule]", "0.`"}], ",", 
+   RowBox[{"\<\"ashrafkhalil\"\>", "\[Rule]", "0.`"}], ",", 
+   RowBox[{"\<\"asteris\"\>", "\[Rule]", "0.`"}], ",", 
+   RowBox[{"\<\"avilewis\"\>", "\[Rule]", "0.`"}], ",", 
+   RowBox[{"\<\"BabakDehghan\"\>", "\[Rule]", "0.`"}], ",", 
+   RowBox[{"\<\"bbclysedoucet\"\>", "\[Rule]", "0.`"}], ",", 
+   RowBox[{"\<\"BDUTT\"\>", "\[Rule]", "0.`"}], ",", 
+   RowBox[{"\<\"bungdan\"\>", "\[Rule]", "0.`"}], ",", 
+   RowBox[{"\<\"DanRaviv\"\>", "\[Rule]", "0.`"}], ",", 
+   RowBox[{"\<\"fpleitgenCNN\"\>", "\[Rule]", "0.`"}], ",", 
+   RowBox[{"\<\"ghazalairshad\"\>", "\[Rule]", "0.`"}], ",", 
+   RowBox[{"\<\"ghoshworld\"\>", "\[Rule]", "0.`"}], ",", 
+   RowBox[{"\<\"Gsquare86\"\>", "\[Rule]", "0.`"}], ",", 
+   RowBox[{"\<\"hadeelalsh\"\>", "\[Rule]", "0.`"}], ",", 
+   RowBox[{"\<\"hamish6PM\"\>", "\[Rule]", "0.`"}], ",", 
+   RowBox[{"\<\"harrietsherwood\"\>", "\[Rule]", "0.`"}], ",", 
+   RowBox[{"\<\"ianinegypt\"\>", "\[Rule]", "0.`"}], ",", 
+   RowBox[{"\<\"JacksonDiehl\"\>", "\[Rule]", "0.`"}], ",", 
+   RowBox[{"\<\"JaredCohen\"\>", "\[Rule]", "0.`"}], ",", 
+   RowBox[{"\<\"jonjensen\"\>", "\[Rule]", "0.`"}], ",", 
+   RowBox[{"\<\"MarcusMonopoli\"\>", "\[Rule]", "0.`"}], ",", 
+   RowBox[{"\<\"margaortigas\"\>", "\[Rule]", "0.`"}], ",", 
+   RowBox[{"\<\"MJayRosenberg\"\>", "\[Rule]", "0.`"}], ",", 
+   RowBox[{"\<\"Moadow\"\>", "\[Rule]", "0.`"}], ",", 
+   RowBox[{"\<\"monaeltahawy\"\>", "\[Rule]", "0.`"}], ",", 
+   RowBox[{"\<\"mwhanna1\"\>", "\[Rule]", "0.`"}], ",", 
+   RowBox[{"\<\"NickKristof\"\>", "\[Rule]", "0.`"}], ",", 
+   RowBox[{"\<\"nolanjazeera\"\>", "\[Rule]", "0.`"}], ",", 
+   RowBox[{"\<\"Omar_Gaza\"\>", "\[Rule]", "0.`"}], ",", 
+   RowBox[{"\<\"piyachatto\"\>", "\[Rule]", "0.`"}], ",", 
+   RowBox[{"\<\"prashantrao\"\>", "\[Rule]", "0.`"}], ",", 
+   RowBox[{"\<\"ragehomaar\"\>", "\[Rule]", "0.`"}], ",", 
+   RowBox[{"\<\"RaviCNN\"\>", "\[Rule]", "0.`"}], ",", 
+   RowBox[{"\<\"shadihamid\"\>", "\[Rule]", "0.`"}], ",", 
+   RowBox[{"\<\"stevenacook\"\>", "\[Rule]", "0.`"}], ",", 
+   RowBox[{"\<\"tweetsintheME\"\>", "\[Rule]", "0.`"}], ",", 
+   RowBox[{"\<\"WSJMidEast\"\>", "\[Rule]", "0.`"}], ",", 
+   RowBox[{"\<\"ZeroSilence\"\>", "\[Rule]", "0.`"}], ",", 
+   RowBox[{"\<\"glcarlstrom\"\>", "\[Rule]", "0.00004301260269258893`"}], ",", 
+   RowBox[{"\<\"BrookingsInst\"\>", "\[Rule]", "0.00004548142083958703`"}], 
+   ",", 
+   RowBox[{"\<\"hackneylad\"\>", "\[Rule]", "0.000048520135856380395`"}], ",", 
+   RowBox[{"\<\"demotix\"\>", "\[Rule]", "0.0000491497100167109`"}], ",", 
+   RowBox[{"\<\"evanchill\"\>", "\[Rule]", "0.000049838026414154`"}], ",", 
+   RowBox[{"\<\"jrug\"\>", "\[Rule]", "0.000051778594728939054`"}], ",", 
+   RowBox[{"\<\"haaretzonline\"\>", "\[Rule]", "0.00005600985773496135`"}], 
+   ",", 
+   RowBox[{"\<\"TauxFu\"\>", "\[Rule]", "0.00006954102920723227`"}], ",", 
+   RowBox[{"\<\"PJCrowley\"\>", "\[Rule]", "0.00007979253939756632`"}], ",", 
+   RowBox[{"\<\"Crowdmap\"\>", "\[Rule]", "0.00008805917576611483`"}], ",", 
+   RowBox[{"\<\"yasmineryan\"\>", "\[Rule]", "0.00008990380293086398`"}], ",", 
+   RowBox[{"\<\"tamsinchan\"\>", "\[Rule]", "0.00010283833813245579`"}], ",", 
+   
+   RowBox[{"\<\"mmbilal\"\>", "\[Rule]", "0.00011708916339792752`"}], ",", 
+   RowBox[{"\<\"kv64info\"\>", "\[Rule]", "0.00011825456265520911`"}], ",", 
+   RowBox[{"\<\"blakehounshell\"\>", "\[Rule]", "0.00012313754463735992`"}], 
+   ",", 
+   RowBox[{"\<\"BloggerSeif\"\>", "\[Rule]", "0.00013187392852433074`"}], ",", 
+   RowBox[{"\<\"BrookingsFP\"\>", "\[Rule]", "0.0001322226629644321`"}], ",", 
+   
+   RowBox[{"\<\"Riy\"\>", "\[Rule]", "0.0001332090049287332`"}], ",", 
+   RowBox[{"\<\"IvanCNN\"\>", "\[Rule]", "0.00013662446488751253`"}], ",", 
+   RowBox[{"\<\"anthonyshadid\"\>", "\[Rule]", "0.00014490653528474135`"}], 
+   ",", 
+   RowBox[{"\<\"habibh\"\>", "\[Rule]", "0.00014771048744460856`"}], ",", 
+   RowBox[{"\<\"mohamed\"\>", "\[Rule]", "0.0001608320377419182`"}], ",", 
+   RowBox[{"\<\"Desert_Dals\"\>", "\[Rule]", "0.00016088378827693462`"}], ",", 
+   RowBox[{"\<\"HalaGorani\"\>", "\[Rule]", "0.00016109112387907427`"}], ",", 
+   
+   RowBox[{"\<\"khadijapatel\"\>", "\[Rule]", "0.0001720676799541153`"}], ",", 
+   RowBox[{"\<\"nashwanasreldin\"\>", "\[Rule]", "0.00017482517482517483`"}], 
+   ",", 
+   RowBox[{"\<\"abuaardvark\"\>", "\[Rule]", "0.0001788508830762352`"}], ",", 
+   
+   RowBox[{"\<\"azadessa\"\>", "\[Rule]", "0.00018744142455482662`"}], ",", 
+   RowBox[{"\<\"emile_hokayem\"\>", "\[Rule]", "0.00019044898347855068`"}], 
+   ",", 
+   RowBox[{"\<\"omarc\"\>", "\[Rule]", "0.00019068200597470284`"}], ",", 
+   RowBox[{"\<\"mosharrafzaidi\"\>", "\[Rule]", "0.00019101284561386754`"}], 
+   ",", 
+   RowBox[{"\<\"MiddleEastInst\"\>", "\[Rule]", "0.00019549068161084322`"}], 
+   ",", 
+   RowBox[{"\<\"sharifkouddous\"\>", "\[Rule]", "0.0001979218208807521`"}], 
+   ",", 
+   RowBox[{"\<\"abumuqawama\"\>", "\[Rule]", "0.00020578672264065523`"}], ",", 
+   RowBox[{"\<\"bencnn\"\>", "\[Rule]", "0.0002149151085321298`"}], ",", 
+   RowBox[{"\<\"sarahmckoolking\"\>", "\[Rule]", "0.00022638092363416843`"}], 
+   ",", 
+   RowBox[{"\<\"Max_Fisher\"\>", "\[Rule]", "0.00023371038608955782`"}], ",", 
+   
+   RowBox[{"\<\"erin_pelton\"\>", "\[Rule]", "0.000239880059970015`"}], ",", 
+   RowBox[{"\<\"mathieubastian\"\>", "\[Rule]", "0.0002489172101359088`"}], 
+   ",", 
+   RowBox[{"\<\"anjucomet\"\>", "\[Rule]", "0.0002526017985248055`"}], ",", 
+   RowBox[{"\<\"naveenaqvi\"\>", "\[Rule]", "0.00026854288629894193`"}], ",", 
+   
+   RowBox[{"\<\"ryandevereaux\"\>", "\[Rule]", "0.00027277686852154935`"}], 
+   ",", 
+   RowBox[{"\<\"BaghdadBrian\"\>", "\[Rule]", "0.00028124648441894476`"}], 
+   ",", 
+   RowBox[{"\<\"AmjadAtallah\"\>", "\[Rule]", "0.0003056701818737582`"}], ",", 
+   RowBox[{"\<\"haaretzopinion\"\>", "\[Rule]", "0.00031152647975077883`"}], 
+   ",", 
+   RowBox[{"\<\"jeremyscahill\"\>", "\[Rule]", "0.00031938677738741617`"}], 
+   ",", 
+   RowBox[{"\<\"jstacher\"\>", "\[Rule]", "0.0003205950243652218`"}], ",", 
+   RowBox[{"\<\"jpalfrey\"\>", "\[Rule]", "0.0003382034632034632`"}], ",", 
+   RowBox[{"\<\"AlanFisher\"\>", "\[Rule]", "0.00034173430158052114`"}], ",", 
+   
+   RowBox[{"\<\"onwardcaro\"\>", "\[Rule]", "0.0003786205590963589`"}], ",", 
+   RowBox[{"\<\"RawyaRageh\"\>", "\[Rule]", "0.00038289027458702547`"}], ",", 
+   
+   RowBox[{"\<\"Brian_Whit\"\>", "\[Rule]", "0.0003957653111704759`"}], ",", 
+   RowBox[{"\<\"SultanAlQassemi\"\>", "\[Rule]", "0.0003996447602131439`"}], 
+   ",", 
+   RowBox[{"\<\"eliselabottcnn\"\>", "\[Rule]", "0.0004206762370510596`"}], 
+   ",", 
+   RowBox[{"\<\"brericsson\"\>", "\[Rule]", "0.00042584903651655487`"}], ",", 
+   
+   RowBox[{"\<\"lrozen\"\>", "\[Rule]", "0.0004351610095735422`"}], ",", 
+   RowBox[{"\<\"FromJoanne\"\>", "\[Rule]", "0.0005060728744939271`"}], ",", 
+   RowBox[{"\<\"TwiddleEastNews\"\>", "\[Rule]", "0.000507292327203551`"}], 
+   ",", 
+   RowBox[{"\<\"SherineT\"\>", "\[Rule]", "0.0005148152385310605`"}], ",", 
+   RowBox[{"\<\"Angela_Deane\"\>", "\[Rule]", "0.00051698670605613`"}], ",", 
+   RowBox[{"\<\"joshmull\"\>", "\[Rule]", "0.0005365126676602086`"}], ",", 
+   RowBox[{"\<\"SaeedCNN\"\>", "\[Rule]", "0.000571183778380694`"}], ",", 
+   RowBox[{"\<\"NouralAdly\"\>", "\[Rule]", "0.0005825808330905913`"}], ",", 
+   RowBox[{"\<\"witnessorg\"\>", "\[Rule]", "0.000609942055504727`"}], ",", 
+   RowBox[{"\<\"AlMasryAlYoum_E\"\>", "\[Rule]", "0.0006203124118874415`"}], 
+   ",", 
+   RowBox[{"\<\"moeed\"\>", "\[Rule]", "0.0006868131868131869`"}], ",", 
+   RowBox[{"\<\"LeilaFadel\"\>", "\[Rule]", "0.0007146685724495265`"}], ",", 
+   RowBox[{"\<\"USIP\"\>", "\[Rule]", "0.0007383138756864012`"}], ",", 
+   RowBox[{"\<\"habibahamid\"\>", "\[Rule]", "0.0007451564828614009`"}], ",", 
+   
+   RowBox[{"\<\"NaheedMustafa\"\>", "\[Rule]", "0.000756501182033097`"}], ",", 
+   RowBox[{"\<\"CFR_org\"\>", "\[Rule]", "0.000851270825732701`"}], ",", 
+   RowBox[{"\<\"netraKL\"\>", "\[Rule]", "0.0009074410163339383`"}], ",", 
+   RowBox[{"\<\"RobAtState\"\>", "\[Rule]", "0.0009594371302169394`"}], ",", 
+   RowBox[{"\<\"CrisisMappers\"\>", "\[Rule]", "0.0009917527925670739`"}], 
+   ",", 
+   RowBox[{"\<\"Advox\"\>", "\[Rule]", "0.0009919877909194963`"}], ",", 
+   RowBox[{"\<\"Zeinobia\"\>", "\[Rule]", "0.000995732574679943`"}], ",", 
+   RowBox[{"\<\"pressfreedom\"\>", "\[Rule]", "0.0010265503242965798`"}], ",", 
+   RowBox[{"\<\"Jerusalem_Post\"\>", "\[Rule]", "0.0010661372743649132`"}], 
+   ",", 
+   RowBox[{"\<\"borzou\"\>", "\[Rule]", "0.0011114332656808738`"}], ",", 
+   RowBox[{"\<\"hrw\"\>", "\[Rule]", "0.0011145786892554615`"}], ",", 
+   RowBox[{"\<\"joshrogin\"\>", "\[Rule]", "0.001116123331628145`"}], ",", 
+   RowBox[{"\<\"Ramikantari\"\>", "\[Rule]", "0.0011525479542273812`"}], ",", 
+   
+   RowBox[{"\<\"democracynow\"\>", "\[Rule]", "0.0012241899942871135`"}], ",", 
+   RowBox[{"\<\"safdar\"\>", "\[Rule]", "0.0012979638192585382`"}], ",", 
+   RowBox[{"\<\"DidiRemez\"\>", "\[Rule]", "0.0013338183581908573`"}], ",", 
+   RowBox[{"\<\"AJRizKhan\"\>", "\[Rule]", "0.001393463389916392`"}], ",", 
+   RowBox[{"\<\"ArabRevolution\"\>", "\[Rule]", "0.0016888001842327474`"}], 
+   ",", 
+   RowBox[{"\<\"FP_Magazine\"\>", "\[Rule]", "0.0017193947730398899`"}], ",", 
+   
+   RowBox[{"\<\"krmaher\"\>", "\[Rule]", "0.001728821931341072`"}], ",", 
+   RowBox[{"\<\"HooverInst\"\>", "\[Rule]", "0.0017754822048260835`"}], ",", 
+   RowBox[{"\<\"alexhanna\"\>", "\[Rule]", "0.0018633540372670807`"}], ",", 
+   RowBox[{"\<\"Cyrenaican\"\>", "\[Rule]", "0.0019066503965832825`"}], ",", 
+   RowBox[{"\<\"omarkhalifa\"\>", "\[Rule]", "0.0020213537887426142`"}], ",", 
+   
+   RowBox[{"\<\"matthewteller\"\>", "\[Rule]", "0.0021413276231263384`"}], 
+   ",", 
+   RowBox[{"\<\"FTMiddleEast\"\>", "\[Rule]", "0.002718622564567286`"}], ",", 
+   
+   RowBox[{"\<\"occupiedcairo\"\>", "\[Rule]", "0.002789832610043397`"}], ",", 
+   RowBox[{"\<\"justimage\"\>", "\[Rule]", "0.002820802133552159`"}], ",", 
+   RowBox[{"\<\"BikyaMasr\"\>", "\[Rule]", "0.003040853201709929`"}], ",", 
+   RowBox[{"\<\"camanpour\"\>", "\[Rule]", "0.0033098882912701694`"}], ",", 
+   RowBox[{"\<\"moalkhalifa\"\>", "\[Rule]", "0.00360821360624549`"}], ",", 
+   RowBox[{"\<\"jricole\"\>", "\[Rule]", "0.0036881547455565582`"}], ",", 
+   RowBox[{"\<\"georgehale\"\>", "\[Rule]", "0.0038473098887886986`"}], ",", 
+   RowBox[{"\<\"norashalaby\"\>", "\[Rule]", "0.0038788602118454423`"}], ",", 
+   
+   RowBox[{"\<\"qubadjt\"\>", "\[Rule]", "0.004118289173365089`"}], ",", 
+   RowBox[{"\<\"SudaneseThinker\"\>", "\[Rule]", "0.0042742205833053975`"}], 
+   ",", 
+   RowBox[{"\<\"AymanM\"\>", "\[Rule]", "0.004334496246960567`"}], ",", 
+   RowBox[{"\<\"htgamal\"\>", "\[Rule]", "0.0044286979627989375`"}], ",", 
+   RowBox[{"\<\"jordantimes\"\>", "\[Rule]", "0.004462235054793622`"}], ",", 
+   RowBox[{"\<\"farazrabbani\"\>", "\[Rule]", "0.004466154919748779`"}], ",", 
+   
+   RowBox[{"\<\"GayMiddleEast\"\>", "\[Rule]", "0.004480155831507183`"}], ",", 
+   RowBox[{"\<\"Katulis\"\>", "\[Rule]", "0.004511278195488722`"}], ",", 
+   RowBox[{"\<\"melissakchan\"\>", "\[Rule]", "0.0046621081609093335`"}], ",", 
+   RowBox[{"\<\"jilliancyork\"\>", "\[Rule]", "0.004783856658258676`"}], ",", 
+   
+   RowBox[{"\<\"WANA_FORUM\"\>", "\[Rule]", "0.004890495428449926`"}], ",", 
+   RowBox[{"\<\"sarahussein\"\>", "\[Rule]", "0.005306003779619131`"}], ",", 
+   RowBox[{"\<\"abdu\"\>", "\[Rule]", "0.005532642591288603`"}], ",", 
+   RowBox[{"\<\"emilydparker\"\>", "\[Rule]", "0.006128133704735376`"}], ",", 
+   
+   RowBox[{"\<\"AliveInEgypt\"\>", "\[Rule]", "0.007213423239767916`"}], ",", 
+   
+   RowBox[{"\<\"Londonstani\"\>", "\[Rule]", "0.007550050899219545`"}], ",", 
+   RowBox[{"\<\"Sandmonkey\"\>", "\[Rule]", "0.007655851257746992`"}], ",", 
+   RowBox[{"\<\"beleidy\"\>", "\[Rule]", "0.008337109198006343`"}], ",", 
+   RowBox[{"\<\"arabist\"\>", "\[Rule]", "0.008420718144264379`"}], ",", 
+   RowBox[{"\<\"newgyptian\"\>", "\[Rule]", "0.009398280802292264`"}], ",", 
+   RowBox[{"\<\"ahramEgypt\"\>", "\[Rule]", "0.009484655054275308`"}], ",", 
+   RowBox[{"\<\"Amiralx\"\>", "\[Rule]", "0.009617502386021584`"}], ",", 
+   RowBox[{"\<\"CaireneGirl\"\>", "\[Rule]", "0.009997369113391212`"}], ",", 
+   RowBox[{"\<\"freearab\"\>", "\[Rule]", "0.010722169662567014`"}], ",", 
+   RowBox[{"\<\"Lujee\"\>", "\[Rule]", "0.012052226314027453`"}], ",", 
+   RowBox[{"\<\"Ali_Bahnasawy\"\>", "\[Rule]", "0.012722504324535462`"}], ",", 
+   RowBox[{"\<\"bsebti\"\>", "\[Rule]", "0.013327924900040563`"}], ",", 
+   RowBox[{"\<\"CrisisGroup\"\>", "\[Rule]", "0.014082272204371455`"}], ",", 
+   RowBox[{"\<\"RamyYaacoub\"\>", "\[Rule]", "0.014679715302491103`"}], ",", 
+   RowBox[{"\<\"Warchadi\"\>", "\[Rule]", "0.01700258979844612`"}], ",", 
+   RowBox[{"\<\"TravellerW\"\>", "\[Rule]", "0.01728608470181504`"}], ",", 
+   RowBox[{"\<\"iyad_elbaghdadi\"\>", "\[Rule]", "0.017370664077250905`"}], 
+   ",", 
+   RowBox[{"\<\"Mohamed_Bary\"\>", "\[Rule]", "0.01749502982107356`"}], ",", 
+   RowBox[{"\<\"EnoughGaddafi\"\>", "\[Rule]", "0.019155753691836166`"}], ",", 
+   RowBox[{"\<\"themoornextdoor\"\>", "\[Rule]", "0.021303501945525292`"}], 
+   ",", 
+   RowBox[{"\<\"Sarahcarr\"\>", "\[Rule]", "0.024592973436161097`"}], ",", 
+   RowBox[{"\<\"nadinetoukan\"\>", "\[Rule]", "0.026263486655309483`"}], ",", 
+   
+   RowBox[{"\<\"monasosh\"\>", "\[Rule]", "0.027503526093088856`"}], ",", 
+   RowBox[{"\<\"Linaattalah\"\>", "\[Rule]", "0.027841208501668716`"}], ",", 
+   RowBox[{"\<\"MennaGamal\"\>", "\[Rule]", "0.02855318372559752`"}], ",", 
+   RowBox[{"\<\"ahmed\"\>", "\[Rule]", "0.02857142857142857`"}], ",", 
+   RowBox[{"\<\"remon_z\"\>", "\[Rule]", "0.030041152263374487`"}], ",", 
+   RowBox[{"\<\"hebalsherif\"\>", "\[Rule]", "0.031008292105079785`"}], ",", 
+   RowBox[{"\<\"AmmarMa\"\>", "\[Rule]", "0.03174497092828978`"}], ",", 
+   RowBox[{"\<\"mrayyan\"\>", "\[Rule]", "0.03589791530335608`"}], ",", 
+   RowBox[{"\<\"FreeLibya\"\>", "\[Rule]", "0.045364891518737675`"}], ",", 
+   RowBox[{"\<\"TEDataEgypt\"\>", "\[Rule]", "0.04838951310861423`"}], ",", 
+   RowBox[{"\<\"estr4ng3d\"\>", "\[Rule]", "0.04933726067746686`"}], ",", 
+   RowBox[{"\<\"Almezel\"\>", "\[Rule]", "0.055494740850030935`"}], ",", 
+   RowBox[{"\<\"Sarahngb\"\>", "\[Rule]", "0.06121376652946843`"}], ",", 
+   RowBox[{"\<\"khalidalkhalifa\"\>", "\[Rule]", "0.06458916761008163`"}], 
+   ",", 
+   RowBox[{"\<\"AlecJRoss\"\>", "\[Rule]", "0.06689907038512616`"}], ",", 
+   RowBox[{"\<\"tabulagaza\"\>", "\[Rule]", "0.06861519224757737`"}], ",", 
+   RowBox[{"\<\"manal\"\>", "\[Rule]", "0.09043119982950913`"}], ",", 
+   RowBox[{"\<\"Ssirgany\"\>", "\[Rule]", "0.09417096033273326`"}], ",", 
+   RowBox[{"\<\"Mozn\"\>", "\[Rule]", "0.09561431796194776`"}], ",", 
+   RowBox[{"\<\"Raafatology\"\>", "\[Rule]", "0.09655644687927999`"}], ",", 
+   RowBox[{"\<\"etharkamal\"\>", "\[Rule]", "0.11080243615770916`"}], ",", 
+   RowBox[{"\<\"moftasa\"\>", "\[Rule]", "0.11168877733954823`"}], ",", 
+   RowBox[{"\<\"sarahspeakstome\"\>", "\[Rule]", "0.11219921656407386`"}], 
+   ",", 
+   RowBox[{"\<\"ziad_mohi\"\>", "\[Rule]", "0.11873374585238992`"}], ",", 
+   RowBox[{"\<\"RamyRaoof\"\>", "\[Rule]", "0.12845868152274836`"}], ",", 
+   RowBox[{"\<\"Ghonim\"\>", "\[Rule]", "0.12993949964571866`"}], ",", 
+   RowBox[{"\<\"LobnaAkrab\"\>", "\[Rule]", "0.13137254901960785`"}], ",", 
+   RowBox[{"\<\"NadiaE\"\>", "\[Rule]", "0.1330095566348112`"}], ",", 
+   RowBox[{"\<\"ellozy\"\>", "\[Rule]", "0.1375443577004968`"}], ",", 
+   RowBox[{"\<\"shadysamir\"\>", "\[Rule]", "0.1457787481804949`"}], ",", 
+   RowBox[{"\<\"gharbeia\"\>", "\[Rule]", "0.1546946091272577`"}], ",", 
+   RowBox[{"\<\"phijazin\"\>", "\[Rule]", "0.1741466236879081`"}], ",", 
+   RowBox[{"\<\"alaa\"\>", "\[Rule]", "0.1748036120695984`"}], ",", 
+   RowBox[{"\<\"3arabawy\"\>", "\[Rule]", "0.19476372924648785`"}], ",", 
+   RowBox[{"\<\"TrellaLB\"\>", "\[Rule]", "0.19747710827943907`"}], ",", 
+   RowBox[{"\<\"EngyG\"\>", "\[Rule]", "0.20506605259968488`"}], ",", 
+   RowBox[{"\<\"daliaziada\"\>", "\[Rule]", "0.206644559076394`"}], ",", 
+   RowBox[{"\<\"MAswad\"\>", "\[Rule]", "0.2146417889189574`"}], ",", 
+   RowBox[{"\<\"monamahfouz\"\>", "\[Rule]", "0.22708439339972378`"}], ",", 
+   RowBox[{"\<\"daliamosaad\"\>", "\[Rule]", "0.23100475384739344`"}], ",", 
+   RowBox[{"\<\"salmaeldaly\"\>", "\[Rule]", "0.25717751718560455`"}], ",", 
+   RowBox[{"\<\"Ghafari\"\>", "\[Rule]", "0.2699059561128527`"}], ",", 
+   RowBox[{"\<\"Nabeelrajab\"\>", "\[Rule]", "0.27605811749842074`"}], ",", 
+   RowBox[{"\<\"Dima_Khatib\"\>", "\[Rule]", "0.27726140283633577`"}], ",", 
+   RowBox[{"\<\"gr33ndata\"\>", "\[Rule]", "0.2913723785722047`"}], ",", 
+   RowBox[{"\<\"maggieosama\"\>", "\[Rule]", "0.30099945765863484`"}], ",", 
+   RowBox[{"\<\"AbdullaBnS\"\>", "\[Rule]", "0.3305073859987155`"}], ",", 
+   RowBox[{"\<\"mbaa\"\>", "\[Rule]", "0.3467024026036183`"}], ",", 
+   RowBox[{"\<\"amrwaked\"\>", "\[Rule]", "0.3992789199140841`"}], ",", 
+   RowBox[{"\<\"M_ElMotasem\"\>", "\[Rule]", "0.41202562838836865`"}], ",", 
+   RowBox[{"\<\"Lastoadri\"\>", "\[Rule]", "0.41270731511898084`"}], ",", 
+   RowBox[{"\<\"ahmada2\"\>", "\[Rule]", "0.4588542232851397`"}], ",", 
+   RowBox[{"\<\"ElBaradei\"\>", "\[Rule]", "0.46314719952584565`"}], ",", 
+   RowBox[{"\<\"waelabbas\"\>", "\[Rule]", "0.5227045908183633`"}], ",", 
+   RowBox[{"\<\"nevin_A\"\>", "\[Rule]", "0.5292833757730083`"}], ",", 
+   RowBox[{"\<\"oke1985\"\>", "\[Rule]", "0.5787128139830999`"}], ",", 
+   RowBox[{"\<\"BooDy\"\>", "\[Rule]", "0.5969296944526846`"}], ",", 
+   RowBox[{"\<\"alfagih\"\>", "\[Rule]", "0.6294784894176234`"}], ",", 
+   RowBox[{"\<\"ahmedsamih\"\>", "\[Rule]", "0.637124569177745`"}], ",", 
+   RowBox[{"\<\"Elshaheeed\"\>", "\[Rule]", "0.6431840617427982`"}], ",", 
+   RowBox[{"\<\"AmrEzzat\"\>", "\[Rule]", "0.6449354286603391`"}], ",", 
+   RowBox[{"\<\"ElNa7aS_Pasha\"\>", "\[Rule]", "0.650543682039745`"}], ",", 
+   RowBox[{"\<\"drnemovet\"\>", "\[Rule]", "0.6526928675400291`"}], ",", 
+   RowBox[{"\<\"Gemyhood\"\>", "\[Rule]", "0.6585295392171024`"}], ",", 
+   RowBox[{"\<\"gamaleid\"\>", "\[Rule]", "0.6729388462490715`"}], ",", 
+   RowBox[{"\<\"eskandarany\"\>", "\[Rule]", "0.677796011108306`"}], ",", 
+   RowBox[{"\<\"oshaokhtmeligi\"\>", "\[Rule]", "0.6924460431654677`"}], ",", 
+   
+   RowBox[{"\<\"ANaje\"\>", "\[Rule]", "0.7244734737403359`"}], ",", 
+   RowBox[{"\<\"lassecgen\"\>", "\[Rule]", "0.8047088501156191`"}], ",", 
+   RowBox[{"\<\"hmlc\"\>", "\[Rule]", "0.8063063063063063`"}], ",", 
+   RowBox[{"\<\"aayatun\"\>", "\[Rule]", "Indeterminate"}], ",", 
+   RowBox[{"\<\"BBCGavinLee\"\>", "\[Rule]", "Indeterminate"}], ",", 
+   RowBox[{"\<\"hfakhry\"\>", "\[Rule]", "Indeterminate"}]}], "}"}]], "Output",\
+
+ CellChangeTimes->{3.506222854462797*^9}]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.5062217079890747`*^9, 3.5062217113667717`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["iteratively populate tweets", "Subsection",
+ CellChangeTimes->{{3.506206600565299*^9, 3.50620660741713*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"CL", "[", 
+  RowBox[{"(", 
+   RowBox[{"let", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"tweetlist", ",", 
+       RowBox[{"twitter`with\:2011oauth", "[", 
+        RowBox[{
+        "oauth\:2011consumer", ",", " ", "oauth\:2011access\:2011token", ",", 
+         "oauth\:2011access\:2011token\:2011secret", ",", 
+         RowBox[{"twitter`user\:2011timeline", "[", 
+          RowBox[{
+          "\:0589id", ",", " ", "\"\<Lujee\>\"", ",", "\:0589page", ",", 
+           "\"\<9\>\"", ",", "\:0589count", ",", "\"\<200\>\""}], "]"}]}], 
+        "]"}]}], "}"}], ",", 
+     RowBox[{"count", "[", "tweetlist", "]"}]}], "]"}], ")"}], "]"}]], "Input",\
+
+ CellChangeTimes->{{3.505961538726911*^9, 3.5059615886182117`*^9}, {
+   3.505961953723534*^9, 3.50596197816402*^9}, {3.506201948196156*^9, 
+   3.506201955297556*^9}, {3.50620198787722*^9, 3.50620216963728*^9}, {
+   3.50620649434793*^9, 3.506206502278857*^9}, {3.506207135110095*^9, 
+   3.506207153817093*^9}, {3.506207231553711*^9, 3.5062072669963093`*^9}, 
+   3.5062073260249643`*^9, {3.506207768032991*^9, 3.506207787008326*^9}, {
+   3.506207826690015*^9, 3.506207929936883*^9}, 3.506207963634821*^9, {
+   3.506208031847719*^9, 3.5062081001102552`*^9}}],
+
+Cell[BoxData["$Failed"], "Output",
+ CellChangeTimes->{
+  3.5062071564972277`*^9, {3.50620725090161*^9, 3.506207268053604*^9}, 
+   3.5062073276527767`*^9, 3.5062078049767027`*^9, 3.506207835649613*^9, {
+   3.5062078673993187`*^9, 3.506207964997725*^9}, {3.506208035564513*^9, 
+   3.506208105833737*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"DateList", "[", "\"\<Tue Feb 08 20:14:12\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.506206924224175*^9, 3.506206933872348*^9}, {
+  3.506207008127219*^9, 3.506207009741931*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"2011", ",", "2", ",", "8", ",", "20", ",", "14", ",", "12.`"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{{3.506206926892514*^9, 3.506206934386663*^9}, 
+   3.5062070101249647`*^9}]
+}, Open  ]],
+
+Cell["\<\
+if last date is before the min date, stop\
+\>", "Text",
+ CellChangeTimes->{{3.5062070282757463`*^9, 3.506207039819031*^9}}],
+
+Cell[BoxData[
+ RowBox[{"AsMap", "[", "]"}]], "Input",
+ CellChangeTimes->{{3.506206792903023*^9, 3.506206794131611*^9}}],
+
+Cell[BoxData[
+ RowBox[{"GetIn", "[", "]"}]], "Input",
+ CellChangeTimes->{{3.506206774607489*^9, 3.5062067756450043`*^9}}],
+
+Cell["\<\
+  [:id
+   :user-id
+   :screen-name
+   :since-id
+   :max-id
+   :count
+   :page]\
+\>", "Text",
+ CellChangeTimes->{3.506206726370309*^9}],
+
+Cell["use paging?? ", "Text",
+ CellChangeTimes->{{3.506206611496954*^9, 3.50620661730475*^9}}]
+}, Open  ]]
+}, Open  ]],
+
+Cell["follow user", "Section",
+ CellChangeTimes->{{3.506132311333424*^9, 3.506132312515367*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["friends", "Section",
+ CellChangeTimes->{{3.5057025995656*^9, 3.5057026037732143`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Grid", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"\:0589screen\:02cdname", ",", "\:0589description"}], "}"}], "/.", 
+      RowBox[{"#", "[", 
+       RowBox[{"[", 
+        RowBox[{"2", ",", "1"}], "]"}], "]"}]}], "&"}], "/@", 
+    "friendprofiles"}], ",", 
+   RowBox[{"Frame", "\[Rule]", "All"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.5059610396173286`*^9, 3.505961110423594*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Position", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"\:0589screen\:02cdname", "/.", 
+      RowBox[{"#", "[", 
+       RowBox[{"[", 
+        RowBox[{"2", ",", "1"}], "]"}], "]"}]}], "&"}], "/@", 
+    RowBox[{"Take", "[", 
+     RowBox[{"friendprofiles", ",", "259"}], "]"}]}], ",", 
+   "\"\<AJEnglish\>\""}], "]"}]], "Input",
+ CellChangeTimes->{{3.5059613036521397`*^9, 3.505961326839754*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", "259", "}"}], "}"}]], "Output",
+ CellChangeTimes->{{3.5059613191215963`*^9, 3.505961327358728*^9}}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"CL", "[", 
+    RowBox[{"(", 
+     RowBox[{"hb`with\:2011table", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"t", ",", 
+         RowBox[{"hb`table", "[", "\"\<users\>\"", "]"}]}], "}"}], ",", 
+       RowBox[{"hb`put", "[", 
+        RowBox[{"t", ",", 
+         RowBox[{"\:0589screen\:02cdname", "/.", 
+          RowBox[{"#", "[", 
+           RowBox[{"[", 
+            RowBox[{"2", ",", "1"}], "]"}], "]"}]}], ",", "\:0589values", ",", 
+         RowBox[{"{", 
+          RowBox[{"\:0589profile", ",", 
+           RowBox[{"{", 
+            RowBox[{"\:0589json", ",", 
+             RowBox[{"json\:2011str", "[", 
+              RowBox[{"#", "[", 
+               RowBox[{"[", 
+                RowBox[{"2", ",", "1"}], "]"}], "]"}], "]"}]}], "}"}]}], 
+          "}"}]}], "]"}]}], "]"}], ")"}], "]"}], "&"}], "/@", 
+  RowBox[{"Take", "[", 
+   RowBox[{"friendprofiles", ",", "259"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.505961538726911*^9, 3.5059615886182117`*^9}, {
+  3.505961953723534*^9, 3.50596197816402*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"friendprofiles", "=", 
+   RowBox[{"Take", "[", 
+    RowBox[{"friendprofiles", ",", "259"}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.5059627103896313`*^9, 3.505962712044244*^9}}],
+
+Cell[BoxData[
+ RowBox[{"friendprofiles", "=", 
+  RowBox[{"Delete", "[", 
+   RowBox[{"friendprofiles", ",", "3"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.506132294191794*^9, 3.5061322976290293`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Flatten", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"\:0589screen\:02cdname", "/.", "#"}], ")"}], "&"}], "/@", 
+   RowBox[{"Last", "/@", "friendprofiles"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.50613254452733*^9, 3.5061325452309933`*^9}, {
+  3.5061327852155657`*^9, 3.506132810511284*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.506132819773014*^9, 3.50613284641331*^9}, {
+   3.506132899886043*^9, 3.506132900036994*^9}, 3.506133019104954*^9}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.506132507070993*^9, 3.50613253900842*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Length", "[", 
+  RowBox[{"{", 
+   RowBox[{
+   "\"\<oshaokhtmeligi\>\"", ",", "\"\<Lujee\>\"", ",", "\"\<norashalaby\>\"",
+     ",", "\"\<TwiddleEastNews\>\"", ",", "\"\<pressfreedom\>\"", ",", 
+    "\"\<ghazalairshad\>\"", ",", "\"\<NouralAdly\>\"", ",", 
+    "\"\<drnemovet\>\"", ",", "\"\<Angela_Deane\>\"", ",", 
+    "\"\<GayMiddleEast\>\"", ",", "\"\<Advox\>\"", ",", "\"\<demotix\>\"", 
+    ",", "\"\<iyad_elbaghdadi\>\"", ",", "\"\<netraKL\>\"", ",", 
+    "\"\<ElNa7aS_Pasha\>\"", ",", "\"\<hfakhry\>\"", ",", 
+    "\"\<TEDataEgypt\>\"", ",", "\"\<themoornextdoor\>\"", ",", 
+    "\"\<hebalsherif\>\"", ",", "\"\<ElBaradei\>\"", ",", 
+    "\"\<Mohamed_Bary\>\"", ",", "\"\<amrwaked\>\"", ",", 
+    "\"\<MarcusMonopoli\>\"", ",", "\"\<TauxFu\>\"", ",", 
+    "\"\<tamsinchan\>\"", ",", "\"\<CaireneGirl\>\"", ",", 
+    "\"\<ZeroSilence\>\"", ",", "\"\<Gemyhood\>\"", ",", "\"\<BooDy\>\"", 
+    ",", "\"\<Ghafari\>\"", ",", "\"\<ANaje\>\"", ",", "\"\<ahmedsamih\>\"", 
+    ",", "\"\<oke1985\>\"", ",", "\"\<salmaeldaly\>\"", ",", "\"\<MAswad\>\"",
+     ",", "\"\<BikyaMasr\>\"", ",", "\"\<Ramikantari\>\"", ",", 
+    "\"\<AmmarMa\>\"", ",", "\"\<DidiRemez\>\"", ",", "\"\<sarahussein\>\"", 
+    ",", "\"\<jricole\>\"", ",", "\"\<Warchadi\>\"", ",", "\"\<asteris\>\"", 
+    ",", "\"\<ghoshworld\>\"", ",", "\"\<DanRaviv\>\"", ",", 
+    "\"\<freearab\>\"", ",", "\"\<Crowdmap\>\"", ",", "\"\<CrisisMappers\>\"",
+     ",", "\"\<occupiedcairo\>\"", ",", "\"\<anjucomet\>\"", ",", 
+    "\"\<AbdullaBnS\>\"", ",", "\"\<M_ElMotasem\>\"", ",", "\"\<EngyG\>\"", 
+    ",", "\"\<brericsson\>\"", ",", "\"\<LeilaFadel\>\"", ",", 
+    "\"\<krmaher\>\"", ",", "\"\<ashrafkhalil\>\"", ",", "\"\<JaredCohen\>\"",
+     ",", "\"\<BloggerSeif\>\"", ",", "\"\<jpalfrey\>\"", ",", 
+    "\"\<daliamosaad\>\"", ",", "\"\<democracynow\>\"", ",", 
+    "\"\<LobnaAkrab\>\"", ",", "\"\<BDUTT\>\"", ",", "\"\<monamahfouz\>\"", 
+    ",", "\"\<eskandarany\>\"", ",", "\"\<aayatun\>\"", ",", 
+    "\"\<alfagih\>\"", ",", "\"\<ahmada2\>\"", ",", "\"\<waelabbas\>\"", ",", 
+    "\"\<nevin_A\>\"", ",", "\"\<remon_z\>\"", ",", "\"\<hmlc\>\"", ",", 
+    "\"\<Amiralx\>\"", ",", "\"\<BBCGavinLee\>\"", ",", 
+    "\"\<nadinetoukan\>\"", ",", "\"\<habibh\>\"", ",", "\"\<Sarahngb\>\"", 
+    ",", "\"\<etharkamal\>\"", ",", "\"\<Ali_Bahnasawy\>\"", ",", 
+    "\"\<lrozen\>\"", ",", "\"\<matthewteller\>\"", ",", 
+    "\"\<RamyYaacoub\>\"", ",", "\"\<hadeelalsh\>\"", ",", "\"\<qubadjt\>\"", 
+    ",", "\"\<prashantrao\>\"", ",", "\"\<NadiaE\>\"", ",", 
+    "\"\<Ssirgany\>\"", ",", "\"\<FromJoanne\>\"", ",", "\"\<estr4ng3d\>\"", 
+    ",", "\"\<ellozy\>\"", ",", "\"\<gr33ndata\>\"", ",", 
+    "\"\<WANA_FORUM\>\"", ",", "\"\<Gsquare86\>\"", ",", "\"\<ianinegypt\>\"",
+     ",", "\"\<anthonyshadid\>\"", ",", "\"\<Lastoadri\>\"", ",", 
+    "\"\<jilliancyork\>\"", ",", "\"\<BaghdadBrian\>\"", ",", 
+    "\"\<gharbeia\>\"", ",", "\"\<ziad_mohi\>\"", ",", "\"\<Mozn\>\"", ",", 
+    "\"\<jstacher\>\"", ",", "\"\<monasosh\>\"", ",", "\"\<Sandmonkey\>\"", 
+    ",", "\"\<farazrabbani\>\"", ",", "\"\<omarc\>\"", ",", 
+    "\"\<daliaziada\>\"", ",", "\"\<habibahamid\>\"", ",", 
+    "\"\<haaretzonline\>\"", ",", "\"\<harrietsherwood\>\"", ",", 
+    "\"\<MennaGamal\>\"", ",", "\"\<TravellerW\>\"", ",", "\"\<Sarahcarr\>\"",
+     ",", "\"\<AmrEzzat\>\"", ",", "\"\<sarahspeakstome\>\"", ",", 
+    "\"\<shadysamir\>\"", ",", "\"\<maggieosama\>\"", ",", 
+    "\"\<tabulagaza\>\"", ",", "\"\<moftasa\>\"", ",", "\"\<Zeinobia\>\"", 
+    ",", "\"\<Raafatology\>\"", ",", "\"\<beleidy\>\"", ",", 
+    "\"\<khadijapatel\>\"", ",", "\"\<azadessa\>\"", ",", "\"\<mmbilal\>\"", 
+    ",", "\"\<nashwanasreldin\>\"", ",", "\"\<mbaa\>\"", ",", 
+    "\"\<mohamed\>\"", ",", "\"\<hamish6PM\>\"", ",", "\"\<ragehomaar\>\"", 
+    ",", "\"\<omarkhalifa\>\"", ",", "\"\<mrayyan\>\"", ",", "\"\<safdar\>\"",
+     ",", "\"\<moeed\>\"", ",", "\"\<Riy\>\"", ",", "\"\<EnoughGaddafi\>\"", 
+    ",", "\"\<FreeLibya\>\"", ",", "\"\<Cyrenaican\>\"", ",", 
+    "\"\<AymanM\>\"", ",", "\"\<Brian_Whit\>\"", ",", "\"\<HooverInst\>\"", 
+    ",", "\"\<haaretzopinion\>\"", ",", "\"\<camanpour\>\"", ",", 
+    "\"\<Jerusalem_Post\>\"", ",", "\"\<joshmull\>\"", ",", 
+    "\"\<kv64info\>\"", ",", "\"\<ahramEgypt\>\"", ",", 
+    "\"\<BrookingsInst\>\"", ",", "\"\<hrw\>\"", ",", "\"\<witnessorg\>\"", 
+    ",", "\"\<BrookingsFP\>\"", ",", "\"\<CFR_org\>\"", ",", "\"\<USIP\>\"", 
+    ",", "\"\<CrisisGroup\>\"", ",", "\"\<AliveInEgypt\>\"", ",", 
+    "\"\<evanchill\>\"", ",", "\"\<JacksonDiehl\>\"", ",", "\"\<alaa\>\"", 
+    ",", "\"\<Ghonim\>\"", ",", "\"\<stevenacook\>\"", ",", 
+    "\"\<joshrogin\>\"", ",", "\"\<MJayRosenberg\>\"", ",", 
+    "\"\<georgehale\>\"", ",", "\"\<justimage\>\"", ",", "\"\<borzou\>\"", 
+    ",", "\"\<ryandevereaux\>\"", ",", "\"\<Linaattalah\>\"", ",", 
+    "\"\<naveenaqvi\>\"", ",", "\"\<hackneylad\>\"", ",", "\"\<Omar_Gaza\>\"",
+     ",", "\"\<jeremyscahill\>\"", ",", "\"\<3arabawy\>\"", ",", 
+    "\"\<sharifkouddous\>\"", ",", "\"\<mathieubastian\>\"", ",", 
+    "\"\<RamyRaoof\>\"", ",", "\"\<Elshaheeed\>\"", ",", "\"\<SherineT\>\"", 
+    ",", "\"\<yasmineryan\>\"", ",", "\"\<abdu\>\"", ",", "\"\<htgamal\>\"", 
+    ",", "\"\<afinighan\>\"", ",", "\"\<Desert_Dals\>\"", ",", 
+    "\"\<fpleitgenCNN\>\"", ",", "\"\<mosharrafzaidi\>\"", ",", 
+    "\"\<NickKristof\>\"", ",", "\"\<jrug\>\"", ",", "\"\<piyachatto\>\"", 
+    ",", "\"\<NaheedMustafa\>\"", ",", "\"\<Londonstani\>\"", ",", 
+    "\"\<bungdan\>\"", ",", "\"\<khalidalkhalifa\>\"", ",", 
+    "\"\<emile_hokayem\>\"", ",", "\"\<AJCountingCost\>\"", ",", 
+    "\"\<AlMasryAlYoum_E\>\"", ",", "\"\<SudaneseThinker\>\"", ",", 
+    "\"\<ahmed\>\"", ",", "\"\<lassecgen\>\"", ",", "\"\<bbclysedoucet\>\"", 
+    ",", "\"\<margaortigas\>\"", ",", "\"\<FTMiddleEast\>\"", ",", 
+    "\"\<manal\>\"", ",", "\"\<SaeedCNN\>\"", ",", "\"\<jonjensen\>\"", ",", 
+    "\"\<avilewis\>\"", ",", "\"\<melissakchan\>\"", ",", 
+    "\"\<RawyaRageh\>\"", ",", "\"\<AlanFisher\>\"", ",", "\"\<Moadow\>\"", 
+    ",", "\"\<glcarlstrom\>\"", ",", "\"\<Dima_Khatib\>\"", ",", 
+    "\"\<AJRizKhan\>\"", ",", "\"\<newgyptian\>\"", ",", "\"\<IvanCNN\>\"", 
+    ",", "\"\<phijazin\>\"", ",", "\"\<alexhanna\>\"", ",", 
+    "\"\<monaeltahawy\>\"", ",", "\"\<TrellaLB\>\"", ",", 
+    "\"\<blakehounshell\>\"", ",", "\"\<bencnn\>\"", ",", "\"\<bsebti\>\"", 
+    ",", "\"\<nolanjazeera\>\"", ",", "\"\<jordantimes\>\"", ",", 
+    "\"\<Nabeelrajab\>\"", ",", "\"\<gamaleid\>\"", ",", "\"\<shadihamid\>\"",
+     ",", "\"\<Max_Fisher\>\"", ",", "\"\<FP_Magazine\>\"", ",", 
+    "\"\<BabakDehghan\>\"", ",", "\"\<Almezel\>\"", ",", "\"\<RaviCNN\>\"", 
+    ",", "\"\<HalaGorani\>\"", ",", "\"\<ArabRevolution\>\"", ",", 
+    "\"\<moalkhalifa\>\"", ",", "\"\<MiddleEastInst\>\"", ",", 
+    "\"\<tweetsintheME\>\"", ",", "\"\<RobAtState\>\"", ",", 
+    "\"\<sarahmckoolking\>\"", ",", "\"\<emilydparker\>\"", ",", 
+    "\"\<onwardcaro\>\"", ",", "\"\<erin_pelton\>\"", ",", 
+    "\"\<eliselabottcnn\>\"", ",", "\"\<PJCrowley\>\"", ",", 
+    "\"\<AlecJRoss\>\"", ",", "\"\<Katulis\>\"", ",", "\"\<abumuqawama\>\"", 
+    ",", "\"\<abuaardvark\>\"", ",", "\"\<AmjadAtallah\>\"", ",", 
+    "\"\<arabist\>\"", ",", "\"\<mwhanna1\>\"", ",", "\"\<WSJMidEast\>\"", 
+    ",", "\"\<SultanAlQassemi\>\"", ",", "\"\<AJELive\>\"", ",", 
+    "\"\<AJEnglish\>\""}], "}"}], "]"}]], "Input",
+ CellChangeTimes->{{3.506133224231946*^9, 3.5061332256451187`*^9}}],
+
+Cell[BoxData["254"], "Output",
+ CellChangeTimes->{3.506133226101761*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["profile", "Section",
+ CellChangeTimes->{{3.506228772542452*^9, 3.506228773252893*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"ImportProfile", "[", "screenname_", "]"}], ":=", 
+  RowBox[{"oauth", "[", 
+   RowBox[{"let", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"u", ",", 
+       RowBox[{
+       "twitter`show\:2011user\:2011by\:2011name", "[", "screenname", "]"}]}],
+       "}"}], ",", 
+     RowBox[{"SetProfile", "[", 
+      RowBox[{"screenname", ",", "u"}], "]"}], ",", "u"}], "]"}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.506228779948627*^9, 3.506228805536689*^9}, {
+   3.506232447095662*^9, 3.5062324629165382`*^9}, {3.506232563226659*^9, 
+   3.5062325672044983`*^9}, 3.506232600609496*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"SetProfile", "[", 
+   RowBox[{"name_", ",", "profile_"}], "]"}], ":=", 
+  RowBox[{"hb`with\:2011table", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"t", ",", 
+      RowBox[{"hb`table", "[", "\"\<users\>\"", "]"}]}], "}"}], ",", 
+    RowBox[{"hb`put", "[", 
+     RowBox[{"t", ",", "name", ",", "\:0589values", ",", 
+      RowBox[{"{", 
+       RowBox[{"\:0589profile", ",", 
+        RowBox[{"{", 
+         RowBox[{"\:0589json", ",", 
+          RowBox[{"json\:2011str", "[", "profile", "]"}]}], "}"}]}], "}"}]}], 
+     "]"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.5062325092421083`*^9, 3.506232554183125*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"GetProfile", "[", "screenname_", "]"}], ":=", 
+  RowBox[{"(", 
+   RowBox[{"hb`with\:2011table", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"t", ",", 
+       RowBox[{"hb`table", "[", "\"\<users\>\"", "]"}]}], "}"}], ",", 
+     RowBox[{"read\:2011json", "@", 
+      RowBox[{"last", "@", 
+       RowBox[{"first", "@", 
+        RowBox[{"get\:2011in", "[", 
+         RowBox[{
+          RowBox[{"hb`as\:2011map", "[", 
+           RowBox[{
+            RowBox[{"hb`get", "[", 
+             RowBox[{"t", ",", "screenname", ",", "\:0589columns", ",", 
+              RowBox[{"{", "\:0589cf1", "}"}]}], "]"}], ",", 
+            "\:0589map\:2011value", ",", 
+            RowBox[{"fn", "[", 
+             RowBox[{
+              RowBox[{"{", "x", "}"}], ",", 
+              RowBox[{"Bytes`toString", "[", "x", "]"}]}], "]"}], ",", 
+            "\:0589map\:2011family", ",", 
+            RowBox[{"fn", "[", 
+             RowBox[{
+              RowBox[{"{", "x", "}"}], ",", 
+              RowBox[{"Bytes`toString", "[", "x", "]"}]}], "]"}], ",", 
+            "\:0589map\:2011qualifier", ",", 
+            RowBox[{"fn", "[", 
+             RowBox[{
+              RowBox[{"{", "x", "}"}], ",", 
+              RowBox[{"Bytes`toString", "[", "x", "]"}]}], "]"}]}], "]"}], 
+          ",", 
+          RowBox[{"{", 
+           RowBox[{"\"\<profile\>\"", ",", "\"\<json\>\""}], "}"}]}], 
+         "]"}]}]}]}]}], "]"}], ")"}]}]], "Input",
+ CellChangeTimes->{{3.505961659167542*^9, 3.505961672399468*^9}, 
+   3.505961708522504*^9, {3.505962030380205*^9, 3.505962037192875*^9}, {
+   3.505966058975543*^9, 3.505966068604323*^9}, {3.506228743920628*^9, 
+   3.506228777623004*^9}, {3.506233174637656*^9, 3.506233191459461*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"CL", "@", 
+     RowBox[{"ImportProfile", "[", "#", "]"}]}], "&"}], "/@", "mideasters"}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.5062332349374733`*^9, 3.506233249166856*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"CL", "@", 
+  RowBox[{
+  "twitter`show\:2011user\:2011by\:2011name", "[", "\"\<sarahmckoolking\>\"", 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.506232412385831*^9, 3.5062324369726343`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"\:0589status", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{
+      "\:0589text", 
+       "\[Rule]", "\<\"@fojolbros thanks for some awesome butter chicken \
+today.  You should park near @StateDept more often!\"\>"}], ",", 
+      RowBox[{"\:0589retweet\:02cdcount", "\[Rule]", "0"}], ",", 
+      RowBox[{"\:0589coordinates", "\[Rule]", "Null"}], ",", 
+      RowBox[{
+      "\:0589in\:02cdreply\:02cdto\:02cdstatus\:02cdid\:02cdstr", "\[Rule]", 
+       "Null"}], ",", 
+      RowBox[{"\:0589contributors", "\[Rule]", "Null"}], ",", 
+      RowBox[{
+      "\:0589in\:02cdreply\:02cdto\:02cduser\:02cdid\:02cdstr", 
+       "\[Rule]", "\<\"30913789\"\>"}], ",", 
+      RowBox[{"\:0589id\:02cdstr", "\[Rule]", "\<\"35117618222465024\"\>"}], 
+      ",", 
+      RowBox[{
+      "\:0589in\:02cdreply\:02cdto\:02cdscreen\:02cdname", 
+       "\[Rule]", "\<\"fojolbros\"\>"}], ",", 
+      RowBox[{"\:0589retweeted", "\[Rule]", "False"}], ",", 
+      RowBox[{"\:0589truncated", "\[Rule]", "False"}], ",", 
+      RowBox[{
+      "\:0589created\:02cdat", 
+       "\[Rule]", "\<\"Tue Feb 08 23:27:47 +0000 2011\"\>"}], ",", 
+      RowBox[{"\:0589geo", "\[Rule]", "Null"}], ",", 
+      RowBox[{"\:0589place", "\[Rule]", "Null"}], ",", 
+      RowBox[{
+      "\:0589in\:02cdreply\:02cdto\:02cdstatus\:02cdid", "\[Rule]", "Null"}], 
+      ",", 
+      RowBox[{"\:0589favorited", "\[Rule]", "False"}], ",", 
+      RowBox[{"\:0589source", "\[Rule]", "\<\"web\"\>"}], ",", 
+      RowBox[{"\:0589id", "\[Rule]", "35117618222465024"}], ",", 
+      RowBox[{
+      "\:0589in\:02cdreply\:02cdto\:02cduser\:02cdid", "\[Rule]", 
+       "30913789"}]}], "}"}]}], ",", 
+   RowBox[{
+   "\:0589profile\:02cduse\:02cdbackground\:02cdimage", "\[Rule]", "True"}], 
+   ",", 
+   RowBox[{"\:0589follow\:02cdrequest\:02cdsent", "\[Rule]", "False"}], ",", 
+   RowBox[{
+   "\:0589profile\:02cdsidebar\:02cdfill\:02cdcolor", 
+    "\[Rule]", "\<\"E3E2DE\"\>"}], ",", 
+   RowBox[{"\:0589protected", "\[Rule]", "False"}], ",", 
+   RowBox[{"\:0589following", "\[Rule]", "False"}], ",", 
+   RowBox[{
+   "\:0589profile\:02cdbackground\:02cdimage\:02cdurl", 
+    "\[Rule]", \
+"\<\"http://a2.twimg.com/profile_background_images/83916146/Washington_\
+twitter_2.jpg\"\>"}], ",", 
+   RowBox[{"\:0589contributors\:02cdenabled", "\[Rule]", "False"}], ",", 
+   RowBox[{"\:0589favourites\:02cdcount", "\[Rule]", "0"}], ",", 
+   RowBox[{
+   "\:0589time\:02cdzone", "\[Rule]", "\<\"Eastern Time (US & Canada)\"\>"}], 
+   ",", 
+   RowBox[{"\:0589name", "\[Rule]", "\<\"Sarah King\"\>"}], ",", 
+   RowBox[{"\:0589id\:02cdstr", "\[Rule]", "\<\"111627089\"\>"}], ",", 
+   RowBox[{"\:0589listed\:02cdcount", "\[Rule]", "37"}], ",", 
+   RowBox[{"\:0589utc\:02cdoffset", "\[Rule]", 
+    RowBox[{"-", "18000"}]}], ",", 
+   RowBox[{
+   "\:0589profile\:02cdlink\:02cdcolor", "\[Rule]", "\<\"088253\"\>"}], ",", 
+   RowBox[{"\:0589profile\:02cdbackground\:02cdtile", "\[Rule]", "True"}], 
+   ",", 
+   RowBox[{"\:0589location", "\[Rule]", "\<\"Washington, DC\"\>"}], ",", 
+   RowBox[{"\:0589statuses\:02cdcount", "\[Rule]", "548"}], ",", 
+   RowBox[{"\:0589followers\:02cdcount", "\[Rule]", "564"}], ",", 
+   RowBox[{"\:0589friends\:02cdcount", "\[Rule]", "295"}], ",", 
+   RowBox[{
+   "\:0589created\:02cdat", 
+    "\[Rule]", "\<\"Fri Feb 05 16:00:30 +0000 2010\"\>"}], ",", 
+   RowBox[{"\:0589lang", "\[Rule]", "\<\"en\"\>"}], ",", 
+   RowBox[{
+   "\:0589profile\:02cdsidebar\:02cdborder\:02cdcolor", 
+    "\[Rule]", "\<\"D3D2CF\"\>"}], ",", 
+   RowBox[{"\:0589url", "\[Rule]", "Null"}], ",", 
+   RowBox[{"\:0589notifications", "\[Rule]", "False"}], ",", 
+   RowBox[{
+   "\:0589profile\:02cdbackground\:02cdcolor", "\[Rule]", "\<\"EDECE9\"\>"}], 
+   ",", 
+   RowBox[{"\:0589geo\:02cdenabled", "\[Rule]", "True"}], ",", 
+   RowBox[{"\:0589show\:02cdall\:02cdinline\:02cdmedia", "\[Rule]", "False"}],
+    ",", 
+   RowBox[{"\:0589is\:02cdtranslator", "\[Rule]", "False"}], ",", 
+   RowBox[{
+   "\:0589profile\:02cdimage\:02cdurl", 
+    "\[Rule]", \
+"\<\"http://a0.twimg.com/profile_images/683395411/OAS_foto_normal.jpg\"\>"}], 
+   ",", 
+   RowBox[{"\:0589verified", "\[Rule]", "False"}], ",", 
+   RowBox[{"\:0589id", "\[Rule]", "111627089"}], ",", 
+   RowBox[{
+   "\:0589description", 
+    "\[Rule]", "\<\"Foreign Policy wonk-ette, Washington enthusiast, \
+Californian at heart\"\>"}], ",", 
+   RowBox[{
+   "\:0589profile\:02cdtext\:02cdcolor", "\[Rule]", "\<\"634047\"\>"}], ",", 
+   RowBox[{"\:0589screen\:02cdname", "\[Rule]", "\<\"sarahmckoolking\"\>"}]}],
+   "}"}]], "Output",
+ CellChangeTimes->{3.506232437492922*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"uidmapping", "=", 
+   RowBox[{"Cases", "[", 
+    RowBox[{
+     RowBox[{"Rule", "@@@", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"CL", "@", 
+          RowBox[{"let", "[", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"u", ",", 
+              RowBox[{"GetProfile", "[", "#", "]"}]}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"#", ",", 
+              RowBox[{"\:0589id", "[", "u", "]"}]}], "}"}]}], "]"}]}], "&"}], 
+        "/@", "mideasters"}], ")"}]}], ",", "_Rule"}], "]"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.506232869173558*^9, 3.506232875316416*^9}, {
+  3.50623325800723*^9, 3.506233307006192*^9}, {3.5062333421782846`*^9, 
+  3.506233366391181*^9}, {3.506233560983843*^9, 3.506233577230976*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["jan25 friends", "Section",
+ CellChangeTimes->{{3.505962679804741*^9, 3.505962681748804*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"oauth", "[", "x_", "]"}], ":=", 
+  RowBox[{"twitter`with\:2011oauth", "[", 
+   RowBox[{
+   "oauth\:2011consumer", ",", " ", "oauth\:2011access\:2011token", ",", 
+    "oauth\:2011access\:2011token\:2011secret", ",", "x"}], "]"}]}]], "Input",\
+
+ CellChangeTimes->{{3.506223993396502*^9, 3.506224029979109*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"ImportFriendsIDs", "[", "name_", "]"}], ":=", 
+  RowBox[{"oauth", "[", 
+   RowBox[{"let", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"ids", ",", 
+       RowBox[{"twitter`friends\:2011of\:2011name", "[", "name", "]"}]}], 
+      "}"}], ",", 
+     RowBox[{"SetFriendsIDs", "[", 
+      RowBox[{"name", ",", "ids"}], "]"}], ",", "ids"}], "]"}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.5062245519713707`*^9, 3.506224579629236*^9}, {
+   3.506226342855455*^9, 3.506226403979109*^9}, {3.506227595216206*^9, 
+   3.506227595933519*^9}, 3.5062276301114492`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"SetFriendsIDs", "[", 
+   RowBox[{"name_", ",", "followers_"}], "]"}], ":=", 
+  RowBox[{"hb`with\:2011table", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"t", ",", 
+      RowBox[{"hb`table", "[", "\"\<users\>\"", "]"}]}], "}"}], ",", 
+    RowBox[{"hb`put", "[", 
+     RowBox[{"t", ",", "name", ",", "\:0589values", ",", 
+      RowBox[{"{", 
+       RowBox[{"\:0589graph", ",", 
+        RowBox[{"{", 
+         RowBox[{"\:0589friendids", ",", 
+          RowBox[{"json\:2011str", "[", "followers", "]"}]}], "}"}]}], 
+       "}"}]}], "]"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.506224155279331*^9, 3.506224169210588*^9}, {
+  3.50622435805575*^9, 3.506224378886496*^9}, {3.506224535348168*^9, 
+  3.506224536577176*^9}, {3.5062276003372393`*^9, 3.506227603058201*^9}}],
+
+Cell[BoxData[
+ RowBox[{"CL", "@", 
+  RowBox[{
+  "ImportFriendsIDs", "[", "\"\<TwiddleEastNews\>\"", "]"}]}]], "Input",
+ CellChangeTimes->{{3.50622640993303*^9, 3.50622641857754*^9}, 
+   3.5062276087747498`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"ImportFollowerIDs", "[", "\"\<oshaokhtmeligi\>\"", "]"}], "//", 
+  "CL"}]], "Input",
+ CellChangeTimes->{{3.506225272440661*^9, 3.506225272831588*^9}}],
+
+Cell[BoxData[
+ RowBox[{"CL", "@", 
+  RowBox[{"twitter`with\:2011oauth", "[", 
+   RowBox[{
+   "oauth\:2011consumer", ",", "oauth\:2011access\:2011token", ",", 
+    "oauth\:2011access\:2011token\:2011secret", ",", 
+    RowBox[{"hb`with\:2011table", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"t", ",", 
+        RowBox[{"hb`table", "[", "\"\<users\>\"", "]"}]}], "}"}], ",", 
+      RowBox[{"hb`put", "[", 
+       RowBox[{"t", ",", "\"\<oshaokhtmeligi\>\"", ",", "\:0589values", ",", 
+        RowBox[{"{", 
+         RowBox[{"\:0589graph", ",", 
+          RowBox[{"{", 
+           RowBox[{"\:0589friendids", ",", 
+            RowBox[{"json\:2011str", "[", 
+             RowBox[{
+             "twitter`friends\:2011of\:2011name", "[", 
+              "\"\<oshaokhtmeligi\>\"", "]"}], "]"}]}], "}"}]}], "}"}]}], 
+       "]"}]}], "]"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.5062245800429697`*^9, 3.506224592389127*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["", "Subsection",
+ CellChangeTimes->{{3.506224727386907*^9, 3.506224728862357*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"GetFriendsIDs", "[", "name_", "]"}], ":=", 
+  RowBox[{"read\:2011json", "@", 
+   RowBox[{"last", "@", 
+    RowBox[{"first", "@", 
+     RowBox[{"get\:2011in", "[", 
+      RowBox[{
+       RowBox[{"hb`with\:2011table", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"t", ",", 
+           RowBox[{"hb`table", "[", "\"\<users\>\"", "]"}]}], "}"}], ",", 
+         RowBox[{"hb`as\:2011map", "[", 
+          RowBox[{
+           RowBox[{"hb`get", "[", 
+            RowBox[{"t", ",", "name", ",", "\:0589columns", ",", 
+             RowBox[{"{", 
+              RowBox[{"\:0589graph", ",", 
+               RowBox[{"{", "\:0589friendids", "}"}]}], " ", "}"}]}], "]"}], 
+           ",", "\:0589map\:2011value", ",", 
+           RowBox[{"fn", "[", 
+            RowBox[{
+             RowBox[{"{", "x", "}"}], ",", 
+             RowBox[{"Bytes`toString", "[", "x", "]"}]}], "]"}], ",", 
+           "\:0589map\:2011family", ",", 
+           RowBox[{"fn", "[", 
+            RowBox[{
+             RowBox[{"{", "x", "}"}], ",", 
+             RowBox[{"Bytes`toString", "[", "x", "]"}]}], "]"}], ",", 
+           "\:0589map\:2011qualifier", ",", 
+           RowBox[{"fn", "[", 
+            RowBox[{
+             RowBox[{"{", "x", "}"}], ",", 
+             RowBox[{"Bytes`toString", "[", "x", "]"}]}], "]"}]}], "]"}]}], 
+        "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"\"\<graph\>\"", ",", "\"\<friendids\>\""}], "}"}]}], 
+      "]"}]}]}]}]}]], "Input",
+ CellChangeTimes->{{3.5062257339917*^9, 3.5062257624890614`*^9}, {
+  3.506225869298376*^9, 3.506225917366571*^9}, {3.506226168774082*^9, 
+  3.5062261723064528`*^9}, {3.5062262131094093`*^9, 3.506226226700738*^9}, {
+  3.506227585170184*^9, 3.5062275863428392`*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.506225863923648*^9, 3.50622586602592*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "Subsection"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"CL", "@", 
+     RowBox[{"ImportFollowerIDs", "[", "#", "]"}]}], "&"}], "/@", 
+   "mideasters"}], ";"}]], "Input",
+ CellChangeTimes->{{3.506226458009221*^9, 3.506226464017099*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"#", "/.", "uidmapping"}], ")"}], "\[Rule]", 
+     RowBox[{"Select", "[", 
+      RowBox[{
+       RowBox[{"CL", "@", 
+        RowBox[{"GetFriendsIDs", "[", "#", "]"}]}], ",", "keepQ"}], "]"}]}], 
+    ")"}], "&"}], "/@", "mideasters"}]], "Input",
+ CellChangeTimes->{{3.50622627795007*^9, 3.506226283837056*^9}, {
+  3.506227771519146*^9, 3.5062277742922487`*^9}, {3.506233486146578*^9, 
+  3.506233527345368*^9}, {3.5062335923726463`*^9, 3.5062336104437513`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"arabicfraction2", "=", 
+   RowBox[{"arabicfraction", "/.", "uidmapping"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.506233925096389*^9, 3.506233938918689*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"arabicfraction", "[", 
+  RowBox[{"[", "1", "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.506234008533146*^9, 3.506234009558062*^9}}],
+
+Cell[BoxData[
+ RowBox[{"\<\"oshaokhtmeligi\"\>", "\[Rule]", 
+  "0.6924460431654677`"}]], "Output",
+ CellChangeTimes->{3.506234009932325*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"<<", "GraphUtilitie"}]], "Input",
+ CellChangeTimes->{{3.5062342325546713`*^9, 3.5062342442674017`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"graph", "=", 
+   RowBox[{"Graph", "@", 
+    RowBox[{"Union", "[", 
+     RowBox[{"Sort", "/@", 
+      RowBox[{"Intersection", "[", 
+       RowBox[{
+        RowBox[{"Union", "@", 
+         RowBox[{"Flatten", "[", 
+          RowBox[{"Thread", "/@", "%266"}], "]"}]}], ",", 
+        RowBox[{"Reverse", "/@", 
+         RowBox[{"Union", "@", 
+          RowBox[{"Flatten", "[", 
+           RowBox[{"Thread", "/@", "%266"}], "]"}]}]}]}], "]"}]}], "]"}]}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.5062343124945498`*^9, 3.506234327907351*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"dropvertices", "=", 
+   RowBox[{"First", "/@", 
+    RowBox[{"Select", "[", 
+     RowBox[{
+      RowBox[{"Transpose", "[", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"VertexList", "[", "graph", "]"}], ",", 
+         RowBox[{"VertexDegree", "[", "graph", "]"}]}], "}"}], "]"}], ",", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Last", "[", "#", "]"}], "===", "1"}], "&"}]}], "]"}]}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.506234840841853*^9, 3.506234844545931*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Select", "[", 
+  RowBox[{
+   RowBox[{"Union", "[", 
+    RowBox[{"Sort", "/@", 
+     RowBox[{"Intersection", "[", 
+      RowBox[{
+       RowBox[{"Union", "@", 
+        RowBox[{"Flatten", "[", 
+         RowBox[{"Thread", "/@", "%266"}], "]"}]}], ",", 
+       RowBox[{"Reverse", "/@", 
+        RowBox[{"Union", "@", 
+         RowBox[{"Flatten", "[", 
+          RowBox[{"Thread", "/@", "%266"}], "]"}]}]}]}], "]"}]}], "]"}], ",", 
+   
+   RowBox[{
+    RowBox[{"FreeQ", "[", 
+     RowBox[{"#", ",", 
+      RowBox[{"Alternatives", "@@", "dropvertices"}]}], "]"}], "&"}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.506234877018363*^9, 3.506234897382887*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Export", "[", 
+  RowBox[{"\"\</mideast3.graphml\>\"", ",", 
+   RowBox[{"%305", "/.", 
+    RowBox[{"(", 
+     RowBox[{"Reverse", "/@", "uidmapping"}], ")"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.506234986677072*^9, 3.506235015393682*^9}, {
+  3.506235047361183*^9, 3.50623506264828*^9}, {3.50623512735457*^9, 
+  3.5062351289450073`*^9}}],
+
+Cell[BoxData["\<\"/mideast3.graphml\"\>"], "Output",
+ CellChangeTimes->{3.506235086405754*^9, 3.506235130365961*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"GraphPlot", "[", "%%%", "]"}]], "Input",
+ CellChangeTimes->{{3.506234899176001*^9, 3.506234910884918*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"graph2", "=", 
+   RowBox[{"VertexDelete", "[", 
+    RowBox[{"graph", ",", 
+     RowBox[{"First", "/@", 
+      RowBox[{"Select", "[", 
+       RowBox[{
+        RowBox[{"Transpose", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"VertexList", "[", "graph", "]"}], ",", 
+           RowBox[{"VertexDegree", "[", "graph", "]"}]}], "}"}], "]"}], ",", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Last", "[", "#", "]"}], "===", "1"}], "&"}]}], "]"}]}]}], 
+    "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.506234448451386*^9, 3.5062344718398046`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.506234314472281*^9, 3.506234350360175*^9}, {
+  3.506234430608302*^9, 3.506234457310223*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "163014260", ",", "9739482", ",", "19489239", ",", "14973978", ",", 
+   "15432218", ",", "17001490", ",", "16466545", ",", "135476005", ",", 
+   "23925541", ",", "18725815", ",", "69181624", ",", "19083676", ",", 
+   "19681513", ",", "49728986", ",", "23572083", ",", "27414710", ",", 
+   "25071839", ",", "36615385", ",", "52511395", ",", "151106990", ",", 
+   "202557701"}], "}"}]], "Output",
+ CellChangeTimes->{{3.506234317179644*^9, 3.5062343317578487`*^9}, {
+  3.506234443621901*^9, 3.506234446887727*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"VertexDegree", "[", "graph", "]"}]], "Input",
+ CellChangeTimes->{3.506234351905126*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "16", ",", "35", ",", "43", ",", "34", ",", "47", ",", "29", ",", "19", ",",
+    "31", ",", "32", ",", "32", ",", "29", ",", "41", ",", "4", ",", "32", 
+   ",", "24", ",", "66", ",", "3", ",", "16", ",", "21", ",", "33", ",", "9", 
+   ",", "67", ",", "38", ",", "18", ",", "10", ",", "19", ",", "14", ",", 
+   "38", ",", "29", ",", "22", ",", "25", ",", "21", ",", "17", ",", "11", 
+   ",", "20", ",", "19", ",", "19", ",", "25", ",", "32", ",", "24", ",", 
+   "26", ",", "4", ",", "12", ",", "18", ",", "23", ",", "8", ",", "39", ",", 
+   "74", ",", "27", ",", "17", ",", "20", ",", "48", ",", "50", ",", "13", 
+   ",", "31", ",", "24", ",", "36", ",", "34", ",", "32", ",", "12", ",", 
+   "45", ",", "38", ",", "32", ",", "9", ",", "29", ",", "20", ",", "30", ",",
+    "19", ",", "22", ",", "22", ",", "19", ",", "24", ",", "33", ",", "36", 
+   ",", "9", ",", "20", ",", "3", ",", "24", ",", "21", ",", "5", ",", "30", 
+   ",", "24", ",", "48", ",", "15", ",", "24", ",", "19", ",", "7", ",", "12",
+    ",", "13", ",", "16", ",", "37", ",", "21", ",", "36", ",", "16", ",", 
+   "13", ",", "4", ",", "41", ",", "15", ",", "17", ",", "26", ",", "36", ",",
+    "15", ",", "4", ",", "3", ",", "3", ",", "18", ",", "21", ",", "13", ",", 
+   "19", ",", "23", ",", "10", ",", "7", ",", "14", ",", "13", ",", "10", ",",
+    "18", ",", "17", ",", "12", ",", "16", ",", "12", ",", "9", ",", "20", 
+   ",", "13", ",", "4", ",", "19", ",", "7", ",", "4", ",", "10", ",", "16", 
+   ",", "20", ",", "4", ",", "8", ",", "11", ",", "11", ",", "15", ",", "10", 
+   ",", "8", ",", "10", ",", "9", ",", "4", ",", "37", ",", "14", ",", "9", 
+   ",", "15", ",", "7", ",", "1", ",", "12", ",", "12", ",", "2", ",", "4", 
+   ",", "7", ",", "3", ",", "11", ",", "1", ",", "7", ",", "7", ",", "17", 
+   ",", "10", ",", "13", ",", "10", ",", "22", ",", "6", ",", "19", ",", "7", 
+   ",", "12", ",", "7", ",", "4", ",", "2", ",", "1", ",", "3", ",", "6", ",",
+    "7", ",", "4", ",", "5", ",", "2", ",", "17", ",", "5", ",", "5", ",", 
+   "8", ",", "6", ",", "3", ",", "4", ",", "1", ",", "2", ",", "1", ",", "6", 
+   ",", "4", ",", "7", ",", "10", ",", "9", ",", "1", ",", "2", ",", "1", ",",
+    "10", ",", "7", ",", "1", ",", "7", ",", "2", ",", "6", ",", "3", ",", 
+   "4", ",", "2", ",", "2", ",", "4", ",", "3", ",", "7", ",", "1", ",", "5", 
+   ",", "1", ",", "1", ",", "1", ",", "5", ",", "3", ",", "2", ",", "2", ",", 
+   "1", ",", "4", ",", "1", ",", "1", ",", "1", ",", "3", ",", "3", ",", "1", 
+   ",", "1", ",", "1", ",", "5", ",", "3", ",", "1", ",", "2", ",", "1"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.506234352183011*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Count", "[", 
+  RowBox[{"%289", ",", "2"}], "]"}]], "Input",
+ CellChangeTimes->{{3.506234362408745*^9, 3.506234363816057*^9}}],
+
+Cell[BoxData["11"], "Output",
+ CellChangeTimes->{3.5062343641671963`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Count", "[", 
+  RowBox[{"%", ",", "1"}], "]"}]], "Input",
+ CellChangeTimes->{{3.506234354367634*^9, 3.506234357248137*^9}}],
+
+Cell[BoxData["21"], "Output",
+ CellChangeTimes->{3.5062343576556807`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Options", "[", "GraphPlot", "]"}]], "Input",
+ CellChangeTimes->{{3.506234502459586*^9, 3.506234503452098*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"AlignmentPoint", "\[Rule]", "Center"}], ",", 
+   RowBox[{"AspectRatio", "\[Rule]", "Automatic"}], ",", 
+   RowBox[{"Axes", "\[Rule]", "False"}], ",", 
+   RowBox[{"AxesLabel", "\[Rule]", "None"}], ",", 
+   RowBox[{"AxesOrigin", "\[Rule]", "Automatic"}], ",", 
+   RowBox[{"AxesStyle", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"Background", "\[Rule]", "None"}], ",", 
+   RowBox[{"BaselinePosition", "\[Rule]", "Automatic"}], ",", 
+   RowBox[{"BaseStyle", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"ColorOutput", "\[Rule]", "Automatic"}], ",", 
+   RowBox[{"ContentSelectable", "\[Rule]", "Automatic"}], ",", 
+   RowBox[{"CoordinatesToolOptions", "\[Rule]", "Automatic"}], ",", 
+   RowBox[{"DataRange", "\[Rule]", "Automatic"}], ",", 
+   RowBox[{"DirectedEdges", "\[Rule]", "False"}], ",", 
+   RowBox[{"DisplayFunction", "\[RuleDelayed]", "$DisplayFunction"}], ",", 
+   RowBox[{"EdgeLabeling", "\[Rule]", "True"}], ",", 
+   RowBox[{"EdgeRenderingFunction", "\[Rule]", "Automatic"}], ",", 
+   RowBox[{"Epilog", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"FormatType", "\[RuleDelayed]", "TraditionalForm"}], ",", 
+   RowBox[{"Frame", "\[Rule]", "False"}], ",", 
+   RowBox[{"FrameLabel", "\[Rule]", "None"}], ",", 
+   RowBox[{"FrameStyle", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"FrameTicks", "\[Rule]", "None"}], ",", 
+   RowBox[{"FrameTicksStyle", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"GridLines", "\[Rule]", "None"}], ",", 
+   RowBox[{"GridLinesStyle", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"ImageMargins", "\[Rule]", "0.`"}], ",", 
+   RowBox[{"ImagePadding", "\[Rule]", "All"}], ",", 
+   RowBox[{"ImageSize", "\[Rule]", "Automatic"}], ",", 
+   RowBox[{"ImageSizeRaw", "\[Rule]", "Automatic"}], ",", 
+   RowBox[{"LabelStyle", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"Method", "\[Rule]", "Automatic"}], ",", 
+   RowBox[{"MultiedgeStyle", "\[Rule]", "Automatic"}], ",", 
+   RowBox[{"PackingMethod", "\[Rule]", "Automatic"}], ",", 
+   RowBox[{"PlotLabel", "\[Rule]", "None"}], ",", 
+   RowBox[{"PlotRange", "\[Rule]", "All"}], ",", 
+   RowBox[{"PlotRangeClipping", "\[Rule]", "False"}], ",", 
+   RowBox[{"PlotRangePadding", "\[Rule]", "Automatic"}], ",", 
+   RowBox[{"PlotRegion", "\[Rule]", "Automatic"}], ",", 
+   RowBox[{"PlotStyle", "\[Rule]", "Automatic"}], ",", 
+   RowBox[{"PreserveImageOptions", "\[Rule]", "Automatic"}], ",", 
+   RowBox[{"Prolog", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"RotateLabel", "\[Rule]", "True"}], ",", 
+   RowBox[{"SelfLoopStyle", "\[Rule]", "Automatic"}], ",", 
+   RowBox[{"Ticks", "\[Rule]", "Automatic"}], ",", 
+   RowBox[{"TicksStyle", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"VertexCoordinateRules", "\[Rule]", "Automatic"}], ",", 
+   RowBox[{"VertexLabeling", "\[Rule]", "Automatic"}], ",", 
+   RowBox[{"VertexRenderingFunction", "\[Rule]", "Automatic"}]}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.5062345038444242`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"GraphPlot", "[", 
+  RowBox[{
+   RowBox[{"First", "@", "graph2"}], ",", 
+   RowBox[{"VertexRenderingFunction", "\[Rule]", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"Blend", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"Blue", ",", "Green"}], "}"}], ",", 
+          RowBox[{
+           RowBox[{"2", "*", 
+            RowBox[{"(", 
+             RowBox[{"#2", "/.", "arabicfraction2"}], ")"}]}], "/.", " ", 
+           RowBox[{
+            RowBox[{"Except", "[", "_Real", "]"}], "\[Rule]", "0"}]}]}], 
+         "]"}], ",", 
+        RowBox[{"Point", "[", "#1", "]"}]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{"DirectedEdges", "\[Rule]", "False"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.506233633367464*^9, 3.506233686735979*^9}, {
+  3.506233721473295*^9, 3.5062337320311203`*^9}, {3.506233944258224*^9, 
+  3.5062340774461203`*^9}, {3.506234117676271*^9, 3.506234164993273*^9}, {
+  3.506234474320142*^9, 3.5062345098327513`*^9}, {3.506234550542326*^9, 
+  3.506234551227417*^9}}],
+
+Cell[BoxData[
+ RowBox[{"$Aborted", "[", "]"}]], "Output",
+ CellChangeTimes->{
+  3.506233687969997*^9, 3.5062339939604893`*^9, {3.506234024454137*^9, 
+   3.506234078425784*^9}, {3.5062341234197817`*^9, 3.506234165919945*^9}, 
+   3.506234476875531*^9, 3.5062345105606623`*^9, 3.506234560390545*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"Normal", "@", "graph2"}]], "Input",
+ CellChangeTimes->{{3.506234602694707*^9, 3.506234603952057*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Length", "[", "graph2", "]"}]], "Input",
+ CellChangeTimes->{{3.506234583008757*^9, 3.506234588159814*^9}}],
+
+Cell[BoxData["0"], "Output",
+ CellChangeTimes->{{3.506234584680079*^9, 3.506234588414384*^9}}]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "Section"],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{3.505966295295164*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"mideastgraph1", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"CL", "@", 
+      RowBox[{"With", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"name", "=", 
+          RowBox[{"(", 
+           RowBox[{"\:0589screen\:02cdname", "/.", 
+            RowBox[{"#", "[", 
+             RowBox[{"[", 
+              RowBox[{"2", ",", "1"}], "]"}], "]"}]}], ")"}]}], "}"}], ",", 
+        RowBox[{"let", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"user", ",", 
+            RowBox[{"hb`with\:2011table", "[", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{"t", ",", 
+                RowBox[{"hb`table", "[", "\"\<users\>\"", "]"}]}], "}"}], ",", 
+              RowBox[{"hb`as\:2011map", "[", 
+               RowBox[{
+                RowBox[{"hb`get", "[", 
+                 RowBox[{"t", ",", "name", ",", "\:0589columns", ",", 
+                  RowBox[{"{", 
+                   RowBox[{"\:0589graph", " ", "\[Rule]", "\:0589friendids"}],
+                    "}"}]}], "]"}], ",", "\:0589map\:2011value", ",", 
+                RowBox[{"fn", "[", 
+                 RowBox[{
+                  RowBox[{"{", "x", "}"}], ",", 
+                  RowBox[{"Bytes`toString", "[", "x", "]"}]}], "]"}], ",", 
+                "\:0589map\:2011family", ",", 
+                RowBox[{"fn", "[", 
+                 RowBox[{
+                  RowBox[{"{", "x", "}"}], ",", 
+                  RowBox[{"Bytes`toString", "[", "x", "]"}]}], "]"}], ",", 
+                "\:0589map\:2011qualifier", ",", 
+                RowBox[{"fn", "[", 
+                 RowBox[{
+                  RowBox[{"{", "x", "}"}], ",", 
+                  RowBox[{"Bytes`toString", "[", "x", "]"}]}], "]"}]}], 
+               "]"}]}], "]"}]}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", "\[IndentingNewLine]", 
+           RowBox[{
+            RowBox[{"let", "[", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{"x", ",", 
+                RowBox[{"read\:2011json", "@", 
+                 RowBox[{"last", "@", 
+                  RowBox[{"first", "@", 
+                   RowBox[{"get\:2011in", "[", 
+                    RowBox[{"user", ",", 
+                    RowBox[{"{", 
+                    RowBox[{"\"\<profile\>\"", ",", "\"\<json\>\""}], "}"}]}],
+                     "]"}]}]}]}]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"\:0589id", "@", "x"}], ",", 
+                RowBox[{"\:0589screen\:02cdname", "@", "x"}]}], "}"}]}], 
+             "]"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"read\:2011json", "[", 
+             RowBox[{"last", "@", 
+              RowBox[{"first", "@", 
+               RowBox[{"get\:2011in", "[", 
+                RowBox[{"user", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<graph\>\"", ",", "\"\<friendids\>\""}], 
+                  "}"}]}], "]"}]}]}], "]"}]}], "}"}]}], "\[IndentingNewLine]",
+          "]"}]}], "]"}]}], "&"}], "/@", "friendprofiles"}]}], ";"}]], "Input",\
+
+ CellChangeTimes->{{3.505962926254859*^9, 3.5059629375460863`*^9}, {
+  3.505962979583001*^9, 3.505963021227346*^9}, {3.5059630550854273`*^9, 
+  3.505963080326232*^9}, {3.5059636175999928`*^9, 3.505963637289648*^9}, {
+  3.505965138776338*^9, 3.505965163642173*^9}, {3.505965288888526*^9, 
+  3.505965291932172*^9}, {3.505966010164831*^9, 3.505966041990795*^9}, {
+  3.5059660832016697`*^9, 3.505966361922681*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"uidmapping", "=", 
+   RowBox[{"Rule", "@@@", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"CL", "@", 
+        RowBox[{"let", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"u", ",", 
+            RowBox[{"GetProfile", "[", "#", "]"}]}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"#", ",", 
+            RowBox[{"\:0589id", "[", "u", "]"}]}], "}"}]}], "]"}]}], "&"}], "/@",
+       "mideasters"}], ")"}]}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.506232869173558*^9, 3.506232875316416*^9}, {
+  3.50623325800723*^9, 3.506233307006192*^9}, {3.5062333421782846`*^9, 
+  3.506233366391181*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"keepQ", "[", "#", "]"}], "=", "True"}], ")"}], "&"}], "/@", 
+   RowBox[{"Last", "/@", "uidmapping"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.505966401943421*^9, 3.505966432164928*^9}, {
+  3.505966493560424*^9, 3.505966494953249*^9}, {3.5062334470430183`*^9, 
+  3.5062334566959553`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Last", "/@", "uidmapping"}]], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"??", "keepQ"}]], "Input",
+ CellChangeTimes->{{3.505966485288641*^9, 3.505966485910386*^9}}],
+
+Cell["Global`keepQ", "Print", "PrintUsage",
+ CellChangeTimes->{3.5059664873488503`*^9},
+ CellTags->"Info3505937686-9336346"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"mideastgraph2", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"#", "[", 
+       RowBox[{"[", 
+        RowBox[{"1", ",", "1"}], "]"}], "]"}], "\[Rule]", 
+      RowBox[{"Select", "[", 
+       RowBox[{
+        RowBox[{"Last", "[", "#", "]"}], ",", "keepQ"}], "]"}]}], "&"}], "/@",
+     "mideastgraph1"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.505966384818177*^9, 3.505966388513475*^9}, {
+  3.505966436753084*^9, 3.505966460681579*^9}}],
+
+Cell[BoxData[
+ RowBox[{"mideastgraph2", "[", 
+  RowBox[{"[", "10", "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.505966463743314*^9, 3.505966470734035*^9}}],
+
+Cell[BoxData[
+ RowBox[{"18650093", "\[Rule]", 
+  RowBox[{"{", 
+   RowBox[{
+   "18833257", ",", "1924421", ",", "92546663", ",", "4970411", ",", 
+    "106840674", ",", "18429664", ",", "23079148", ",", "138787319", ",", 
+    "83590349", ",", "9576102", ",", "82282572", ",", "1921671", ",", "5242", 
+    ",", "69181624", ",", "85243004", ",", "29979814", ",", "14048901", ",", 
+    "2168011", ",", "9378802", ",", "9739482", ",", "20867867", ",", 
+    "16935292", ",", "1285451", ",", "17004618", ",", "14700316"}], "}"}]}]], \
+"Input",
+ CellChangeTimes->{{3.506233453677894*^9, 3.50623345509772*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.5059666307460127`*^9, 3.505966643370071*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  TagBox[
+   PanelBox[GridBox[{
+      {
+       StyleBox[
+        StyleBox[
+         DynamicBox[ToBoxes[
+           FEPrivate`FrontEndResource["FEStrings", "sizeExplanation"], 
+           StandardForm],
+          ImageSizeCache->{278., {2., 8.}}],
+         StripOnInput->False,
+         DynamicUpdating->True], "Panel",
+        StripOnInput->False,
+        Background->None]},
+      {
+       ItemBox[
+        TagBox[
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"5242", "\[Rule]", "302683"}], ",", 
+           RowBox[{"5242", "\[Rule]", "1921671"}], ",", 
+           RowBox[{"5242", "\[Rule]", "2168011"}], ",", 
+           RowBox[{"5242", "\[Rule]", "3419141"}], ",", 
+           RowBox[{"5242", "\[Rule]", "5108161"}], ",", 
+           RowBox[{"5242", "\[Rule]", "6090052"}], ",", 
+           RowBox[{"5242", "\[Rule]", "7489012"}], ",", 
+           RowBox[{"5242", "\[Rule]", "8787362"}], ",", 
+           RowBox[{"5242", "\[Rule]", "9201822"}], ",", 
+           RowBox[{"5242", "\[Rule]", "12599812"}], ",", 
+           RowBox[{"5242", "\[Rule]", "15196372"}], ",", 
+           RowBox[{"5242", "\[Rule]", "17774777"}], ",", 
+           RowBox[{"5242", "\[Rule]", "18267544"}], ",", 
+           RowBox[{"5242", "\[Rule]", "23188724"}], ",", 
+           RowBox[{"5242", "\[Rule]", "24136198"}], ",", 
+           RowBox[{"5242", "\[Rule]", "52998468"}], ",", 
+           RowBox[{"\[LeftSkeleton]", "3440", "\[RightSkeleton]"}], ",", 
+           RowBox[{"238845761", "\[Rule]", "11316572"}], ",", 
+           RowBox[{"238845761", "\[Rule]", "18011386"}], ",", 
+           RowBox[{"238845761", "\[Rule]", "24264540"}], ",", 
+           RowBox[{"238845761", "\[Rule]", "29979814"}], ",", 
+           RowBox[{"238845761", "\[Rule]", "238843898"}], ",", 
+           RowBox[{"239152755", "\[Rule]", "608583"}], ",", 
+           RowBox[{"239152755", "\[Rule]", "9201822"}], ",", 
+           RowBox[{"239152755", "\[Rule]", "14048901"}], ",", 
+           RowBox[{"239152755", "\[Rule]", "18011386"}], ",", 
+           RowBox[{"239152755", "\[Rule]", "29979814"}], ",", 
+           RowBox[{"239152755", "\[Rule]", "158067539"}], ",", 
+           RowBox[{"239152755", "\[Rule]", "159827281"}], ",", 
+           RowBox[{"242718658", "\[Rule]", "3419141"}], ",", 
+           RowBox[{"242718658", "\[Rule]", "18480789"}], ",", 
+           RowBox[{"242718658", "\[Rule]", "20301135"}], ",", 
+           RowBox[{"242718658", "\[Rule]", "23926671"}]}], "}"}],
+         Short[#, 5]& ],
+        Background->GrayLevel[1],
+        BaseStyle->{Deployed -> False},
+        Frame->True,
+        FrameStyle->GrayLevel[0, 0.2],
+        StripOnInput->False]},
+      {
+       RowBox[{
+        ButtonBox[
+         StyleBox[
+          StyleBox[
+           DynamicBox[ToBoxes[
+             FEPrivate`FrontEndResource["FEStrings", "sizeShowLess"], 
+             StandardForm],
+            ImageSizeCache->{49., {1., 8.}}],
+           StripOnInput->False,
+           DynamicUpdating->True], "Panel",
+          StripOnInput->False,
+          Background->None],
+         Appearance->Automatic,
+         ButtonFunction:>OutputSizeLimit`ButtonFunction[
+          Identity, 151, 22976457037361600632, 5/2],
+         Enabled->True,
+         Evaluator->Automatic,
+         Method->"Queued"], "\[ThinSpace]", 
+        ButtonBox[
+         StyleBox[
+          StyleBox[
+           DynamicBox[ToBoxes[
+             FEPrivate`FrontEndResource["FEStrings", "sizeShowMore"], 
+             StandardForm],
+            ImageSizeCache->{52., {1., 8.}}],
+           StripOnInput->False,
+           DynamicUpdating->True], "Panel",
+          StripOnInput->False,
+          Background->None],
+         Appearance->Automatic,
+         ButtonFunction:>OutputSizeLimit`ButtonFunction[
+          Identity, 151, 22976457037361600632, 5 2],
+         Enabled->True,
+         Evaluator->Automatic,
+         Method->"Queued"], "\[ThinSpace]", 
+        ButtonBox[
+         StyleBox[
+          StyleBox[
+           DynamicBox[ToBoxes[
+             FEPrivate`FrontEndResource["FEStrings", "sizeShowAll"], 
+             StandardForm],
+            ImageSizeCache->{82., {2., 8.}}],
+           StripOnInput->False,
+           DynamicUpdating->True], "Panel",
+          StripOnInput->False,
+          Background->None],
+         Appearance->Automatic,
+         ButtonFunction:>OutputSizeLimit`ButtonFunction[
+          Identity, 151, 22976457037361600632, Infinity],
+         Enabled->True,
+         Evaluator->Automatic,
+         Method->"Queued"], "\[ThinSpace]", 
+        ButtonBox[
+         StyleBox[
+          StyleBox[
+           DynamicBox[ToBoxes[
+             FEPrivate`FrontEndResource["FEStrings", "sizeChangeLimit"], 
+             StandardForm],
+            ImageSizeCache->{74., {1., 8.}}],
+           StripOnInput->False,
+           DynamicUpdating->True], "Panel",
+          StripOnInput->False,
+          Background->None],
+         Appearance->Automatic,
+         ButtonFunction:>FrontEndExecute[{
+            FrontEnd`SetOptions[
+            FrontEnd`$FrontEnd, 
+             FrontEnd`PreferencesSettings -> {"Page" -> "Evaluation"}], 
+            FrontEnd`FrontEndToken["PreferencesDialog"]}],
+         Evaluator->None,
+         Method->"Preemptive"]}]}
+     },
+     GridBoxAlignment->{
+      "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+       "RowsIndexed" -> {}},
+     GridBoxDividers->{
+      "Columns" -> {{False}}, "ColumnsIndexed" -> {}, "Rows" -> {{False}}, 
+       "RowsIndexed" -> {}},
+     GridBoxItemSize->{
+      "Columns" -> {{Automatic}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+       "RowsIndexed" -> {}},
+     GridBoxSpacings->{"Columns" -> {
+         Offset[0.27999999999999997`], {
+          Offset[0.5599999999999999]}, 
+         Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+         Offset[0.2], {
+          Offset[1.2]}, 
+         Offset[0.2]}, "RowsIndexed" -> {}}],
+    DefaultBaseStyle->{},
+    FrameMargins->5],
+   Deploy,
+   DefaultBaseStyle->{Deployed -> True}],
+  Out[151]]], "Output",
+ CellChangeTimes->{3.505966640990096*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Length", "[", 
+  RowBox[{"Intersection", "[", 
+   RowBox[{
+    RowBox[{"Reverse", "/@", 
+     RowBox[{"Flatten", "[", 
+      RowBox[{"Thread", "/@", "mideastgraph2"}], "]"}]}], ",", 
+    RowBox[{"Flatten", "[", 
+     RowBox[{"Thread", "/@", "mideastgraph2"}], "]"}]}], "]"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.505966692414185*^9, 3.5059666938688803`*^9}}],
+
+Cell[BoxData["3472"], "Output",
+ CellChangeTimes->{3.50596669431496*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Length", "[", 
+  RowBox[{"Reverse", "/@", 
+   RowBox[{"Flatten", "[", 
+    RowBox[{"Thread", "/@", "mideastgraph2"}], "]"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.5059666973733683`*^9, 3.505966698572939*^9}}],
+
+Cell[BoxData["7396"], "Output",
+ CellChangeTimes->{3.505966699031766*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.505966703610549*^9, 3.5059667238545513`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"5242", "\[Rule]", "1921671"}]], "Output",
+ CellChangeTimes->{{3.505966704750477*^9, 3.505966712134572*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"?", "Export"}]], "Input",
+ CellChangeTimes->{{3.505967018050417*^9, 3.5059670188765383`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox["\<\"\\!\\(\\*RowBox[{\\\"Export\\\", \\\"[\\\", RowBox[{StyleBox[\
+\\\"\\\\\\\"\\\\!\\\\(\\\\*StyleBox[\\\\\\\"file\\\\\\\",\\\\\\\"TI\\\\\\\"]\\\
+\\).\\\\!\\\\(\\\\*StyleBox[\\\\\\\"ext\\\\\\\",\\\\\\\"TI\\\\\\\"]\\\\)\\\\\\\
+\"\\\",ShowStringCharacters->True], \\\",\\\", StyleBox[\\\"expr\\\", \
+\\\"TI\\\"]}], \\\"]\\\"}]\\) exports data to a file, converting it to the \
+format corresponding to the file extension \\!\\(\\*StyleBox[\\\"ext\\\", \
+\\\"TI\\\"]\\). \\n\\!\\(\\*RowBox[{\\\"Export\\\", \\\"[\\\", \
+RowBox[{StyleBox[\\\"file\\\", \\\"TI\\\"], \\\",\\\", StyleBox[\\\"expr\\\", \
+\\\"TI\\\"], \\\",\\\", \
+StyleBox[\\\"\\\\\\\"\\\\!\\\\(\\\\*StyleBox[\\\\\\\"format\\\\\\\",\\\\\\\"\
+TI\\\\\\\"]\\\\)\\\\\\\"\\\", ShowStringCharacters->True]}], \\\"]\\\"}]\\) \
+exports data in the specified format.\\n\\!\\(\\*RowBox[{\\\"Export\\\", \
+\\\"[\\\", RowBox[{StyleBox[\\\"file\\\", \\\"TI\\\"], \\\",\\\", StyleBox[\\\
+\"exprs\\\", \\\"TI\\\"], \\\",\\\", StyleBox[\\\"elems\\\", \\\"TI\\\"]}], \
+\\\"]\\\"}]\\) exports data by treating \\!\\(\\*StyleBox[\\\"exprs\\\", \
+\\\"TI\\\"]\\) as elements specified by \\!\\(\\*StyleBox[\\\"elems\\\", \
+\\\"TI\\\"]\\).\"\>", "MSG"], "\[NonBreakingSpace]", 
+  ButtonBox[
+   StyleBox["\[RightSkeleton]", "SR"],
+   Active->True,
+   BaseStyle->"Link",
+   ButtonData->"paclet:ref/Export"]}]], "Print", "PrintUsage",
+ CellChangeTimes->{3.50596702165195*^9},
+ CellTags->"Info3505938219-9336346"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"?", "GXL"}]], "Input",
+ CellChangeTimes->{{3.505967099666671*^9, 3.505967099883319*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Union", "[", 
+  RowBox[{"Sort", "/@", 
+   RowBox[{"Intersection", "[", 
+    RowBox[{
+     RowBox[{"Reverse", "/@", 
+      RowBox[{"Flatten", "[", 
+       RowBox[{"Thread", "/@", "mideastgraph2"}], "]"}]}], ",", 
+     RowBox[{"Flatten", "[", 
+      RowBox[{"Thread", "/@", "mideastgraph2"}], "]"}]}], "]"}]}], 
+  "]"}]], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Export", "[", 
+  RowBox[{"\"\</mideast.graphml\>\"", ",", 
+   RowBox[{"Union", "[", 
+    RowBox[{"Sort", "/@", 
+     RowBox[{"Intersection", "[", 
+      RowBox[{
+       RowBox[{"Reverse", "/@", 
+        RowBox[{"Flatten", "[", 
+         RowBox[{"Thread", "/@", "mideastgraph2"}], "]"}]}], ",", 
+       RowBox[{"Flatten", "[", 
+        RowBox[{"Thread", "/@", "mideastgraph2"}], "]"}]}], "]"}]}], "]"}], 
+   ",", "\"\<graphml\>\""}], "]"}]], "Input",
+ CellChangeTimes->{{3.505967175169257*^9, 3.505967191613805*^9}, {
+  3.505967223987146*^9, 3.505967224712479*^9}, {3.505967287895969*^9, 
+  3.5059673056157312`*^9}}],
+
+Cell[BoxData["\<\"/mideast.graphml\"\>"], "Output",
+ CellChangeTimes->{
+  3.505967192670658*^9, 3.505967224986289*^9, {3.505967302828318*^9, 
+   3.505967306873231*^9}}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"Graph", "@", 
+  RowBox[{"Union", "[", 
+   RowBox[{"Sort", "/@", 
+    RowBox[{"Intersection", "[", 
+     RowBox[{
+      RowBox[{"Reverse", "/@", 
+       RowBox[{"Flatten", "[", 
+        RowBox[{"Thread", "/@", "mideastgraph2"}], "]"}]}], ",", 
+      RowBox[{"Flatten", "[", 
+       RowBox[{"Thread", "/@", "mideastgraph2"}], "]"}]}], "]"}]}], 
+   "]"}]}]], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"VertexList", "[", 
+   RowBox[{"Union", "[", 
+    RowBox[{"Sort", "/@", 
+     RowBox[{"Intersection", "[", 
+      RowBox[{
+       RowBox[{"Reverse", "/@", 
+        RowBox[{"Flatten", "[", 
+         RowBox[{"Thread", "/@", "mideastgraph2"}], "]"}]}], ",", 
+       RowBox[{"Flatten", "[", 
+        RowBox[{"Thread", "/@", "mideastgraph2"}], "]"}]}], "]"}]}], "]"}], 
+   "]"}], "//", "Length"}]], "Input",
+ CellChangeTimes->{{3.505967482643199*^9, 3.5059674869744253`*^9}}],
+
+Cell[BoxData["1"], "Output",
+ CellChangeTimes->{3.5059674876735277`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"?", "Graph"}]], "Input",
+ CellChangeTimes->{{3.505967495700911*^9, 3.505967496349093*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox["\<\"\\!\\(\\*RowBox[{\\\"Graph\\\", \\\"[\\\", RowBox[{\\\"{\\\", \
+RowBox[{SubscriptBox[StyleBox[\\\"e\\\", \\\"TI\\\"], StyleBox[\\\"1\\\", \
+\\\"TR\\\"]], \\\",\\\", SubscriptBox[StyleBox[\\\"e\\\", \\\"TI\\\"], \
+StyleBox[\\\"2\\\", \\\"TR\\\"]], \\\",\\\", StyleBox[\\\"\[Ellipsis]\\\", \\\
+\"TR\\\"]}], \\\"}\\\"}], \\\"]\\\"}]\\) yields a graph with edges \
+\\!\\(\\*SubscriptBox[StyleBox[\\\"e\\\", \\\"TI\\\"], StyleBox[\\\"j\\\", \\\
+\"TI\\\"]]\\).\\n\\!\\(\\*RowBox[{\\\"Graph\\\", \\\"[\\\", \
+RowBox[{RowBox[{StyleBox[\\\"{\\\", \\\"TI\\\"], \
+RowBox[{StyleBox[SubscriptBox[StyleBox[\\\"v\\\", \\\"TI\\\"], StyleBox[\\\"1\
+\\\", \\\"TR\\\"]], \\\"TI\\\"], \\\",\\\", StyleBox[SubscriptBox[StyleBox[\\\
+\"v\\\", \\\"TI\\\"], StyleBox[\\\"2\\\", \\\"TR\\\"]], \\\"TI\\\"], \
+\\\",\\\", StyleBox[\\\"\[Ellipsis]\\\", \\\"TR\\\"]}], StyleBox[\\\"}\\\", \
+\\\"TI\\\"]}], \\\",\\\", RowBox[{StyleBox[\\\"{\\\", \\\"TI\\\"], RowBox[{\\\
+\"{\\\", RowBox[{SubscriptBox[StyleBox[\\\"e\\\", \\\"TI\\\"], StyleBox[\\\"1\
+\\\", \\\"TR\\\"]], \\\",\\\", SubscriptBox[StyleBox[\\\"e\\\", \\\"TI\\\"], \
+StyleBox[\\\"2\\\", \\\"TR\\\"]], \\\",\\\", StyleBox[\\\"\[Ellipsis]\\\", \\\
+\"TR\\\"]}], StyleBox[\\\"}\\\", \\\"TI\\\"]}]}]}], \\\"]\\\"}]\\) yields the \
+graph with vertices \\!\\(\\*SubscriptBox[StyleBox[\\\"v\\\", \\\"TI\\\"], \
+StyleBox[\\\"i\\\", \\\"TI\\\"]]\\) and edges \\!\\(\\*SubscriptBox[StyleBox[\
+\\\"e\\\", \\\"TI\\\"], StyleBox[\\\"j\\\", \\\"TI\\\"]]\\). \
+\\n\\!\\(\\*RowBox[{\\\"Graph\\\", \\\"[\\\", RowBox[{RowBox[{\\\"{\\\", \
+RowBox[{StyleBox[\\\"\[Ellipsis]\\\", \\\"TR\\\"], \\\",\\\", \
+RowBox[{SubscriptBox[StyleBox[\\\"w\\\", \\\"TI\\\"], StyleBox[\\\"i\\\", \
+\\\"TI\\\"]], \\\"[\\\", RowBox[{SubscriptBox[StyleBox[\\\"v\\\", \
+\\\"TI\\\"], StyleBox[\\\"i\\\", \\\"TI\\\"]], \\\",\\\", StyleBox[\\\"\
+\[Ellipsis]\\\", \\\"TR\\\"]}], \\\"]\\\"}], \\\",\\\", StyleBox[\\\"\
+\[Ellipsis]\\\", \\\"TR\\\"]}], \\\"}\\\"}], \\\",\\\", RowBox[{\\\"{\\\", \
+RowBox[{StyleBox[\\\"\[Ellipsis]\\\", \\\"TR\\\"], \\\",\\\", \
+RowBox[{SubscriptBox[StyleBox[\\\"w\\\", \\\"TI\\\"], StyleBox[\\\"j\\\", \
+\\\"TI\\\"]], \\\"[\\\", RowBox[{SubscriptBox[StyleBox[\\\"e\\\", \
+\\\"TI\\\"], StyleBox[\\\"j\\\", \\\"TI\\\"]], \\\",\\\", StyleBox[\\\"\
+\[Ellipsis]\\\", \\\"TR\\\"]}], \\\"]\\\"}], \\\",\\\", StyleBox[\\\"\
+\[Ellipsis]\\\", \\\"TR\\\"]}], \\\"}\\\"}]}], \\\"]\\\"}]\\) yields a graph \
+with vertex and edge properties defined by the symbolic wrappers \
+\\!\\(\\*SubscriptBox[StyleBox[\\\"w\\\", \\\"TI\\\"], StyleBox[\\\"k\\\", \\\
+\"TI\\\"]]\\).\"\>", "MSG"], "\[NonBreakingSpace]", 
+  ButtonBox[
+   StyleBox["\[RightSkeleton]", "SR"],
+   Active->True,
+   BaseStyle->"Link",
+   ButtonData->"paclet:ref/Graph"]}]], "Print", "PrintUsage",
+ CellChangeTimes->{3.505967497221202*^9},
+ CellTags->"Info3505938696-9336346"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"Import", "[", "\"\<~/mideast2.graphml\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.505972691856065*^9, 3.505972711558487*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"GraphPlot", "[", 
+  RowBox[{
+   RowBox[{"Union", "[", 
+    RowBox[{"Sort", "/@", 
+     RowBox[{"Intersection", "[", 
+      RowBox[{
+       RowBox[{"Reverse", "/@", 
+        RowBox[{"Flatten", "[", 
+         RowBox[{"Thread", "/@", "mideastgraph2"}], "]"}]}], ",", 
+       RowBox[{"Flatten", "[", 
+        RowBox[{"Thread", "/@", "mideastgraph2"}], "]"}]}], "]"}]}], "]"}], 
+   ",", 
+   RowBox[{"SelfLoopStyle", "\[Rule]", "None"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.505966504430462*^9, 3.505966526036066*^9}, {
+  3.505966584371079*^9, 3.505966584530303*^9}, {3.505966644955702*^9, 
+  3.50596668430418*^9}, {3.505966725027871*^9, 3.5059667339517384`*^9}}],
+
+Cell[BoxData[
+ GraphicsBox[
+  TagBox[GraphicsComplexBox[CompressedData["
+1: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
+ouJW/bMMpf/XVYgdx19YTsL/AHw+IHI=
+    "], {
+     {RGBColor[0.5, 0., 0.], LineBox[CompressedData["
+1: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
+mRwhR4JjI2OtY94x/9jsmHWMHLONBcc+exd59713x98bf+/t8bfH/zr+avzn
+ifMTHRNTEwsT0onLE8uTu1MLU9IpeOry1PL0f0wnpuenPzw7fzaUO5fbzBVy
+/NzD3HZOloNzX+Ue5ZK5g5w8N567k6vO7c0cnXHOpGaq30/l+/Ly/P189bnC
+uSsfwLPUbHD2k7nU3O5cZm5+/pP5ofnQ/Onzi+d15y+dXzo/cH5lQbugW9Qt
+3lpcWkwvDiyuLF5YGliWX5y6qL2ou3jp4lJhq8AvPCxsF6SFWAEufFXIF+yF
+J4VkoVhYLfQVrhbShf7CbmGgcKNwp/C7QnVhr/B0tW9VvvpgdXd179LSpYG1
+zrWHa79fg9d21i6t3V7Lrz1ZK649W/tmbe/y0HpifXT95kbPxtzGO7+yXTFf
+qbqS+DT96Z+v7v4Nci11bXezsLm2yd/s3NzehDfzm8nN4mbfpnxzd1OxWb0l
+3YptpbeGtv6wdXPr9HbVtnQ7v923rdj+Ybt6p7jTu/NyR1F8Vlwtyovjxd3i
+naKiuFd8er1/98at6tvF2+O3X93++fber/d/Pb/ftb++v7P/x/3H+9f2qf3v
+9o/uz+2n9r/f/3xfcbfhbtXd/L2+e8/v3Xiw+8W5L6588fHf7f7m7m9G/j73
+sPjwnx+Of/XNo+Kjg0erj54/uvro5cHqQd+B/ODB17Kvv/zHx4/Jx8nH6cf9
+j+8/kT959eTn3xef9T1TfPM/39769uBb+beKP9z8439+l/5u6Hnm+Q8vUv9S
+fKn4U+xPzn/d+DH54/Uf+//98V+Ov1L89dX/fvZ/emARow==
+       "]]}, 
+     {RGBColor[0, 0, 0.7], 
+      PointBox[{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18,
+        19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 
+       36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53,
+        54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 
+       71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88,
+        89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 
+       105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 
+       119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 
+       133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 
+       147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 
+       161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 
+       175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 
+       189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, 201, 202, 
+       203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 
+       217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 
+       231, 232, 233}]}}],
+   Annotation[#, VertexCoordinateRules -> CompressedData["
+1:eJw9Vnk01A3YtQ6z+s0YM2PMjIhKJISKai6VUhFKIS2WlLdeoSREJGtKr7dF
+KpXsLWRJFMlWonqlxRapZG0RIsLnO+c733POc+6/z7nPfe5z1VwP2O2WkpCQ
+6J3p/0W7ZbPb84pYuBoTzFvaTUJHUBBxuIMJ3dNrP9nLUeBIW+wj/MLEWM25
+e7WqZIiG9nloHCWgEhxneyiABu0cGUoanQmDieL8xy4UWF9r3W1gzMPaF05y
+xfqyEK/sPeJdpoTj6WqMpj8yaBHX1zPy6Zgbt5DIPSyPGx6v/ZTu0nCtskJj
+YAabbg6W3x0kQDmwZerDYQbumflXrXpCh//A8YENmlSMRnlUDK8i4NZgl1lp
+S8e516sPPopXRKvw0M2R2ilx9No4SV0OH6sjhQcCrWm40q877WSiiPXCNf67
+y2noDxBM9wxzkKLZZDmeSoWTVXbtQDMDdMqJRaWHJ8UGY3ZT/goz8/83HnNJ
+joyCogajxzQeWIsSVBIySGjeKZwlv0QZLvQcwxVesohxGPGyXSHAr8JkPk9T
+Ap/KD9j0FHOQVt5YZ9hIwwl2YtZ5WS6k831Mg2f40ePOtbYf4MHy2Nwdv3Ip
+eNG1t+DGPg5a9IojygRkXBt0mZ+jxIXz3VB3Gx8F1Cgb55z+o4RTtY5XKtaT
+UTK4aMs+cDHSVbnuSRAJWr1fQ1dcYcK9QTEvUERD/r00UsQ4B/fHKo3ibcnQ
+XFCxMb+Eiy30L6p7OTKIJl9w7T/ER2rcRd7XUipOLVy+eL4LH/YSgoJSjgKO
+mnxVVgIfGrGXPO3eknHy2G49Tz0e3hKl5JqsafFK0ZyppSXKeBid9rFLVwqx
+q03f2p7j4enlB0ZHJaTwvkM0v2eGPw0xzWe8SRJzzbpajhXwsLV1RG5kjTRe
+StfcVvJWgrWB3pVBFzl4LRu/MLRaGaGXOBeqLEnQ2DlgMn2dC03GysT7yvLo
+93P3U2Fykb6umBgIJpCi2nkgcYKLmKnGr1evMmCS+arZla4E16WRNk3mUviy
+xCY0LoGHbcmewwXL5PAk9ga3RUIR8yhPD0cnKcI36pTZrisM3G3+6XZzDw1d
+kUSa5XwWvm7/rM2JYuDN+6BdY5sIvNHWua91Tg5fPBeI3XppsBWF/nwmIY/U
+vt3e1D8EFMUL5Tzu0HBRauE5Y7CQbJb+7y0rKpI9fuY/zlLC9yN/xQglqTBL
+SzeOTlKAg4umUz6FiY6z4/XrnrJQoRFY/7uSDOlWz//qTzCR7az3rsiTgfvr
+vrvltbFgp1aSdeAZFc2v3Mvm5TPxdUHJXD1VKnaumdhZxSYgWvnUQSWeAnWH
+n3uTl9IQsiBinnUUCYscPxz1X8HErpTqF5GpdDzzfpPoOaAALa8mr9SZ/fa9
+vGZn7EVAZspB4uff8vi2wyLpdjgJyrZ+51O3EyDlxcfyZBTxwfKZc8lnOn6t
+Lz0tk8nAQEOlVoIvAbPT/sI8GyaYhrYii0kFmO+JZGqp05FgGt6wJIGCKmZI
+UJgmHd5nKKFbnzGgbhJy+PZeCoZH7Vyv0xhI3pZdmhRGw1OzA4szuxXQ9rlT
+8nyJHHQGy243XaBCN7Ow47k+Hd/TrLTMdtGxJ2/4bbEmAVnx2/ATkVQkdPgc
+sfZn4Ky+pcdYDB2MppaUHCEZgWrzizjZBC6P2DcJN1OwTmxzfvtRBbT2b1Ul
+68nCY4/LnNqlLFTOOWPsZ0SFjoTLAbYXBQ7GNXfqaAT+8d/pa7WYwHBXpPHJ
+KhZK/h5M9/sojQTWQenhbwRGiyff7/sjjx1JG+qiVQg4n3q2MH5IHonbPzVo
+ebLwTvJXbnozBX9Mz1/N2EPHCsPh6B/vCehNste15LCxKrCnrvJfGrw7fwWe
+LiNAHQhbe0ONQIf8rtHBc2Rs8s/fY/WMhZTSq6apgWxE64rdDVaSUGTl5fi8
+hgfdO+2b6FZ0LAqXnuAlKCOzLeKihSELVqMba5pEHDD97Fp+TDEwL2Gt3c03
+iohe2b6wb7MCDCiqI4fWMCGuqvzsdYKCgSnJF7dFLFRdtTPsjCHQcujfDdr3
+qPBKzXeMIjHxWVFWqvGOPBqbb9o9OkPCvlmPtD1kuMiasGBH36MjtCjKtD9Z
+CZKBdjipQWBVrbZFgTUfdxdVtWTQCRR2WIUUZs/wx1YN8Kqi475EDb8imQ3W
+kqhHH18p4OuFVytubeHiZjnZN3KG19/JJZ5D/8ii9Mgn41MnFeEara4ReEUF
+x9ffs930gQ2Ly0lHHc7SIbX16EbXajbau6jHuvnK0Ne5vMrrrRxkjuSEhIvZ
+MHy3R/BDkgGF/4wdG5ew0FysQW/SYcKw8Xj4ilwaLAinH4r/UbEt1bnsdQAb
+QmFGgXsYFdeIzOvSTwgY/3Mw/+16ElYeDFf7ySLgEEbq67WRxqpiNTrlMRMe
+hi7K3c4zOopP36+azMDSaJ8NA1XSOHx6+Z7sXgpk92hVBT2Rg2vHzc3JhVQo
+TA2YhLbLo0pv6DlqVeHTKL09o5uJcY28kcx6EZZ7bYvQslGE/bvAwAWyani3
+zev57RQWvrwuqNE9zUX8MpF7foIklFJfvbP/rojcx1N198lyON7pOURV5IJr
+T/OzipeCw/HYsNc3SRi4oJu9p4mOYyY1v6bIiqivN97xyJ5AQwntbvJ2IUir
+mN9/XqXg2vb0a5vvKWE0u3sw2ZKOBZ4PWi58Z+PlvN/zOzAh9mnNsI5/o4yt
+2dUnJbXkYba6mv9qjjI+smMrjhdPiU2zF8zxzWKhcKjIezpMEutTyMV1X0gw
+d9M7rVVFxr2Gg4ZfP7Cw2E2XxpRi4mz9I5ufL2bywr7W6tTFTCS5c+Nd9kqh
+WJDhenwZFQ+aLFneUgLId95ff9BuUpxDShFatPCgfOFJtN6FP+KBw5eWO/7m
+46qcQLJ9VAZm4bfioxbz8fJvoxulfpLQjuV6RDjy8dfjzESygwz2pZ9MtDzK
+xzeB2Z20QHmEN3yt0TnNx7EeWnnvQmmYf9o6vyqKD7N3Pd2LrkyKQ0uyclp6
++fD9kWc4sfCXOGBkhXPObj54P3sIe20q1rcZPJ0rI8DfaSxy/hgd+jmf+4xu
+CFB7XrW7ZrkUzqj592R9EaE8SemzRwIV0S9HggX9bPyolPPo2ikBkqXkIU9f
+Veyd+OM1VvZNfL37WuHBhYqoG46ULb1EwevXvmFuQypIFTLXHsn/KeZ1rRWE
+HROBbuXYdujAH7FLkElwcIo8jhoOq47O3KevcKR1R74Mtueah1yXkcB87ry9
+To4yyObnbsgtV8AbhtHtAmkOvlk0/CiwlED26pNafB8OnoUuysky50Cne1qm
+dxEP0n8ZLQ2LmvExyYJfKqtVsOP96znW+hz0W1bkKvSxUbzx0fZhFgu/BMK0
+xWEq+CQzXX5xGw18C/UHW93ZOBpws8e2UxoDzx+F2rupYMv+5occdQYSdAY2
+mecrw+xjv+QLeyYsQvJoAx+FUPPxtX9DJbDMm3hkNZMXQr5erJ9dzULebdPf
+EY3KMImv2fGUqQD5GIWsvrlcyOxv2UKeZKKtttdicawA+a5aKsY2dPQ/Jj1c
+HcLEJ8v7Rtrjk+L9RyZygxOnxef+PeS3aB4ZA0uqhyaXC5HWkiX9o4YNm6fu
+Z9pDhCilBNTWG5Fwcjgq3ko8CypuQfVDQgJto7HPJ92VENDkmL5Wgg3ZwIKy
+OH0R3tLV+7vH5EH6PuZ50oTA2YMREaQMHuR4up2Tb9jQfT50KngzG2zbdP23
+PRxku8pvm+c+Jt4moOzUfK8CwrQoKOOmIoKseuq7tHmYf7VLoMFk4YVNylm7
+PCH0PKI2bgmlw1iqSeUjlY9doUHvWG0dYvYqCfvfG9gIfWf1rbJkUDxtMRan
+HaeGy/WJMWaddJhH7P/ovISJQyq3HIaKO8U1a6wTpPrUkVewwuafiyQQ9iVS
+v7aqwXb2Fcm6vpn8XJW2bEPdLAR1i867mZFhUN0vDOaIENNWldKwmYVVH7uF
+1QUCtOpt0Zma8ecI7yavNQYc1KtNhfT6dYuNtE6Xps74pcT/lXlbhZFzEhcb
+2p0TDHjd4r2DpuPa8krYoeTfynwuQuP7XUkxM/luya4+nWuxHGjuiC7edFgE
+yuT3zN8nGBjKYQS8DlJDQXhnSvN9GTgtP7fW7qAKYi+6nDHUYKLEJzQ400Ed
+RYN5kXZLFcCdsy/U9KoQh+QDPi2VYMJpX7P70t+zMevEPrOCfHlsGXQOz1Cb
+BYfwb+LIH1QUP2z4QHIlUP+9PXhW7BdxALOw23mChdJR3XorDVUwpBwLAqXY
+uGeQ7m0cx8ZIkuiRWIGNugqNT6o2HKzgzcrt11TBlxted62Xs/CU21YuM90n
+jvV1V15nQkGTWlxaUp4cbCgIppyXh0L0Z+V7GzVhF7ezeE0Egee2fpEJdeoQ
+DPxZXdiuiPHOWy7lKXxcaTR2mpj564dd/aqdEkUosy/yceAoQfZVmIL5CyYu
+JVV1tBhz4OOep8V5MKPbldP3DcZ5gI5ibdHrQfGQX0uLfgwbAg8+0R7Ew37B
+OS39UTY+fKM0X97AgyvZ+9WaBzyE6zaVrw/lILr84o3WKhH0jD6kdrl1iwvn
+XDG5yCdQWz3vrkuuEhwWb3pYeUAaZWlrYiVF0+K+NsGo1GwWLEs3POgYZaLJ
+OG2qXXM2xme/s6dKSoHUKjvd3yoBdsDtV0EVv8WGEQ/6QnZNiJ3CSwPT9qvB
+7XpuTakJC8Ovpo1vHFPH77fmZSWFTJQpbNe6kDAXG42NuBlTJGjy7mRqNs1G
+ouJW/bMMpf/XVYgdx19YTsL/AHw+IHI=
+     "]]& ],
+  AspectRatio->Automatic,
+  FrameTicks->None,
+  ImageSize->{911., Automatic},
+  PlotRange->All,
+  PlotRangePadding->Scaled[0.1]]], "Output",
+ CellChangeTimes->{{3.505966681146117*^9, 3.505966685047864*^9}, {
+  3.505966726003468*^9, 3.505966734613076*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["mideastgraph2"], "Input"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"14619728", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"65375759", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"7067102", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"14375609", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"1285451", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"31576969", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"21589783", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"78417474", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"2696831", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"18650093", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"25529018", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"247301389", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"43937371", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"15336943", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"56727397", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"9739482", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"15067830", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"18725815", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"36615385", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"88714870", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"48094796", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"101734884", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"18728732", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"127825476", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"119360445", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"202557701", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"230288829", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"49680877", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"215844036", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"61211686", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"39059828", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"182745161", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"3655491", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"2204711", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"5872932", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"8787362", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"40701142", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"11562822", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"202872841", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"17017496", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"74446328", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"14126888", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"45567561", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"90184020", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"108668795", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"17001490", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"25058400", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"9378802", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"244957467", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"19083676", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"243811449", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"142388142", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"106840674", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"18307147", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"30029450", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"49728986", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"27414710", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"37264417", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"18197610", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"80077721", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"16434823", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"61440064", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"33039483", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"159827281", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"21097230", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"190261453", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"16935292", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"242718658", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"19929890", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"18480789", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"15863493", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"24481693", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"52998468", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"12745892", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"2168011", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"14315883", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"23925541", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"14442420", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"42597278", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"18632368", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"28991368", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"20719191", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"20301135", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"46076929", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"52511395", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"47455112", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"35707603", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"23926671", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"96104822", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"34427421", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"25974152", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"18833257", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"33485597", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"46649613", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"5456672", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"134073667", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"562363", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"75092443", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"24265090", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"40198892", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"136403245", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"302683", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"14048901", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"10230", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"1183721", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"50695016", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"31382001", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"135476005", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"7489012", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"3419141", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"19198775", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"5697482", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"14513512", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"21881398", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"24506246", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"14973978", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"40517345", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"21273874", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"11044062", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"12599812", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"60939477", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"30621862", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"74988965", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"14785459", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"796074", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"608583", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"9201822", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"18429664", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"17904983", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"15474024", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"18217117", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"34375215", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"6090052", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"5108161", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"26738483", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"20763821", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"11474692", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"12394", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"4995881", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"4970771", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"5426712", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"238845761", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"238843898", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"18011386", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"23588075", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"21406106", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"86364947", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"25071839", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"69181624", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"19489239", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"2614131", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"19493190", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"149626038", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"151106990", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"14700316", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"18992997", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"54311364", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"17469492", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"19784906", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"17965523", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"245696038", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"21675256", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"15432218", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"1921671", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"23188724", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"210829635", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"15766082", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"88433137", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"14430586", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"25139939", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"24382468", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"25946632", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"39621814", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"16042128", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"14880200", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"257593", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"23839835", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"9576102", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"16122373", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"22749476", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"23079148", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"158067539", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"24670390", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"68768482", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"5740092", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"19681513", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"16466545", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"124102339", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"23572083", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"35459949", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"17004618", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"26734716", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"48353398", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"20867867", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"161636930", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"80669530", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"84620593", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"235891694", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"125601462", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"36637698", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"17774777", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"5242", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"45835766", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"108352527", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"163014260", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"26743107", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"1924421", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"19416833", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"14496918", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"29708270", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"16288136", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"205887871", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"19409079", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"31083211", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"14346260", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"201712702", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"15155662", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"92251334", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"85243004", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"39216161", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"661613", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"29979814", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"45192838", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"17243582", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"83590349", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"18003650", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"92546663", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"18189723", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"24264540", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"15196372", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"24136198", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"17060020", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"26792275", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"19086179", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"22344775", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"88711812", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"25333609", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"239152755", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"54190209", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"47814419", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"74769064", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"44494276", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"111627089", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"89978599", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"105374561", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"128558424", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"18996618", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"138787319", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"82282572", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"57105450", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"19190572", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"18267544", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"68512584", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"11316572", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"74175669", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"130238301", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"46744791", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"18424289", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"4970411", "\[Rule]", 
+    RowBox[{"{", "}"}]}]}], "}"}]], "Output",
+ CellChangeTimes->{3.505966480375915*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"mideastgraph2", "[", 
+  RowBox[{"[", "1", "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.505966474855073*^9, 3.505966476191004*^9}}],
+
+Cell[BoxData[
+ RowBox[{"14619728", "\[Rule]", 
+  RowBox[{"{", "}"}]}]], "Output",
+ CellChangeTimes->{3.505966476568042*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["lists", "Section",
+ CellChangeTimes->{{3.50571474456596*^9, 3.5057147450281353`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"twitter`with\:2011oauth", "[", 
+   RowBox[{
+   "oauth\:2011consumer", ",", " ", "oauth\:2011access\:2011token", ",", 
+    "oauth\:2011access\:2011token\:2011secret", ",", 
+    RowBox[{"twitter`list\:2011memberships", "[", "\"\<al3x\>\"", "]"}]}], 
+   "]"}], "//", "CL"}]], "Input",
+ CellChangeTimes->{{3.505714758216482*^9, 3.505714769150064*^9}, {
+  3.5057148087436543`*^9, 3.505714819284884*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"twitter`with\:2011oauth", "[", 
+   RowBox[{
+   "oauth\:2011consumer", ",", " ", "oauth\:2011access\:2011token", ",", 
+    "oauth\:2011access\:2011token\:2011secret", ",", 
+    RowBox[{"twitter`list\:2011members", "[", 
+     RowBox[{"\"\<programnature\>\"", ",", "\"\<hackers\>\""}], "]"}]}], 
+   "]"}], "//", "CL"}]], "Input",
+ CellChangeTimes->{{3.505714758216482*^9, 3.505714769150064*^9}, {
+  3.5057148087436543`*^9, 3.505714819284884*^9}, {3.505714852787899*^9, 
+  3.505714871675283*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"twitter`with\:2011oauth", "[", 
+   RowBox[{
+   "oauth\:2011consumer", ",", " ", "oauth\:2011access\:2011token", ",", 
+    "oauth\:2011access\:2011token\:2011secret", ",", 
+    RowBox[{"twitter`get\:2011lists", "[", "\"\<programnature\>\"", "]"}]}], 
+   "]"}], "//", "CL"}]], "Input",
+ CellChangeTimes->{{3.505714903252508*^9, 3.505714907922112*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"twitter`with\:2011oauth", "[", 
+   RowBox[{
+   "oauth\:2011consumer", ",", " ", "oauth\:2011access\:2011token", ",", 
+    "oauth\:2011access\:2011token\:2011secret", ",", 
+    RowBox[{"twitter`add\:2011to\:2011list", "[", 
+     RowBox[{"\"\<newlist\>\"", ",", "\"\<NickKristof\>\""}], "]"}]}], "]"}], 
+  "//", "CL"}]], "Input",
+ CellChangeTimes->{{3.505714928419663*^9, 3.505714942753586*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"twitter`with\:2011oauth", "[", 
+   RowBox[{
+   "oauth\:2011consumer", ",", " ", "oauth\:2011access\:2011token", ",", 
+    "oauth\:2011access\:2011token\:2011secret", ",", 
+    RowBox[{"twitter`create\:2011list", "[", "\"\<newlist2\>\"", "]"}]}], 
+   "]"}], "//", "CL"}]], "Input",
+ CellChangeTimes->{{3.505715145260968*^9, 3.505715155410468*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"\:0589slug", "\[Rule]", "\<\"newlist2\"\>"}], ",", 
+   RowBox[{"\:0589member\:02cdcount", "\[Rule]", "0"}], ",", 
+   RowBox[{"\:0589following", "\[Rule]", "False"}], ",", 
+   RowBox[{"\:0589subscriber\:02cdcount", "\[Rule]", "0"}], ",", 
+   RowBox[{"\:0589name", "\[Rule]", "\<\"newlist2\"\>"}], ",", 
+   RowBox[{"\:0589id\:02cdstr", "\[Rule]", "\<\"35095654\"\>"}], ",", 
+   RowBox[{"\:0589uri", "\[Rule]", "\<\"/programnature/newlist2\"\>"}], ",", 
+   RowBox[{
+   "\:0589full\:02cdname", "\[Rule]", "\<\"@programnature/newlist2\"\>"}], 
+   ",", 
+   RowBox[{"\:0589user", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{
+      "\:0589profile\:02cduse\:02cdbackground\:02cdimage", "\[Rule]", 
+       "True"}], ",", 
+      RowBox[{"\:0589follow\:02cdrequest\:02cdsent", "\[Rule]", "False"}], 
+      ",", 
+      RowBox[{
+      "\:0589profile\:02cdsidebar\:02cdfill\:02cdcolor", 
+       "\[Rule]", "\<\"e0ff92\"\>"}], ",", 
+      RowBox[{"\:0589protected", "\[Rule]", "False"}], ",", 
+      RowBox[{"\:0589following", "\[Rule]", "False"}], ",", 
+      RowBox[{
+      "\:0589profile\:02cdbackground\:02cdimage\:02cdurl", 
+       "\[Rule]", \
+"\<\"http://a3.twimg.com/a/1296179758/images/themes/theme1/bg.png\"\>"}], ",", 
+      RowBox[{"\:0589contributors\:02cdenabled", "\[Rule]", "False"}], ",", 
+      RowBox[{"\:0589favourites\:02cdcount", "\[Rule]", "76"}], ",", 
+      RowBox[{
+      "\:0589time\:02cdzone", 
+       "\[Rule]", "\<\"Eastern Time (US & Canada)\"\>"}], ",", 
+      RowBox[{"\:0589name", "\[Rule]", "\<\"program nature\"\>"}], ",", 
+      RowBox[{"\:0589id\:02cdstr", "\[Rule]", "\<\"2933441\"\>"}], ",", 
+      RowBox[{"\:0589listed\:02cdcount", "\[Rule]", "2"}], ",", 
+      RowBox[{"\:0589utc\:02cdoffset", "\[Rule]", 
+       RowBox[{"-", "18000"}]}], ",", 
+      RowBox[{
+      "\:0589profile\:02cdlink\:02cdcolor", "\[Rule]", "\<\"0000ff\"\>"}], 
+      ",", 
+      RowBox[{"\:0589profile\:02cdbackground\:02cdtile", "\[Rule]", "False"}],
+       ",", 
+      RowBox[{"\:0589location", "\[Rule]", "\<\"\"\>"}], ",", 
+      RowBox[{"\:0589statuses\:02cdcount", "\[Rule]", "0"}], ",", 
+      RowBox[{"\:0589followers\:02cdcount", "\[Rule]", "63"}], ",", 
+      RowBox[{"\:0589friends\:02cdcount", "\[Rule]", "292"}], ",", 
+      RowBox[{
+      "\:0589created\:02cdat", 
+       "\[Rule]", "\<\"Fri Mar 30 04:06:30 +0000 2007\"\>"}], ",", 
+      RowBox[{"\:0589lang", "\[Rule]", "\<\"en\"\>"}], ",", 
+      RowBox[{
+      "\:0589profile\:02cdsidebar\:02cdborder\:02cdcolor", 
+       "\[Rule]", "\<\"87bc44\"\>"}], ",", 
+      RowBox[{"\:0589url", "\[Rule]", "\<\"http://infoharmoni.com\"\>"}], ",", 
+      RowBox[{"\:0589notifications", "\[Rule]", "False"}], ",", 
+      RowBox[{
+      "\:0589profile\:02cdbackground\:02cdcolor", 
+       "\[Rule]", "\<\"9ae4e8\"\>"}], ",", 
+      RowBox[{"\:0589geo\:02cdenabled", "\[Rule]", "False"}], ",", 
+      RowBox[{
+      "\:0589show\:02cdall\:02cdinline\:02cdmedia", "\[Rule]", "False"}], ",", 
+      RowBox[{"\:0589is\:02cdtranslator", "\[Rule]", "False"}], ",", 
+      RowBox[{
+      "\:0589profile\:02cdimage\:02cdurl", 
+       "\[Rule]", \
+"\<\"http://a1.twimg.com/sticky/default_profile_images/default_profile_0_\
+normal.png\"\>"}], ",", 
+      RowBox[{"\:0589verified", "\[Rule]", "False"}], ",", 
+      RowBox[{"\:0589id", "\[Rule]", "2933441"}], ",", 
+      RowBox[{"\:0589description", "\[Rule]", "\<\"\"\>"}], ",", 
+      RowBox[{
+      "\:0589profile\:02cdtext\:02cdcolor", "\[Rule]", "\<\"000000\"\>"}], 
+      ",", 
+      RowBox[{
+      "\:0589screen\:02cdname", "\[Rule]", "\<\"programnature\"\>"}]}], 
+     "}"}]}], ",", 
+   RowBox[{"\:0589mode", "\[Rule]", "\<\"public\"\>"}], ",", 
+   RowBox[{"\:0589id", "\[Rule]", "35095654"}], ",", 
+   RowBox[{"\:0589description", "\[Rule]", "\<\"\"\>"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.5057149535235443`*^9, 3.5057151563109407`*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["hbase", "Section",
+ CellChangeTimes->{{3.505956009059628*^9, 3.5059560096847267`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"hb`with\:2011table", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"t", ",", 
+      RowBox[{"hb`table", "[", "\"\<users\>\"", "]"}]}], "}"}], ",", 
+    RowBox[{"hb`put", "[", 
+     RowBox[{"t", ",", "\"\<username\>\"", ",", "\:0589values", ",", 
+      RowBox[{"{", 
+       RowBox[{"\:0589profile", ",", 
+        RowBox[{"{", 
+         RowBox[{"\:0589raw", ",", "\"\<idlist\>\""}], "}"}]}], "}"}]}], 
+     "]"}]}], "]"}], "//", "ClojureEvaluate"}]], "Input",
+ CellChangeTimes->{{3.505624020431356*^9, 3.505624062907216*^9}, {
+  3.505624159239822*^9, 3.505624190960615*^9}, {3.505624279473925*^9, 
+  3.505624285711093*^9}, {3.505959349038665*^9, 3.505959370306119*^9}, {
+  3.505959549194725*^9, 3.505959576194861*^9}}]
+}, Open  ]]
+},
+WindowSize->{1161, 856},
+WindowMargins->{{Automatic, 108}, {Automatic, 0}},
+ShowSelection->True,
+InputAutoReplacements->{
+ "\\" -> "\:2024", "--" -> "\:2011", "-=" -> "\:02cd", "''" -> "\:0589", "**" -> 
+  "\:204e", "\[DownQuestion]" -> "\:2047", "!!" -> "\:203c"},
+FrontEndVersion->"8.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (November 6, \
+2010)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "Info3505937686-9336346"->{
+  Cell[116312, 2582, 124, 2, 39, "Print",
+   CellTags->"Info3505937686-9336346"]},
+ "Info3505938219-9336346"->{
+  Cell[125196, 2829, 1482, 25, 70, "Print",
+   CellTags->"Info3505938219-9336346"]},
+ "Info3505938696-9336346"->{
+  Cell[129156, 2938, 2880, 44, 77, "Print",
+   CellTags->"Info3505938696-9336346"]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"Info3505937686-9336346", 174340, 4007},
+ {"Info3505938219-9336346", 174452, 4010},
+ {"Info3505938696-9336346", 174566, 4013}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 134, 2, 27, "Input"],
+Cell[716, 26, 135, 2, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[888, 33, 201, 6, 27, "Input"],
+Cell[1092, 41, 281, 7, 27, "Output"]
+}, Open  ]],
+Cell[1388, 51, 123, 2, 27, "Input"],
+Cell[CellGroupData[{
+Cell[1536, 57, 19, 0, 67, "Section"],
+Cell[1558, 59, 7586, 113, 433, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9181, 177, 100, 1, 67, "Section"],
+Cell[9284, 180, 214, 5, 27, "Input"],
+Cell[9501, 187, 190, 4, 27, "Input"],
+Cell[9694, 193, 277, 7, 27, "Input"],
+Cell[CellGroupData[{
+Cell[9996, 204, 592, 12, 58, "Input"],
+Cell[10591, 218, 347, 7, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10975, 230, 292, 8, 27, "Input"],
+Cell[11270, 240, 347, 7, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11654, 252, 300, 8, 27, "Input"],
+Cell[11957, 262, 349, 7, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12343, 274, 112, 1, 34, "Subsection"],
+Cell[CellGroupData[{
+Cell[12480, 279, 314, 8, 27, "Input"],
+Cell[12797, 289, 347, 7, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[13181, 301, 322, 8, 27, "Input"],
+Cell[13506, 311, 346, 7, 27, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[13901, 324, 96, 1, 34, "Subsection"],
+Cell[CellGroupData[{
+Cell[14022, 329, 438, 10, 43, "Input"],
+Cell[14463, 341, 4735, 105, 238, "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[19259, 453, 100, 1, 67, "Section"],
+Cell[CellGroupData[{
+Cell[19384, 458, 100, 1, 34, "Subsection"],
+Cell[19487, 461, 2030, 48, 103, "Input"],
+Cell[CellGroupData[{
+Cell[21542, 513, 152, 3, 27, "Input"],
+Cell[21697, 518, 112, 1, 27, "Output"]
+}, Open  ]],
+Cell[21824, 522, 429, 11, 27, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[22290, 538, 102, 1, 34, "Subsection"],
+Cell[22395, 541, 2176, 52, 133, "Input"],
+Cell[24574, 595, 2115, 51, 133, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[26726, 651, 133, 1, 35, "Subsection"],
+Cell[CellGroupData[{
+Cell[26884, 656, 830, 21, 58, "Input"],
+Cell[27717, 679, 149, 2, 27, "Output"]
+}, Open  ]],
+Cell[27881, 684, 2272, 54, 133, "Input"],
+Cell[CellGroupData[{
+Cell[30178, 742, 1057, 28, 27, "Input"],
+Cell[31238, 772, 19172, 308, 673, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[50447, 1085, 155, 3, 27, "Input"],
+Cell[50605, 1090, 19022, 307, 673, "Output"]
+}, Open  ]],
+Cell[69642, 1400, 96, 1, 27, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[69775, 1406, 114, 1, 34, "Subsection"],
+Cell[CellGroupData[{
+Cell[69914, 1411, 1232, 25, 58, "Input"],
+Cell[71149, 1438, 302, 5, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[71488, 1448, 202, 3, 27, "Input"],
+Cell[71693, 1453, 218, 5, 27, "Output"]
+}, Open  ]],
+Cell[71926, 1461, 133, 3, 26, "Text"],
+Cell[72062, 1466, 119, 2, 27, "Input"],
+Cell[72184, 1470, 121, 2, 27, "Input"],
+Cell[72308, 1474, 144, 9, 116, "Text"],
+Cell[72455, 1485, 94, 1, 26, "Text"]
+}, Open  ]]
+}, Open  ]],
+Cell[72576, 1490, 96, 1, 67, "Section"],
+Cell[CellGroupData[{
+Cell[72697, 1495, 92, 1, 37, "Section"],
+Cell[72792, 1498, 455, 13, 27, "Input"],
+Cell[CellGroupData[{
+Cell[73272, 1515, 428, 12, 27, "Input"],
+Cell[73703, 1529, 143, 3, 27, "Output"]
+}, Open  ]],
+Cell[73861, 1535, 1068, 28, 43, "Input"],
+Cell[74932, 1565, 220, 5, 27, "Input"],
+Cell[75155, 1572, 200, 4, 27, "Input"],
+Cell[75358, 1578, 335, 8, 27, "Input"],
+Cell[75696, 1588, 163, 2, 27, "Input"],
+Cell[75862, 1592, 91, 1, 27, "Input"],
+Cell[CellGroupData[{
+Cell[75978, 1597, 7451, 110, 433, "Input"],
+Cell[83432, 1709, 72, 1, 27, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[83553, 1716, 92, 1, 67, "Section"],
+Cell[83648, 1719, 619, 16, 27, "Input"],
+Cell[84270, 1737, 651, 17, 27, "Input"],
+Cell[84924, 1756, 1740, 41, 88, "Input"],
+Cell[86667, 1799, 236, 7, 27, "Input"],
+Cell[CellGroupData[{
+Cell[86928, 1810, 214, 5, 27, "Input"],
+Cell[87145, 1817, 4608, 103, 208, "Output"]
+}, Open  ]],
+Cell[91768, 1923, 812, 22, 27, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[92617, 1950, 98, 1, 67, "Section"],
+Cell[92718, 1953, 343, 8, 27, "Input"],
+Cell[93064, 1963, 598, 15, 27, "Input"],
+Cell[93665, 1980, 806, 19, 27, "Input"],
+Cell[94474, 2001, 210, 5, 27, "Input"],
+Cell[94687, 2008, 185, 4, 27, "Input"],
+Cell[94875, 2014, 928, 22, 58, "Input"],
+Cell[CellGroupData[{
+Cell[95828, 2040, 88, 1, 34, "Subsection"],
+Cell[95919, 2043, 1758, 42, 88, "Input"],
+Cell[97680, 2087, 91, 1, 27, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[97808, 2093, 22, 0, 34, "Subsection"],
+Cell[97833, 2095, 239, 7, 27, "Input"],
+Cell[98075, 2104, 557, 14, 27, "Input"],
+Cell[98635, 2120, 194, 4, 27, "Input"],
+Cell[CellGroupData[{
+Cell[98854, 2128, 156, 3, 27, "Input"],
+Cell[99013, 2133, 140, 3, 27, "Output"]
+}, Open  ]],
+Cell[99168, 2139, 127, 2, 27, "Input"],
+Cell[99298, 2143, 572, 16, 27, "Input"],
+Cell[99873, 2161, 521, 15, 27, "Input"],
+Cell[100397, 2178, 675, 20, 27, "Input"],
+Cell[CellGroupData[{
+Cell[101097, 2202, 365, 8, 27, "Input"],
+Cell[101465, 2212, 116, 1, 27, "Output"]
+}, Open  ]],
+Cell[101596, 2216, 130, 2, 27, "Input"],
+Cell[101729, 2220, 610, 17, 27, "Input"],
+Cell[CellGroupData[{
+Cell[102364, 2241, 141, 2, 27, "Input"],
+Cell[102508, 2245, 553, 10, 43, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[103098, 2260, 111, 2, 27, "Input"],
+Cell[103212, 2264, 2661, 37, 103, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[105910, 2306, 150, 3, 27, "Input"],
+Cell[106063, 2311, 73, 1, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[106173, 2317, 147, 3, 27, "Input"],
+Cell[106323, 2322, 73, 1, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[106433, 2328, 134, 2, 27, "Input"],
+Cell[106570, 2332, 3043, 62, 148, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[109650, 2399, 1065, 26, 43, "Input"],
+Cell[110718, 2427, 296, 5, 27, "Output"]
+}, Open  ]],
+Cell[111029, 2435, 125, 2, 27, "Input"],
+Cell[CellGroupData[{
+Cell[111179, 2441, 130, 2, 27, "Input"],
+Cell[111312, 2445, 94, 1, 27, "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[111467, 2453, 19, 0, 67, "Section"],
+Cell[111489, 2455, 68, 1, 27, "Input"],
+Cell[111560, 2458, 3483, 80, 133, "Input"],
+Cell[115046, 2540, 673, 19, 27, "Input"],
+Cell[115722, 2561, 382, 10, 27, "Input"],
+Cell[116107, 2573, 62, 1, 27, "Input"],
+Cell[CellGroupData[{
+Cell[116194, 2578, 115, 2, 27, "Input"],
+Cell[116312, 2582, 124, 2, 39, "Print",
+ CellTags->"Info3505937686-9336346"]
+}, Open  ]],
+Cell[116451, 2587, 483, 14, 27, "Input"],
+Cell[116937, 2603, 156, 3, 27, "Input"],
+Cell[117096, 2608, 600, 11, 43, InheritFromParent],
+Cell[CellGroupData[{
+Cell[117721, 2623, 94, 1, 27, "Input"],
+Cell[117818, 2626, 6109, 153, 167, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[123964, 2784, 387, 10, 27, "Input"],
+Cell[124354, 2796, 72, 1, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[124463, 2802, 235, 5, 27, "Input"],
+Cell[124701, 2809, 73, 1, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[124811, 2815, 94, 1, 27, "Input"],
+Cell[124908, 2818, 131, 2, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[125076, 2825, 117, 2, 27, "Input"],
+Cell[125196, 2829, 1482, 25, 70, "Print",
+ CellTags->"Info3505938219-9336346"]
+}, Open  ]],
+Cell[126693, 2857, 112, 2, 27, "Input"],
+Cell[126808, 2861, 352, 10, 27, "Input"],
+Cell[CellGroupData[{
+Cell[127185, 2875, 639, 15, 43, "Input"],
+Cell[127827, 2892, 168, 3, 27, "Output"]
+}, Open  ]],
+Cell[128010, 2898, 388, 11, 27, "Input"],
+Cell[CellGroupData[{
+Cell[128423, 2913, 504, 13, 27, "Input"],
+Cell[128930, 2928, 72, 1, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[129039, 2934, 114, 2, 27, "Input"],
+Cell[129156, 2938, 2880, 44, 77, "Print",
+ CellTags->"Info3505938696-9336346"]
+}, Open  ]],
+Cell[132051, 2985, 150, 2, 27, "Input"],
+Cell[CellGroupData[{
+Cell[132226, 2991, 685, 16, 27, "Input"],
+Cell[132914, 3009, 15916, 265, 755, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[148867, 3279, 39, 0, 27, "Input"],
+Cell[148909, 3281, 17440, 521, 448, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[166386, 3807, 155, 3, 27, "Input"],
+Cell[166544, 3812, 123, 3, 27, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[166716, 3821, 91, 1, 67, "Section"],
+Cell[166810, 3824, 433, 9, 27, "Input"],
+Cell[167246, 3835, 527, 11, 43, "Input"],
+Cell[167776, 3848, 384, 8, 27, "Input"],
+Cell[168163, 3858, 428, 9, 43, "Input"],
+Cell[CellGroupData[{
+Cell[168616, 3871, 381, 8, 27, "Input"],
+Cell[169000, 3881, 3915, 82, 163, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[172964, 3969, 92, 1, 67, "Section"],
+Cell[173059, 3972, 754, 17, 27, "Input"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

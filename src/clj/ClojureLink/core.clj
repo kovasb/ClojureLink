@@ -80,6 +80,7 @@
 			
 (defn createExprSub [struct] 
 	(cond
+		(= (class struct) com.wolfram.jlink.Expr) struct
 		(= struct true) (Expr. 4 "True")
 		(= struct false) (Expr. 4 "False")
 		(= struct nil) (Expr. 4 "Null")
@@ -90,13 +91,16 @@
 		(float? struct) (Expr.  2 (str struct))
 		(string? struct) (Expr. struct)
 		(list? struct) (Expr. (createExprSub (first struct)) (into-array Expr (map createExprSub (rest struct))))
+		(= clojure.lang.MapEntry (class struct)) (Expr. (Expr.  4 "Rule") (into-array Expr (map createExprSub struct)))
 		(vector? struct) (Expr. (Expr.  4 "List") (into-array Expr (map createExprSub struct)))
-		(map? struct) (Expr. (Expr.  4 "HashMap") (into-array Expr (map createExprSub struct)))
+		(map? struct) (Expr. (Expr.  4 "List") (into-array Expr (map createExprSub struct)))
 		(set? struct) (Expr. (Expr.  4 "HashSet") (into-array Expr (map createExprSub struct)))
 		(seq? struct) (Expr. (Expr.  4 "List") (into-array Expr (map createExprSub struct)))
 		true (let [s (gensym)] (set! java-object-map (assoc java-object-map s struct)) (createExprSub s))
 	)	
-)			
+)	
+
+		
 
 (defn createExpr [struct] 
 	(binding [java-object-map {}] 
